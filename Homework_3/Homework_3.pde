@@ -15,6 +15,7 @@ void setup() {
   
   currentLineString = "";
   lineCounter = 0;
+  yPos = 32;
 }
 
 void draw() {
@@ -29,20 +30,20 @@ void populateLineString() {
   xPos = 5;
   while (textWidth(currentLineString) + textWidth(currentWord) < width) {
     //text(currentWord, xPos, yPos);
-    if (currentWord.length() < 5) {
+    if (currentWord.length() <= 5) {
       fill(255,0,0);
-    } else if (currentWord.length() < 9 & currentWord.length() > 5) {
+    } else if (currentWord.length() <= 9 & currentWord.length() > 5) {
       fill(0,255,0);
     } else if (currentWord.length() > 9) {
       fill(0,0, 255);
     }
     //currentWord = "";
     currentLineString += currentWord + " ";
-    int randomIndex = (int)random(3290);
-    currentWord = uniqueWords[randomIndex];
     //println(currentLineString);
     text(currentWord, xPos, yPos);
     xPos += textWidth(currentWord) + textWidth(" ");
+    int randomIndex = (int)random(3290);
+    currentWord = uniqueWords[randomIndex];
   }
   yPos += 32;
   lineCounter += 1;
