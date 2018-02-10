@@ -1,4 +1,4 @@
-﻿***
+﻿
 start
 of
 this
@@ -8,7 +8,7 @@ ebook
 the
 invisible
 man
-***
+
 produced
 by
 andrew
@@ -249,7 +249,7 @@ shiny
 tip
 of
 his
-nose;
+nose
 the
 snow
 had
@@ -1295,7 +1295,7 @@ going
 out
 of
 the
-door;
+door
 but
 his
 napkin
@@ -1548,7 +1548,7 @@ going
 off
 at
 a
-tangent;
+tangent
 aint
 you
 done
@@ -1780,7 +1780,7 @@ the
 question
 about
 a
-trap;
+trap
 and
 then
 snatching
@@ -2137,7 +2137,7 @@ quite
 still
 during
 that
-time;
+time
 it
 would
 seem
@@ -2301,7 +2301,7 @@ it
 strikes
 well
 and
-hearty;
+hearty
 but
 the
 hourhand
@@ -3103,7 +3103,7 @@ face
 but
 extracted
 the
-works;
+works
 and
 he
 tried
@@ -3369,7 +3369,7 @@ village
 through
 the
 thawing
-snow;
+snow
 a
 man
 must
@@ -4497,7 +4497,7 @@ again
 for
 the
 second
-time;
+time
 there
 was
 mrs
@@ -4512,7 +4512,7 @@ business
 to
 bite
 her
-guests;
+guests
 there
 was
 huxter
@@ -4523,14 +4523,14 @@ from
 over
 the
 road
-interrogative;
+interrogative
 and
 sandy
 wadgers
 from
 the
 forge
-judicial;
+judicial
 besides
 women
 and
@@ -4546,12 +4546,12 @@ en
 bite
 me
 i
-knows;
+knows
 tasnt
 right
 have
 such
-dargs;
+dargs
 whad
 e
 bite
@@ -4628,7 +4628,7 @@ at
 once
 said
 mr
-huxter;
+huxter
 especially
 if
 its
@@ -4893,7 +4893,7 @@ the
 table
 high
 with
-straw;
+straw
 the
 only
 things
@@ -5045,7 +5045,7 @@ he
 had
 removed
 his
-glasses;
+glasses
 they
 were
 beside
@@ -5439,7 +5439,7 @@ bottle
 it
 was
 all
-over;
+over
 the
 stranger
 had
@@ -5796,7 +5796,7 @@ of
 getting
 rid
 of
-him;
+him
 but
 he
 showed
@@ -5928,7 +5928,7 @@ his
 temper
 continued
 very
-uncertain;
+uncertain
 for
 the
 most
@@ -6130,7 +6130,7 @@ disliked
 him
 or
 the
-reverse;
+reverse
 but
 there
 was
@@ -6421,7 +6421,7 @@ or
 some
 modification
 of
-it;
+it
 as
 for
 instance
@@ -7165,7 +7165,7 @@ on
 sniffing
 all
 the
-time;
+time
 evidently
 recently
 caught
@@ -7295,7 +7295,7 @@ five
 ingredients
 put
 it
-down;
+down
 turned
 his
 head
@@ -7468,7 +7468,7 @@ he
 never
 said
 a
-word;
+word
 just
 glared
 and
@@ -8212,7 +8212,7 @@ thing
 kept
 mr
 buntings
-courage;
+courage
 the
 persuasion
 that
@@ -8835,7 +8835,7 @@ no
 answer
 he
 rapped
-again;
+again
 then
 pushed
 the
@@ -9291,7 +9291,7 @@ the
 sponge
 from
 the
-washstand;
+washstand
 and
 then
 the
@@ -9717,7 +9717,7 @@ for
 parliamentary
 government
 asserted
-itself;
+itself
 there
 was
 a
@@ -9829,7 +9829,7 @@ slowly
 staring
 all
 the
-time;
+time
 he
 walked
 across
@@ -10141,7 +10141,7 @@ increased
 mrs
 huxter
 came
-over;
+over
 some
 gay
 young
@@ -11379,7 +11379,7 @@ uz
 hand
 and
 a
-loaf;
+loaf
 stood
 just
 as
@@ -11433,7 +11433,7 @@ very
 resolutely
 towards
 the
-house;
+house
 first
 mr
 hall
@@ -12020,7 +12020,7 @@ arm
 he
 extended
 his
-hand;
+hand
 it
 seemed
 to
@@ -12228,7 +12228,7 @@ man
 i
 hope
 so
-sir;
+sir
 but
 ive
 got
@@ -12311,7 +12311,7 @@ he
 gripped
 at
 the
-waistcoat;
+waistcoat
 it
 struggled
 and
@@ -12428,7 +12428,7 @@ helped
 to
 pull
 it
-off;
+off
 he
 was
 struck
@@ -12737,7 +12737,7 @@ as
 something
 pushed
 by
-her;
+her
 a
 dog
 kicked
@@ -12865,7 +12865,7 @@ then
 swearing
 savagely
 to
-himself;
+himself
 and
 looking
 beheld
@@ -12944,7 +12944,7 @@ that
 his
 philosophical
 tranquillity
-vanished;
+vanished
 he
 got
 up
@@ -13004,7 +13004,7 @@ his
 figure
 inclined
 to
-embonpoint;
+embonpoint
 his
 short
 limbs
@@ -13126,7 +13126,7 @@ but
 too
 large
 for
-him;
+him
 whereas
 the
 ones
@@ -13251,7 +13251,7 @@ one
 side
 regarding
 them
-distastefully;
+distastefully
 and
 which
 is
@@ -13604,7 +13604,7 @@ and
 west
 north
 and
-south;
+south
 the
 road
 with
@@ -14826,7 +14826,7 @@ believe
 in
 an
 invisible
-man;
+man
 and
 those
 who
@@ -16064,7 +16064,7 @@ his
 mind
 worth
 talking
-about;
+about
 yesthe
 greek
 of
@@ -16558,7 +16558,7 @@ private
 memoranda
 said
 the
-voice;
+voice
 and
 two
 chins
@@ -16823,7 +16823,7 @@ i
 want
 clothingand
 other
-accommodation;
+accommodation
 and
 i
 must
@@ -17113,7 +17113,7 @@ mr
 bunting
 his
 voice
-rising;
+rising
 i
 tell
 you
@@ -17297,7 +17297,7 @@ about
 i
 heerdn
 say
-disgraceful;
+disgraceful
 that
 i
 did
@@ -18560,7 +18560,7 @@ face
 expressed
 consternation
 and
-fatigue;
+fatigue
 he
 appeared
 to
@@ -18790,7 +18790,7 @@ will
 be
 looking
 for
-me;
+me
 everyone
 on
 their
@@ -18976,7 +18976,7 @@ it
 aint
 justice
 he
-said;
+said
 you
 must
 admit
@@ -19577,7 +19577,7 @@ that
 was
 firm
 and
-deliberate;
+deliberate
 theres
 a
 story
@@ -20506,7 +20506,7 @@ was
 suddenly
 very
 red
-indeed;
+indeed
 he
 clenched
 his
@@ -20519,7 +20519,7 @@ this
 ten
 minutes
 he
-said;
+said
 and
 you
 you
@@ -22097,7 +22097,7 @@ wont
 do
 said
 the
-policeman;
+policeman
 thats
 murder
 i
@@ -24326,7 +24326,7 @@ let
 go
 by
 an
-effort;
+effort
 his
 instinct
 was
@@ -24911,7 +24911,7 @@ strange
 to
 see
 him
-smoking;
+smoking
 his
 mouth
 and
@@ -25085,7 +25085,7 @@ mans
 wrist
 was
 growing
-painful;
+painful
 he
 was
 feverish
@@ -26030,7 +26030,7 @@ he
 rent
 the
 paper
-open;
+open
 a
 couple
 of
@@ -26365,7 +26365,7 @@ invisible
 man
 and
 the
-tramp;
+tramp
 for
 mr
 marvel
@@ -26605,7 +26605,7 @@ invisible
 man
 forgot
 this
-arm;
+arm
 and
 its
 sore
@@ -26648,7 +26648,7 @@ the
 glass
 in
 his
-hand;
+hand
 all
 that
 happened
@@ -26847,7 +26847,7 @@ but
 kemp
 laughed
 well
-yes;
+yes
 to
 me
 it
@@ -26894,7 +26894,7 @@ and
 took
 up
 physics
-no;
+no
 well
 i
 did
@@ -27482,7 +27482,7 @@ it
 is
 in
 the
-air;
+air
 it
 becomes
 at
@@ -27517,7 +27517,7 @@ there
 are
 only
 two
-surfaces;
+surfaces
 in
 the
 powder
@@ -27564,7 +27564,7 @@ much
 the
 same
 refractive
-index;
+index
 that
 is
 the
@@ -27598,7 +27598,7 @@ nearly
 the
 same
 refractive
-index;
+index
 a
 transparent
 thing
@@ -27653,7 +27653,7 @@ same
 as
 that
 of
-air;
+air
 for
 then
 there
@@ -27958,7 +27958,7 @@ credit
 i
 went
 on
-working;
+working
 i
 got
 nearer
@@ -28030,7 +28030,7 @@ red
 colouring
 matter
 of
-blood;
+blood
 it
 can
 be
@@ -28101,7 +28101,7 @@ my
 mind
 i
 was
-alone;
+alone
 the
 laboratory
 was
@@ -28503,7 +28503,7 @@ had
 bought
 with
 his
-money;
+money
 the
 work
 was
@@ -29159,7 +29159,7 @@ rag
 upset
 her
 a
-bit;
+bit
 you
 should
 have
@@ -29308,7 +29308,7 @@ courseso
 i
 had
 her
-safe;
+safe
 but
 she
 woke
@@ -29390,7 +29390,7 @@ past
 me
 into
 the
-room;
+room
 strange
 enough
 to
@@ -29807,7 +29807,7 @@ grating
 in
 great
 titchfield
-street;
+street
 because
 i
 saw
@@ -29937,7 +29937,7 @@ fact
 i
 was
 worked
-out;
+out
 the
 intense
 stress
@@ -30037,7 +30037,7 @@ had
 to
 be
 carried
-through;
+through
 the
 fixed
 idea
@@ -30355,7 +30355,7 @@ had
 him
 by
 the
-collar;
+collar
 something
 ripped
 and
@@ -30424,7 +30424,7 @@ apartments
 would
 have
 meant
-delay;
+delay
 altogether
 i
 had
@@ -30534,7 +30534,7 @@ my
 landlord
 going
 quietly
-upstairs;
+upstairs
 he
 had
 heard
@@ -30793,7 +30793,7 @@ afire
 all
 my
 body
-afire;
+afire
 but
 i
 lay
@@ -31871,7 +31871,7 @@ could
 not
 see
 my
-feet;
+feet
 indeed
 i
 stumbled
@@ -33388,7 +33388,7 @@ been
 scratched
 by
 his
-nails;
+nails
 my
 feet
 hurt
@@ -33552,7 +33552,7 @@ it
 was
 my
 lodging
-burning;
+burning
 my
 clothes
 my
@@ -33746,7 +33746,7 @@ get
 myself
 covered
 and
-warm;
+warm
 then
 i
 might
@@ -33933,7 +33933,7 @@ not
 feel
 safe
 there
-however;
+however
 people
 were
 going
@@ -34412,7 +34412,7 @@ alone
 it
 was
 very
-still;
+still
 in
 one
 place
@@ -34510,7 +34510,7 @@ turn
 out
 what
 i
-sought;
+sought
 the
 box
 label
@@ -34826,7 +34826,7 @@ landlord
 vociferating
 in
 his
-rooms;
+rooms
 i
 saw
 his
@@ -34913,7 +34913,7 @@ continued
 stonily
 following
 the
-service;
+service
 the
 old
 clergyman
@@ -35849,7 +35849,7 @@ terrible
 thing
 i
 was
-fasting;
+fasting
 for
 to
 eat
@@ -36109,7 +36109,7 @@ streets
 north
 of
 the
-strand;
+strand
 for
 i
 remembered
@@ -36715,7 +36715,7 @@ room
 while
 he
 was
-there;
+there
 i
 could
 scarcely
@@ -36823,7 +36823,7 @@ himas
 he
 would
 have
-done;
+done
 i
 never
 saw
@@ -38518,7 +38518,7 @@ property
 i
 felt
 amazingly
-confident;
+confident
 its
 not
 particularly
@@ -38657,7 +38657,7 @@ well
 served
 but
 it
-sufficed;
+sufficed
 and
 when
 i
@@ -39456,7 +39456,7 @@ we
 must
 get
 those
-books;
+books
 those
 books
 are
@@ -39884,7 +39884,7 @@ a
 reign
 of
 terror
-yes;
+yes
 no
 doubt
 its
@@ -40055,7 +40055,7 @@ lone
 wolf
 publish
 your
-results;
+results
 take
 the
 worldtake
@@ -40578,7 +40578,7 @@ he
 is
 mad
 said
-kemp;
+kemp
 inhuman
 he
 is
@@ -40665,7 +40665,7 @@ every
 available
 man
 to
-work;
+work
 you
 must
 prevent
@@ -40787,7 +40787,7 @@ him
 from
 eating
 or
-sleeping;
+sleeping
 day
 and
 night
@@ -40851,7 +40851,7 @@ is
 a
 danger
 a
-disaster;
+disaster
 unless
 he
 is
@@ -41516,7 +41516,7 @@ simply
 a
 legend
 a
-terror;
+terror
 in
 the
 afternoon
@@ -41935,7 +41935,7 @@ wicksteed
 received
 his
 splintered
-walkingstick;
+walkingstick
 but
 why
 the
@@ -42607,7 +42607,7 @@ found
 houses
 locked
 and
-secured;
+secured
 he
 may
 have
@@ -42725,7 +42725,7 @@ at
 least
 he
 lost
-heart;
+heart
 for
 nearly
 twentyfour
@@ -42749,7 +42749,7 @@ must
 have
 eaten
 and
-slept;
+slept
 for
 in
 the
@@ -42825,7 +42825,7 @@ day
 you
 have
 chased
-me;
+me
 you
 have
 tried
@@ -42898,7 +42898,7 @@ and
 the
 rest
 of
-them;
+them
 it
 is
 under
@@ -42981,7 +42981,7 @@ coming
 let
 him
 take
-precautions;
+precautions
 it
 will
 impress
@@ -43224,7 +43224,7 @@ will
 have
 him
 he
-said;
+said
 and
 i
 am
@@ -45496,7 +45496,7 @@ at
 vacancy
 and
 hit
-nothing;
+nothing
 he
 put
 his
@@ -45960,7 +45960,7 @@ the
 housemaid
 was
 struggling
-out;
+out
 she
 pitched
 forward
@@ -46060,7 +46060,7 @@ heelas
 struck
 with
 an
-idea;
+idea
 its
 that
 invisible
@@ -46163,7 +46163,7 @@ that
 opened
 on
 the
-veranda;
+veranda
 as
 he
 did
@@ -46512,7 +46512,7 @@ sun
 looked
 locked
 and
-barred;
+barred
 no
 doubt
 they
@@ -47046,7 +47046,7 @@ was
 weaker
 than
 the
-other;
+other
 he
 grasped
 the
@@ -47355,7 +47355,7 @@ navvy
 holding
 a
 bloodstained
-spade;
+spade
 hes
 shamming
 hes
@@ -47367,7 +47367,7 @@ doctor
 cautiously
 raising
 his
-knee;
+knee
 and
 ill
 hold
@@ -47379,7 +47379,7 @@ bruised
 and
 already
 going
-red;
+red
 he
 spoke
 thickly
@@ -48450,7 +48450,7 @@ wouldnt
 do
 what
 he
-did;
+did
 id
 justwell
 he
@@ -48526,7 +48526,7 @@ by
 h
 g
 wells
-***
+
 end
 of
 this
@@ -48536,4 +48536,4 @@ ebook
 the
 invisible
 man
-***
+

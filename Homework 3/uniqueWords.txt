@@ -1,11 +1,10 @@
-﻿***
+﻿
 andrew
 sly
 romance
 wintry
 biting
 snowfall
-nose;
 charity
 bargain
 introduction
@@ -65,7 +64,6 @@ embarrassed
 nicely
 dried
 whiteswathed
-door;
 napkin
 shivered
 preoccupied
@@ -84,7 +82,6 @@ divin
 handkerchief
 talkin
 toomaybe
-tangent;
 taters
 confirmed
 mouthpiece
@@ -99,10 +96,8 @@ bowed
 acknowledgment
 speedier
 delivery
-trap
 loath
 steep
-trap;
 snatching
 upsettled
 coachman
@@ -127,7 +122,7 @@ coals
 clockjobber
 th
 strikes
-hearty;
+hearty
 nuthin
 seated
 drooping
@@ -186,7 +181,6 @@ reserved
 occasion
 puts
 extracted
-works;
 unassuming
 shade
 swam
@@ -208,7 +202,6 @@ excessively
 annoyed
 trudging
 thawing
-snow;
 youugly
 wropped
 gleesons
@@ -285,21 +278,16 @@ pansy
 indecipherable
 shapes
 rejoined
-guests;
 dealer
-interrogative;
-judicial;
 fatuities:
-knows;
 tasnt
-dargs;
+dargs
 n
 vocabulary
 limited
 express
 atakin
 cauterised
-huxter;
 inflamed
 shoot
 growling
@@ -335,14 +323,12 @@ bookshelfeverywhere
 chemists
 boast
 yielded
-straw;
 unpacked
 troubling
 litter
 dinner
 absorbed
 drops
-glasses;
 sockets
 complain
 abnormal
@@ -416,7 +402,7 @@ irreligious
 fitfully
 audibly
 communication
-uncertain;
+uncertain
 provocation
 gusts
 chronic
@@ -435,7 +421,7 @@ shamefully
 skulllike
 (he
 bogies
-reverse;
+reverse
 divided
 occupation
 questioned
@@ -465,7 +451,6 @@ permitted
 consisted
 detected
 modification
-it;
 silas
 durgan
 assert
@@ -517,7 +502,6 @@ jealous
 coveted
 whitsuntide
 subscriptionlist
-guests
 hallan
 unfoundedbut
 rightly
@@ -551,9 +535,7 @@ fishing
 apologised
 dignified
 ingredients
-down;
 swish
-working
 lifting
 chimneyward
 illustrate
@@ -562,7 +544,6 @@ deformity
 keeps
 joint
 elbow
-word;
 venomously
 flinch
 hanged
@@ -586,7 +567,6 @@ sincerity
 excellent
 inferior
 sherry
-judicial
 stillness
 arouse
 adjoining
@@ -600,7 +580,6 @@ creaking
 tread
 match
 crept
-courage;
 burglar
 resident
 housekeeping
@@ -637,7 +616,6 @@ operator
 latch
 connected
 overnight
-again;
 cocked
 jauntily
 depth
@@ -658,7 +636,7 @@ stair
 peak
 hopped
 sponge
-washstand;
+washstand
 singularly
 gently
 impelled
@@ -693,7 +671,6 @@ genius
 parliamentary
 government
 asserted
-itself;
 decisive
 acting
 busted
@@ -832,10 +809,8 @@ apex
 gal
 skirts
 seconds
-loaf;
 speaker
 procession
-house;
 determined
 bobby
 wary
@@ -862,7 +837,6 @@ peasants
 matteroffact
 realization
 incongruity
-waistcoat
 miracle
 undone
 linings
@@ -882,9 +856,7 @@ abuse
 likes
 correct
 invisibilityits
-sir;
 stipulated
-waistcoat;
 fluttering
 shirtsleeve
 planted
@@ -896,7 +868,6 @@ sexton
 convulsed
 vacantly
 flapping
-off;
 smote
 crown
 noises
@@ -919,7 +890,6 @@ kneespun
 undermost
 relax
 constables
-her;
 howling
 accomplished
 scatters
@@ -928,7 +898,6 @@ relates
 amateur
 naturalist
 coughing
-himself;
 variety
 distinguishes
 cultivated
@@ -936,7 +905,6 @@ phenomenon
 disturbing
 philosophical
 tranquillity
-vanished;
 steepness
 picture
 copious
@@ -946,7 +914,7 @@ liquorish
 fluctuating
 bristling
 eccentricity
-embonpoint;
+embonpoint
 accentuated
 inclination
 substitution
@@ -969,7 +937,7 @@ springing
 agrimony
 pairs
 arecharity
-distastefully;
+distastefully
 ugliest
 universe
 darned
@@ -1000,7 +968,6 @@ mark
 buried
 bootless
 east
-south;
 shallow
 ditches
 bordering
@@ -1083,7 +1050,6 @@ willing
 gusty
 reared
 headrather
-man;
 dissolve
 witnesses
 missing
@@ -1201,7 +1167,6 @@ russian
 language
 (to
 uncomfortablefor
-about;
 yesthe
 furnish
 clue
@@ -1248,7 +1213,6 @@ horrified
 roughly
 pry
 investigators
-voice;
 chins
 rattled
 invade
@@ -1259,7 +1223,7 @@ visitors
 nodont
 evenings
 clothingand
-accommodation;
+accommodation
 narrative
 discussing
 cloudy
@@ -1279,7 +1243,6 @@ jerking
 intonation:
 riright
 dontinterrupt
-rising;
 wi
 nart
 itdistinct
@@ -1299,7 +1262,6 @@ obdurate
 crestfallen
 tiptoed
 nonsenseperhaps
-disgraceful;
 hsh
 shopfront
 pellmell
@@ -1349,7 +1311,6 @@ fletchers
 planks
 chairswith
 cataclysmic
-results
 appalled
 gauds
 cocoanuts
@@ -1378,7 +1339,7 @@ elastic
 ligature
 rubicund
 consternation
-fatigue;
+fatigue
 accompanied
 winced
 honour
@@ -1432,7 +1393,6 @@ opulence
 finishing
 likewise
 eyed
-deliberate;
 cheek
 glowing
 ostria
@@ -1492,7 +1452,6 @@ whatsoeverblimey
 stoutly
 jerkily
 dyer
-indeed;
 potbellied
 leatheryfaced
 boot
@@ -1603,7 +1562,6 @@ blackbearded
 biscuit
 burton
 conversed
-tangent
 dishevelled
 shrieking
 insomewhere
@@ -1617,7 +1575,6 @@ settee
 eyebrows
 irresolutely
 anxiously
-policeman;
 blinking
 roundprowling
 artful
@@ -1724,7 +1681,6 @@ sane
 intelligible
 stupidly
 knuckled
-effort;
 isthis
 behypnotism
 demonstrated
@@ -1768,7 +1724,6 @@ hungryin
 curse
 themi
 sayi
-smoking;
 pharynx
 nares
 cast
@@ -1778,7 +1733,6 @@ scrapeive
 soda
 wildbut
 methodicalafter
-painful;
 feverish
 brood
 smoked
@@ -1829,7 +1783,6 @@ practice
 spelt
 seeking
 james
-open;
 columns
 reading
 reprinted
@@ -1858,7 +1811,6 @@ minor
 notably
 telegraphwire
 connexion
-tramp;
 lined
 shoal
 reporters
@@ -1874,7 +1826,6 @@ alert
 pattering
 overhead
 admitted
-arm;
 citizen
 delighted
 willingly
@@ -1883,7 +1834,6 @@ sanity
 breakfasttablea
 enoughand
 medicine
-no;
 fascinated
 density
 subject
@@ -1933,7 +1883,6 @@ plain
 sailing
 beaten
 multiplies
-surfaces;
 grain
 passes
 vanishes
@@ -1943,7 +1892,6 @@ particles
 cotton
 woody
 bone
-nails
 suffices
 londonsix
 disadvantages
@@ -1953,13 +1901,11 @@ journalist
 ideashe
 knavish
 credit
-working;
 crushing
 famous
 design
 physiology
 colouring
-blood;
 whitecolourlessand
 functions
 exclaim
@@ -1967,7 +1913,6 @@ nightin
 daytime
 bothered
 studentsand
-alone;
 laboratory
 brightly
 animala
@@ -1997,7 +1942,6 @@ december
 illmanaged
 lodginghouse
 slum
-money;
 successfully
 unmeaning
 tragedy
@@ -2050,7 +1994,6 @@ lean
 purringthe
 starvingand
 smelling
-bit;
 spit
 butter
 joke
@@ -2060,13 +2003,11 @@ bleach
 opium
 clamped
 courseso
-safe;
 suspected
 vivisectinga
 drinksodden
 applied
 peer
-room;
 doubtbare
 uncurtained
 seethe
@@ -2085,7 +2026,6 @@ thenheaven
 whyi
 grating
 titchfield
-street;
 barracks
 albany
 soldiers
@@ -2107,7 +2047,6 @@ transient
 due
 overwork
 energies
-through;
 fixed
 dose
 unmade
@@ -2135,12 +2074,11 @@ housein
 disreputable
 protest
 jabber
-collar;
 fuss
 disregarded
 crisis
 apartments
-delay;
+delay
 barely
 bankand
 afford
@@ -2148,7 +2086,6 @@ chequebookthe
 nowand
 post
 office
-upstairs;
 quiver
 hesitate
 preparations
@@ -2162,8 +2099,6 @@ whitelike
 racking
 anguish
 sickness
-afire
-afire;
 chloroformed
 lived
 untended
@@ -2228,7 +2163,6 @@ trailand
 insured
 teeming
 unexpected
-feet;
 stumbled
 unaccustomed
 clumsiness
@@ -2359,7 +2293,6 @@ maze
 frequented
 runs
 tonsils
-nails;
 lame
 limping
 feared
@@ -2373,7 +2306,6 @@ streaming
 roofs
 telephone
 wires
-burning;
 burnt
 boatsif
 meweary
@@ -2392,7 +2324,6 @@ cruelty
 evoke
 sole
 shelter
-warm;
 latched
 gower
 boughtyou
@@ -2413,7 +2344,6 @@ region
 picnic
 baskets
 wicker
-however;
 restlessly
 multitudes
 bedsteads
@@ -2440,13 +2370,12 @@ darkened
 departments
 galleries
 showrooms
-still;
 entrances
 tapping
 bootheels
 passersby
 cash
-sought;
+sought
 label
 vests
 comforter
@@ -2472,13 +2401,11 @@ purchase
 lapsed
 disorderly
 vociferating
-rooms;
 gnarled
 disappear
 mumbling
 mourners
 stonily
-service;
 faltered
 droning
 ritual
@@ -2540,7 +2467,7 @@ vaguest
 shelterno
 coveringto
 forego
-fasting;
+fasting
 unassimilated
 grotesquely
 warned
@@ -2570,7 +2497,6 @@ array
 solved
 wentcircuitously
 ways
-strand;
 nipping
 overtaken
 crossing
@@ -2607,7 +2533,6 @@ poorly
 furnished
 confoundedly
 irritating
-there;
 alertness
 spectacular
 heartily
@@ -2616,7 +2541,6 @@ tin
 teapot
 crumbs
 stained
-done;
 doorsand
 underground
 pleasure
@@ -2671,7 +2595,6 @@ fixan
 toohunting
 fooling
 unlocking
-loaf
 cheesemore
 sufficient
 hunger
@@ -2706,7 +2629,6 @@ calico
 cashmere
 scarfs
 hunchbacks
-sufficed
 eight
 equipped
 inspecting
@@ -2720,7 +2642,6 @@ pointedly
 troubled
 untied
 knots
-strand
 ohdisillusionment
 troubles
 practically
@@ -2729,12 +2650,11 @@ sumptuous
 feast
 hotel
 accumulate
-confident;
+confident
 recalling
 appetite
 tasteful
 affairand
-sufficed;
 wasin
 climate
 civilised
@@ -2787,7 +2707,6 @@ request
 strongest
 cell
 hangs
-books;
 changes
 publicity
 implied
@@ -2821,7 +2740,6 @@ humph
 happiness
 lone
 wolf
-results;
 worldtake
 nation
 leastinto
@@ -2841,13 +2759,11 @@ patter
 officers
 disheveled
 swathings
-kemp;
 selfishness
 safety
 selfseeking
 create
 nowfurious
-work;
 wills
 maiming
 trains
@@ -2857,10 +2773,8 @@ counts
 value
 stationmarvel
 booksyes
-sleeping;
 astir
 send
-disaster;
 pinned
 yesyou
 council
@@ -2911,7 +2825,6 @@ fortunate
 fatal
 inaction
 legend
-terror;
 virtue
 worded
 proclamation
@@ -2947,7 +2860,6 @@ lodge
 strugglethe
 numerous
 wounds
-walkingstick;
 attack
 murderous
 frenzy
@@ -2964,7 +2876,6 @@ victimhe
 circumstance
 trotting
 pantomime
-walkingstick
 clump
 beech
 depression
@@ -3011,7 +2922,6 @@ clover
 hills
 learnt
 confidences
-secured;
 loitered
 stations
 inns
@@ -3020,8 +2930,6 @@ campaign
 dotted
 menhunters
 remorselessly
-heart;
-slept;
 powerful
 malignant
 missive
@@ -3031,7 +2939,6 @@ clever
 chased
 announces
 queen
-them;
 epochthe
 epoch
 execution
@@ -3040,7 +2947,7 @@ named
 guards
 armour
 likesdeath
-precautions;
+precautions
 impress
 pillar
 die
@@ -3162,7 +3069,6 @@ aimed
 countered
 aiming
 vacancy
-nothing;
 clubbed
 kempsir
 pause
@@ -3194,21 +3100,18 @@ evades
 laburnum
 abutted
 slope
-idea;
 pelting
 bells
 bellowing
 bull
 everythingthe
 scurrying
-veranda;
 ploughed
 tennis
 shaking
 frantically
 efforts
 useless
-veranda
 vaulted
 hammer
 windowa
@@ -3227,7 +3130,6 @@ beginnings
 strangely
 slower
 progression
-barred;
 barredby
 eventuality
 arriving
@@ -3235,7 +3137,6 @@ barring
 posts
 gravelthe
 drainage
-works
 transitory
 fag
 driver
@@ -3260,7 +3161,6 @@ shopdoor
 sprawled
 compressed
 weaker
-other;
 wrists
 assailant
 dull
@@ -3283,14 +3183,10 @@ vigorous
 stalwart
 forms
 kneeling
-spade;
 raising
-knee;
-red;
 mouths
 increase
 seeming
-heart
 sideugh
 prone
 ashowing
@@ -3313,7 +3209,6 @@ betrayed
 unpitied
 gifted
 physicist
-disaster
 career
 ends
 sign
@@ -3387,7 +3282,6 @@ leans
 blinks
 haul
 themlord
-did;
 justwell
 lapses
 undying
