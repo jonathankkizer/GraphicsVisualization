@@ -6,7 +6,7 @@ from collections import defaultdict
 def formatStuff(i):
 	word = ""
 	for j in i:
-		word += j.replace(",", "").replace("", "").replace(".", "").replace('"', "").replace("?", "").replace("!", "").replace("-","").replace(")","").replace("'","").replace("_","").replace("$","").replace(";","").replace("*","")
+		word += j.replace(",", "").replace(".", "").replace('"', "").replace("?", "").replace("!", "").replace("-","").replace(")","").replace("'","").replace("_","").replace("$","").replace(";","").replace("*","").replace("(","").replace("[","").replace("]","").replace(":","")
 	filter(lambda x: x.isalpha(), word)
 	return word.lower()
 
