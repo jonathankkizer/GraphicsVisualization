@@ -380,7 +380,7 @@ the
 wintertime
 was
 an
-unheard of
+unheardof
 piece
 of
 luck
@@ -596,10 +596,10 @@ and
 had
 a
 bush
-side whisker
+sidewhisker
 over
 his
-coat collar
+coatcollar
 that
 completely
 hid
@@ -645,7 +645,7 @@ her
 conversational
 advances
 were
-ill timed
+illtimed
 laid
 the
 rest
@@ -685,7 +685,7 @@ turned
 up
 his
 dripping
-hat brim
+hatbrim
 turned
 down
 hiding
@@ -864,7 +864,7 @@ a
 gold
 and
 black
-tea tray
+teatray
 carried
 it
 into
@@ -1017,7 +1017,7 @@ he
 held
 a
 white
-cloth  it
+clothit
 was
 a
 serviette
@@ -1025,7 +1025,7 @@ he
 had
 brought
 with
-him  over
+himover
 the
 lower
 part
@@ -1113,14 +1113,14 @@ first
 he
 wore
 a
-dark brown
+darkbrown
 velvet
 jacket
 with
 a
 high
 black
-linen lined
+linenlined
 collar
 turned
 up
@@ -1239,7 +1239,7 @@ know
 sir
 she
 began
-that  
+that
 and
 she
 stopped
@@ -1282,7 +1282,7 @@ she
 glanced
 at
 his
-white swathed
+whiteswathed
 head
 and
 blue
@@ -1477,7 +1477,7 @@ more
 coal
 unfolded
 the
-clothes horse
+clotheshorse
 and
 extended
 the
@@ -1529,7 +1529,7 @@ his
 mouth
 was
 hurt
-too  maybe
+toomaybe
 she
 turned
 round
@@ -1654,7 +1654,7 @@ his
 back
 to
 the
-window blind
+windowblind
 and
 spoke
 now
@@ -1723,7 +1723,7 @@ acknowledgment
 of
 her
 explanation
-to morrow
+tomorrow
 he
 said
 there
@@ -1911,7 +1911,7 @@ have
 to
 have
 an
-opration  he
+oprationhe
 was
 that
 bad
@@ -1956,7 +1956,7 @@ for
 him
 as
 i
-had  my
+hadmy
 sister
 being
 took
@@ -1989,7 +1989,7 @@ as
 to
 say
 it
-sir  
+sir
 will
 you
 get
@@ -2150,7 +2150,7 @@ darkness
 smoking
 in
 the
-firelight  perhaps
+firelightperhaps
 dozing
 once
 or
@@ -2233,7 +2233,7 @@ tea
 teddy
 henfrey
 the
-clock jobber
+clockjobber
 came
 into
 the
@@ -2304,7 +2304,7 @@ and
 hearty
 but
 the
-hour hand
+hourhand
 wont
 do
 nuthin
@@ -2368,7 +2368,7 @@ red
 glow
 from
 the
-fire  which
+firewhich
 lit
 his
 eyes
@@ -2382,7 +2382,7 @@ his
 downcast
 face
 in
-darkness  and
+darknessand
 the
 scanty
 vestiges
@@ -2440,7 +2440,7 @@ an
 enormous
 mouth
 wide
-open  a
+opena
 vast
 and
 incredible
@@ -2464,7 +2464,7 @@ of
 a
 moment
 the
-white bound
+whitebound
 head
 the
 monstrous
@@ -2536,7 +2536,7 @@ mind
 sir
 this
 man
-a coming
+acoming
 to
 look
 at
@@ -2615,7 +2615,7 @@ said
 the
 stranger
 regarding
-him  as
+himas
 mr
 henfrey
 says
@@ -2626,7 +2626,7 @@ sense
 of
 the
 dark
-spectacles  like
+spectacleslike
 a
 lobster
 i
@@ -2674,12 +2674,12 @@ hall
 youd
 prefer
 the
-clock  
+clock
 certainly
 said
 the
 stranger
-certainly  but
+certainlybut
 as
 a
 rule
@@ -2748,7 +2748,7 @@ he
 said
 when
 the
-clock mending
+clockmending
 is
 over
 i
@@ -2764,7 +2764,7 @@ but
 not
 till
 the
-clock mending
+clockmending
 is
 over
 mrs
@@ -2774,7 +2774,7 @@ about
 to
 leave
 the
-room  she
+roomshe
 made
 no
 conversational
@@ -2793,7 +2793,7 @@ in
 front
 of
 mr
-henfrey  when
+henfreywhen
 her
 visitor
 asked
@@ -2943,7 +2943,7 @@ to
 my
 work
 an
-accident  
+accident
 i
 thought
 as
@@ -2953,12 +2953,12 @@ mrs
 hall
 to
 herself
-  necessitates
+necessitates
 a
 certain
 retirement
 my
-eyes  are
+eyesare
 sometimes
 so
 weak
@@ -2980,7 +2980,7 @@ together
 lock
 myself
 up
-sometimes  now
+sometimesnow
 and
 then
 not
@@ -3008,7 +3008,7 @@ of
 excruciating
 annoyance
 to
-me  it
+meit
 is
 well
 these
@@ -3030,7 +3030,7 @@ so
 bold
 as
 to
-ask  
+ask
 that
 i
 think
@@ -3085,7 +3085,7 @@ puts
 it
 at
 the
-clock mending
+clockmending
 mr
 henfrey
 not
@@ -3173,10 +3173,10 @@ he
 had
 removed
 the
-works  a
+worksa
 quite
 unnecessary
-proceeding  with
+proceedingwith
 the
 idea
 of
@@ -3300,7 +3300,7 @@ that
 introductory
 shot
 the
-weather  
+weather
 he
 began
 why
@@ -3330,19 +3330,19 @@ is
 to
 fix
 the
-hour hand
+hourhand
 on
 its
 axle
 youre
 simply
-humbugging  
+humbugging
 certainly
-sir  one
+sirone
 minute
 more
 i
-overlooked  
+overlooked
 and
 mr
 henfrey
@@ -3386,7 +3386,7 @@ a
 man
 look
 at
-you  ugly
+youugly
 and
 yet
 again
@@ -3485,7 +3485,7 @@ whats
 that
 he
 asked
-rum looking
+rumlooking
 customer
 stopping
 at
@@ -3539,7 +3539,7 @@ but
 women
 are
 that
-trustful  where
+trustfulwhere
 strangers
 are
 concerned
@@ -3594,7 +3594,7 @@ lot
 of
 luggage
 coming
-to morrow
+tomorrow
 so
 he
 says
@@ -3749,7 +3749,7 @@ which
 he
 did
 about
-half past
+halfpast
 nine
 mr
 hall
@@ -3923,7 +3923,7 @@ was
 that
 on
 the
-twenty ninth
+twentyninth
 day
 of
 february
@@ -3950,7 +3950,7 @@ luggage
 arrived
 through
 the
-slush  and
+slushand
 very
 remarkable
 luggage
@@ -3978,7 +3978,7 @@ were
 a
 box
 of
-books  big
+booksbig
 fat
 books
 of
@@ -3989,7 +3989,7 @@ just
 in
 an
 incomprehensible
-handwriting  and
+handwritingand
 a
 dozen
 or
@@ -4015,7 +4015,7 @@ casual
 curiosity
 at
 the
-straw  glass
+strawglass
 bottles
 the
 stranger
@@ -4221,7 +4221,7 @@ business
 of
 a
 swift
-half minute
+halfminute
 no
 one
 spoke
@@ -4301,7 +4301,7 @@ wheel
 come
 here
 said
-fearenside  youd
+fearensideyoud
 better
 hall
 had
@@ -4613,7 +4613,7 @@ inquiry
 wed
 better
 be
-a takin
+atakin
 of
 his
 luggage
@@ -4676,7 +4676,7 @@ turned
 up
 and
 his
-hat brim
+hatbrim
 bent
 down
 the
@@ -4716,7 +4716,7 @@ im
 rare
 sorry
 the
-darg  
+darg
 not
 a
 bit
@@ -4787,7 +4787,7 @@ he
 began
 to
 produce
-bottles  little
+bottleslittle
 fat
 bottles
 containing
@@ -4814,10 +4814,10 @@ and
 slender
 necks
 large
-green glass
+greenglass
 bottles
 large
-white glass
+whiteglass
 bottles
 bottles
 with
@@ -4839,8 +4839,8 @@ wooden
 caps
 wine
 bottles
-salad oil
-bottles  putting
+saladoil
+bottlesputting
 them
 in
 rows
@@ -4861,7 +4861,7 @@ the
 floor
 on
 the
-bookshelf  everywhere
+bookshelfeverywhere
 the
 chemists
 shop
@@ -4910,7 +4910,7 @@ were
 a
 number
 of
-test tubes
+testtubes
 and
 a
 carefully
@@ -4989,7 +4989,7 @@ of
 the
 bottles
 into
-test tubes
+testtubes
 that
 he
 did
@@ -5117,30 +5117,30 @@ him
 i
 knocked
 but
-seemingly  
+seemingly
 perhaps
 you
 did
 but
 in
 my
-investigations  my
+investigationsmy
 really
 very
 urgent
 and
 necessary
-investigations  the
+investigationsthe
 slightest
 disturbance
 the
 jar
 of
 a
-door  i
+doori
 must
 ask
-you  
+you
 certainly
 sir
 you
@@ -5174,7 +5174,7 @@ so
 bold
 as
 to
-remark  
+remark
 dont
 if
 the
@@ -5191,7 +5191,7 @@ and
 he
 mumbled
 at
-her  words
+herwords
 suspiciously
 like
 curses
@@ -5210,7 +5210,7 @@ in
 one
 hand
 and
-test tube
+testtube
 in
 the
 other
@@ -5237,9 +5237,9 @@ know
 sir
 what
 you
-consider  
+consider
 a
-shilling  put
+shillingput
 down
 a
 shilling
@@ -5256,7 +5256,7 @@ hall
 taking
 up
 the
-table cloth
+tablecloth
 and
 beginning
 to
@@ -5269,7 +5269,7 @@ if
 youre
 satisfied
 of
-course  
+course
 he
 turned
 and
@@ -5277,7 +5277,7 @@ sat
 down
 with
 his
-coat collar
+coatcollar
 toward
 her
 all
@@ -5536,7 +5536,7 @@ were
 in
 the
 little
-beer shop
+beershop
 of
 iping
 hanger
@@ -5553,7 +5553,7 @@ what
 my
 dog
 bit
-well  hes
+wellhes
 black
 leastways
 his
@@ -5584,7 +5584,7 @@ to
 show
 wouldnt
 you
-well  there
+wellthere
 wasnt
 none
 just
@@ -5638,7 +5638,7 @@ black
 here
 and
 white
-there  in
+therein
 patches
 and
 hes
@@ -5649,7 +5649,7 @@ hes
 a
 kind
 of
-half breed
+halfbreed
 and
 the
 colours
@@ -5768,7 +5768,7 @@ of
 penury
 began
 he
-over rode
+overrode
 her
 by
 the
@@ -6065,7 +6065,7 @@ upon
 one
 or
 two
-home going
+homegoing
 labourers
 and
 teddy
@@ -6079,7 +6079,7 @@ coat
 one
 night
 at
-half past
+halfpast
 nine
 was
 scared
@@ -6087,7 +6087,7 @@ shamefully
 by
 the
 strangers
-skull like
+skulllike
 head
 he
 was
@@ -6563,7 +6563,7 @@ comprehensible
 to
 an
 urban
-brain worker
+brainworker
 was
 an
 amazing
@@ -6624,7 +6624,7 @@ extinction
 of
 candles
 and
-lamps  who
+lampswho
 could
 agree
 with
@@ -6651,11 +6651,11 @@ humourists
 would
 up
 with
-coat collars
+coatcollars
 and
 down
 with
-hat brims
+hatbrims
 and
 go
 pacing
@@ -6800,7 +6800,7 @@ but
 hit
 upon
 the
-subscription list
+subscriptionlist
 for
 a
 village
@@ -6828,12 +6828,12 @@ a
 name
 said
 mrs
-hall  an
+hallan
 assertion
 which
 was
 quite
-unfounded  but
+unfoundedbut
 i
 didnt
 rightly
@@ -7062,13 +7062,13 @@ loose
 sheets
 of
 his
-forth coming
+forthcoming
 sermon
 that
 chap
 at
 the
-inn  
+inn
 well
 give
 me
@@ -7092,14 +7092,14 @@ a
 glass
 of
 cheap
-sherry  the
+sherrythe
 only
 drink
 the
 good
 vicar
 had
-available  he
+availablehe
 told
 him
 of
@@ -7191,15 +7191,15 @@ kept
 my
 eyes
 open
-bottles  chemicals  everywhere
+bottleschemicalseverywhere
 balance
-test tubes
+testtubes
 in
 stands
 and
 a
 smell
-of  evening
+ofevening
 primrose
 would
 he
@@ -7210,7 +7210,7 @@ consider
 it
 asked
 him
-point blank
+pointblank
 was
 he
 researching
@@ -7265,7 +7265,7 @@ a
 prescription
 most
 valuable
-prescription  what
+prescriptionwhat
 for
 he
 wouldnt
@@ -7358,7 +7358,7 @@ his
 arm
 well
 no
-hand  just
+handjust
 an
 empty
 sleeve
@@ -7675,9 +7675,9 @@ straight
 towards
 me
 slowly
-slowly  just
+slowlyjust
 like
-that  until
+thatuntil
 the
 cuff
 was
@@ -7699,16 +7699,16 @@ you
 like
 that
 and
-then  
+then
 well
-something  exactly
+somethingexactly
 like
 a
 finger
 and
 thumb
 it
-felt  nipped
+feltnipped
 my
 nose
 bunting
@@ -7760,9 +7760,9 @@ cut
 out
 of
 the
-room  i
+roomi
 left
-him  
+him
 cuss
 stopped
 there
@@ -7963,7 +7963,7 @@ out
 of
 the
 adjoining
-dressing room
+dressingroom
 and
 walking
 along
@@ -8002,7 +8002,7 @@ on
 his
 spectacles
 her
-dressing gown
+dressinggown
 and
 his
 bath
@@ -8027,7 +8027,7 @@ at
 his
 study
 desk
-down stairs
+downstairs
 and
 then
 a
@@ -8241,7 +8241,7 @@ the
 housekeeping
 reserve
 of
-gold  two
+goldtwo
 pounds
 ten
 in
@@ -8344,7 +8344,7 @@ bunting
 turned
 back
 the
-window curtains
+windowcurtains
 and
 mr
 bunting
@@ -8363,7 +8363,7 @@ mrs
 bunting
 scrutinised
 the
-waste paper
+wastepaper
 basket
 and
 mr
@@ -8373,7 +8373,7 @@ the
 lid
 of
 the
-coal scuttle
+coalscuttle
 then
 they
 came
@@ -8390,7 +8390,7 @@ other
 i
 could
 have
-sworn  
+sworn
 said
 mr
 bunting
@@ -8422,7 +8422,7 @@ of
 all
 the
 strange
-occurrences  
+occurrences
 there
 was
 a
@@ -8594,7 +8594,7 @@ and
 his
 wife
 a
-quaintly costumed
+quaintlycostumed
 little
 couple
 still
@@ -8695,7 +8695,7 @@ of
 sarsaparilla
 from
 their
-joint room
+jointroom
 as
 she
 was
@@ -8904,7 +8904,7 @@ cocked
 jauntily
 over
 the
-bed post
+bedpost
 as
 hall
 stood
@@ -9215,7 +9215,7 @@ extraordinary
 thing
 happened
 the
-bed clothes
+bedclothes
 gathered
 themselves
 together
@@ -9260,7 +9260,7 @@ hat
 hopped
 off
 the
-bed post
+bedpost
 described
 a
 whirling
@@ -9484,7 +9484,7 @@ in
 again
 i
 half
-guessed  i
+guessedi
 might
 ha
 known
@@ -9506,7 +9506,7 @@ sunday
 and
 all
 they
-bottles  moren
+bottlesmoren
 its
 right
 for
@@ -9711,7 +9711,7 @@ a
 few
 minutes
 the
-anglo saxon
+anglosaxon
 genius
 for
 parliamentary
@@ -9954,7 +9954,7 @@ as
 far
 as
 excuse
-me  
+me
 go
 to
 the
@@ -9997,7 +9997,7 @@ coach
 and
 horses
 about
-half past
+halfpast
 five
 in
 the
@@ -10149,16 +10149,16 @@ fellows
 resplendent
 in
 black
-ready made
+readymade
 jackets
 and
 pique
 paper
-ties  for
+tiesfor
 it
 was
 whit
-monday  joined
+mondayjoined
 the
 group
 with
@@ -10180,7 +10180,7 @@ to
 peep
 under
 the
-window blinds
+windowblinds
 he
 could
 see
@@ -10282,7 +10282,7 @@ who
 also
 sold
 old
-second hand
+secondhand
 ordinary
 bicycles
 were
@@ -10290,7 +10290,7 @@ stretching
 a
 string
 of
-union jacks
+unionjacks
 and
 royal
 ensigns
@@ -10536,7 +10536,7 @@ i
 was
 awaiting
 a
-remittance  
+remittance
 i
 told
 you
@@ -10605,7 +10605,7 @@ more
 like
 an
 angry
-diving helmet
+divinghelmet
 than
 ever
 it
@@ -10633,7 +10633,7 @@ look
 here
 my
 good
-woman  
+woman
 he
 began
 dont
@@ -10660,7 +10660,7 @@ i
 daresay
 in
 my
-pocket  
+pocket
 you
 told
 me
@@ -10683,8 +10683,8 @@ well
 ive
 found
 some
-more  
-ul lo
+more
+ullo
 from
 the
 bar
@@ -10804,7 +10804,7 @@ comes
 in
 by
 the
-doors  thats
+doorsthats
 the
 rule
 of
@@ -10831,7 +10831,7 @@ and
 i
 want
 to
-know  
+know
 suddenly
 the
 stranger
@@ -10932,14 +10932,14 @@ and
 staggered
 back
 the
-nose  it
+noseit
 was
 the
 strangers
 nose
 pink
 and
-shining  rolled
+shiningrolled
 on
 the
 floor
@@ -11003,9 +11003,9 @@ anything
 mrs
 hall
 standing
-open mouthed
+openmouthed
 and
-horror struck
+horrorstruck
 shrieked
 at
 what
@@ -11078,11 +11078,11 @@ figure
 up
 to
 the
-coat collar
+coatcollar
 of
 him
 and
-then  nothingness
+thennothingness
 no
 visible
 thing
@@ -11189,7 +11189,7 @@ smocked
 elders
 and
 aproned
-gipsies  began
+gipsiesbegan
 running
 towards
 the
@@ -11264,7 +11264,7 @@ evidence
 of
 a
 vociferous
-eye witness
+eyewitness
 o
 bogey
 whats
@@ -11314,7 +11314,7 @@ off
 is
 wrapping
 e
-did  
+did
 in
 its
 struggles
@@ -11409,7 +11409,7 @@ all
 you
 just
 missed
-en  
+en
 there
 was
 a
@@ -11588,7 +11588,7 @@ says
 body
 and
 dutys
-duty  
+duty
 keep
 off
 said
@@ -11684,7 +11684,7 @@ wadgers
 who
 acted
 as
-goal keeper
+goalkeeper
 for
 the
 offensive
@@ -11845,7 +11845,7 @@ strange
 figure
 headless
 and
-handless  for
+handlessfor
 he
 had
 pulled
@@ -11896,7 +11896,7 @@ are
 perhaps
 the
 most
-matter of fact
+matteroffact
 people
 under
 the
@@ -12016,7 +12016,7 @@ i
 could
 put
 my
-arm  
+arm
 he
 extended
 his
@@ -12027,7 +12027,7 @@ to
 meet
 something
 in
-mid air
+midair
 and
 he
 drew
@@ -12062,7 +12062,7 @@ fact
 is
 im
 all
-here  head
+herehead
 hands
 legs
 and
@@ -12202,7 +12202,7 @@ im
 after
 aint
 no
-invisibility  its
+invisibilityits
 burglary
 theres
 a
@@ -12217,7 +12217,7 @@ well
 and
 circumstances
 certainly
-point  
+point
 stuff
 and
 nonsense
@@ -12340,7 +12340,7 @@ he
 gets
 the
 things
-off  
+off
 hold
 him
 cried
@@ -12366,7 +12366,7 @@ of
 the
 stranger
 the
-shirt sleeve
+shirtsleeve
 planted
 a
 shrewd
@@ -12377,7 +12377,7 @@ face
 that
 stopped
 his
-open armed
+openarmed
 advance
 and
 sent
@@ -12647,7 +12647,7 @@ went
 spinning
 down
 the
-half dozen
+halfdozen
 steps
 of
 the
@@ -12657,7 +12657,7 @@ cried
 in
 a
 strangled
-voice  holding
+voiceholding
 tight
 nevertheless
 and
@@ -12665,7 +12665,7 @@ making
 play
 with
 his
-knee  spun
+kneespun
 around
 and
 fell
@@ -12726,7 +12726,7 @@ the
 constables
 prostrate
 body
-half way
+halfway
 across
 the
 road
@@ -13024,7 +13024,7 @@ substitution
 of
 twine
 and
-shoe laces
+shoelaces
 for
 buttons
 apparent
@@ -13074,7 +13074,7 @@ for
 socks
 of
 irregular
-open work
+openwork
 were
 bare
 his
@@ -13094,13 +13094,13 @@ dog
 in
 a
 leisurely
-manner  he
+mannerhe
 did
 everything
 in
 a
 leisurely
-manner  he
+mannerhe
 was
 contemplating
 trying
@@ -13142,7 +13142,7 @@ comfortable
 fit
 but
 too
-thin soled
+thinsoled
 for
 damp
 mr
@@ -13237,7 +13237,7 @@ said
 the
 voice
 they
-are  charity
+arecharity
 boots
 said
 mr
@@ -13274,7 +13274,7 @@ the
 voice
 ive
 worn
-worse  in
+worsein
 fact
 ive
 worn
@@ -13283,7 +13283,7 @@ but
 none
 so
 owdacious
-ugly  if
+uglyif
 youll
 allow
 the
@@ -13291,8 +13291,8 @@ expression
 ive
 been
 cadging
-boots  in
-particular  for
+bootsin
+particularfor
 days
 because
 i
@@ -13478,7 +13478,7 @@ wind
 swaying
 the
 remote
-green pointed
+greenpointed
 furze
 bushes
 am
@@ -13497,7 +13497,7 @@ talking
 to
 myself
 what
-the  
+the
 dont
 be
 alarmed
@@ -13751,7 +13751,7 @@ fool
 said
 the
 voice
-im  off  my  blooming  chump
+imoffmybloomingchump
 said
 mr
 marvel
@@ -13795,7 +13795,7 @@ voice
 penetratingly
 tremulous
 with
-self control
+selfcontrol
 well
 said
 mr
@@ -13884,7 +13884,7 @@ marvels
 shoulder
 by
 a
-hairs breadth
+hairsbreadth
 mr
 marvel
 turning
@@ -14087,10 +14087,10 @@ with
 pain
 where
 youve
-hid  how
+hidhow
 you
 do
-it  i
+iti
 dont
 know
 im
@@ -14149,7 +14149,7 @@ you
 to
 understand
 is
-this  
+this
 but
 whereabouts
 interrupted
@@ -14182,10 +14182,10 @@ one
 of
 your
 ignorant
-tramps  
+tramps
 yes
 i
-am  thin
+amthin
 air
 youre
 looking
@@ -14199,9 +14199,9 @@ stuff
 to
 you
 vox
-et  what
+etwhat
 is
-it  jabber
+itjabber
 is
 it
 that
@@ -14210,14 +14210,14 @@ am
 just
 a
 human
-being  solid
+beingsolid
 needing
 food
 and
 drink
 needing
 covering
-too  but
+toobut
 im
 invisible
 you
@@ -14248,16 +14248,16 @@ wont
 be
 so
 darn
-out of the way
+outoftheway
 like
-then  lord
+thenlord
 he
 said
 how
 you
 made
 me
-jump  gripping
+jumpgripping
 me
 like
 that
@@ -14304,9 +14304,9 @@ if
 this
 dont
 beat
-cock fighting
+cockfighting
 most
-remarkable  and
+remarkableand
 there
 i
 can
@@ -14325,7 +14325,7 @@ a
 bit
 of
 you
-visible  except  
+visibleexcept
 he
 scrutinised
 the
@@ -14403,7 +14403,7 @@ long
 a
 story
 and
-besides  
+besides
 i
 tell
 you
@@ -14432,7 +14432,7 @@ i
 have
 come
 to
-that  i
+thati
 came
 upon
 you
@@ -14452,7 +14452,7 @@ murdered
 and
 i
 saw
-you  
+you
 lord
 said
 mr
@@ -14461,14 +14461,14 @@ i
 came
 up
 behind
-you  hesitated  went
-on  
+youhesitatedwent
+on
 mr
 marvels
 expression
 was
 eloquent
-  then
+then
 stopped
 here
 i
@@ -14491,8 +14491,8 @@ back
 and
 came
 to
-you  you
-and  
+youyou
+and
 lord
 said
 mr
@@ -14505,7 +14505,7 @@ a
 tizzy
 may
 i
-ask  how
+askhow
 is
 it
 and
@@ -14518,7 +14518,7 @@ in
 the
 way
 of
-help  invisible
+helpinvisible
 i
 want
 you
@@ -14526,8 +14526,8 @@ to
 help
 me
 get
-clothes  and
-shelter  and
+clothesand
+shelterand
 then
 with
 other
@@ -14539,10 +14539,10 @@ long
 enough
 if
 you
-wont  well
+wontwell
 but
 you
-will  must
+willmust
 look
 here
 said
@@ -14605,7 +14605,7 @@ and
 stones
 and
 a
-fist  lord
+fistlord
 pull
 yourself
 together
@@ -14670,7 +14670,7 @@ be
 my
 helper
 help
-me  and
+meand
 i
 will
 do
@@ -14709,7 +14709,7 @@ do
 as
 i
 direct
-you  
+you
 he
 paused
 and
@@ -14748,7 +14748,7 @@ fingers
 dont
 you
 go
-a thinking
+athinking
 that
 whatever
 you
@@ -14761,7 +14761,7 @@ do
 is
 to
 help
-you  just
+youjust
 tell
 me
 what
@@ -14802,7 +14802,7 @@ scepticism
 suddenly
 reared
 its
-head  rather
+headrather
 nervous
 scepticism
 not
@@ -15000,7 +15000,7 @@ tea
 while
 without
 the
-sunday school
+sundayschool
 children
 ran
 races
@@ -15061,7 +15061,7 @@ the
 while
 to
 a
-pulley swung
+pulleyswung
 handle
 one
 could
@@ -15142,7 +15142,7 @@ and
 some
 of
 the
-gayer minded
+gayerminded
 had
 also
 adorned
@@ -15150,7 +15150,7 @@ their
 bowler
 hats
 with
-brilliant coloured
+brilliantcoloured
 favours
 of
 ribbon
@@ -15159,7 +15159,7 @@ fletcher
 whose
 conceptions
 of
-holiday making
+holidaymaking
 were
 severe
 was
@@ -15502,7 +15502,7 @@ against
 one
 of
 the
-gate posts
+gateposts
 produced
 a
 short
@@ -15630,7 +15630,7 @@ bundle
 in
 a
 blue
-table cloth
+tablecloth
 in
 one
 hand
@@ -15638,14 +15638,14 @@ and
 three
 books
 tied
-together  as
+togetheras
 it
 proved
 afterwards
 with
 the
 vicars
-braces  in
+bracesin
 the
 other
 directly
@@ -15959,12 +15959,12 @@ third
 and
 opening
 it
-hm  no
+hmno
 name
 on
 the
-fly leaf
-bother  cypher
+flyleaf
+bothercypher
 and
 figures
 the
@@ -15986,7 +15986,7 @@ a
 face
 suddenly
 disappointed
-im  dear
+imdear
 me
 its
 all
@@ -16002,7 +16002,7 @@ bunting
 no
 illustrations
 throwing
-light  
+light
 see
 for
 yourself
@@ -16037,7 +16037,7 @@ the
 greek
 i
 thought
-you  
+you
 of
 course
 said
@@ -16053,7 +16053,7 @@ and
 feeling
 suddenly
 very
-uncomfortable  for
+uncomfortablefor
 he
 had
 no
@@ -16065,7 +16065,7 @@ mind
 worth
 talking
 about
-yes  the
+yesthe
 greek
 of
 course
@@ -16278,12 +16278,12 @@ nerves
 are
 all
 loose
-to day
+today
 it
 quite
 made
 me
-jump  the
+jumpthe
 door
 opening
 like
@@ -16341,7 +16341,7 @@ during
 the
 last
 few
-days  very
+daysvery
 strange
 i
 cannot
@@ -16352,34 +16352,34 @@ in
 this
 absurd
 invisibility
-story  
+story
 its
 incredible
 said
-cuss  incredible
+cussincredible
 but
 the
 fact
 remains
 that
 i
-saw  i
+sawi
 certainly
 saw
 right
 down
 his
-sleeve  
+sleeve
 but
 did
-you  are
+youare
 you
 sure
 suppose
 a
 mirror
 for
-instance  
+instance
 hallucinations
 are
 so
@@ -16396,7 +16396,7 @@ seen
 a
 really
 good
-conjuror  
+conjuror
 i
 wont
 argue
@@ -16413,7 +16413,7 @@ just
 now
 theres
 these
-books  ah
+booksah
 heres
 some
 of
@@ -16626,7 +16626,7 @@ i
 have
 the
 poker
-handy  besides
+handybesides
 being
 invisible
 theres
@@ -16648,7 +16648,7 @@ easily
 if
 i
 wanted
-to  do
+todo
 you
 understand
 very
@@ -16788,7 +16788,7 @@ clothing
 where
 is
 it
-no  dont
+nodont
 rise
 i
 can
@@ -16821,7 +16821,7 @@ quite
 chilly
 i
 want
-clothing  and
+clothingand
 other
 accommodation
 and
@@ -16925,12 +16925,12 @@ a
 sharp
 cry
 and
-then  silence
-hul lo
+thensilence
+hullo
 said
 teddy
 henfrey
-hul lo
+hullo
 from
 the
 tap
@@ -17055,7 +17055,7 @@ exclaimed
 henfrey
 sotto
 voce
-you  all  right
+youallright
 thur
 asked
 mr
@@ -17072,9 +17072,9 @@ curious
 jerking
 intonation
 quite
-ri right
+riright
 please
-dont  interrupt
+dontinterrupt
 odd
 said
 mr
@@ -17149,7 +17149,7 @@ mr
 henfrey
 i
 heard
-it  distinct
+itdistinct
 whos
 that
 speaking
@@ -17164,7 +17164,7 @@ said
 hall
 can
 you
-hear  anything
+hearanything
 silence
 the
 sounds
@@ -17176,7 +17176,7 @@ sounds
 like
 throwing
 the
-table cloth
+tablecloth
 about
 said
 hall
@@ -17212,7 +17212,7 @@ you
 nothin
 better
 to
-do  busy
+dobusy
 day
 like
 this
@@ -17286,7 +17286,7 @@ think
 the
 whole
 business
-nonsense  perhaps
+nonsenseperhaps
 they
 were
 just
@@ -17312,7 +17312,7 @@ said
 henfrey
 like
 as
-not  
+not
 began
 mrs
 hall
@@ -17363,7 +17363,7 @@ and
 vivid
 and
 huxters
-shop front
+shopfront
 blistering
 in
 the
@@ -17427,7 +17427,7 @@ rushed
 out
 at
 once
-pell mell
+pellmell
 into
 the
 street
@@ -17697,7 +17697,7 @@ something
 happened
 to
 his
-rear most
+rearmost
 foot
 and
 he
@@ -17736,7 +17736,7 @@ quite
 a
 number
 of
-over hasty
+overhasty
 people
 now
 when
@@ -18076,7 +18076,7 @@ clothe
 himself
 in
 the
-hearth rug
+hearthrug
 and
 a
 west
@@ -18269,7 +18269,7 @@ slamming
 and
 fights
 for
-hiding places
+hidingplaces
 you
 must
 figure
@@ -18287,7 +18287,7 @@ fletchers
 planks
 and
 two
-chairs  with
+chairswith
 cataclysmic
 results
 you
@@ -18512,7 +18512,7 @@ bank
 holiday
 a
 short
-thick set
+thickset
 man
 in
 a
@@ -18553,7 +18553,7 @@ wrapped
 in
 a
 blue
-table cloth
+tablecloth
 his
 rubicund
 face
@@ -18611,7 +18611,7 @@ give
 me
 the
 slip
-again  
+again
 lord
 said
 mr
@@ -18684,7 +18684,7 @@ is
 ive
 been
 knocked
-about  
+about
 youll
 get
 knocked
@@ -18794,7 +18794,7 @@ me
 everyone
 on
 their
-guard  
+guard
 the
 voice
 broke
@@ -18839,7 +18839,7 @@ stupid
 said
 the
 voice
-sharply  overtaking
+sharplyovertaking
 him
 the
 fact
@@ -18905,12 +18905,12 @@ hearts
 weak
 that
 little
-business  i
+businessi
 pulled
 it
 through
 of
-course  but
+coursebut
 bless
 you
 i
@@ -18950,7 +18950,7 @@ you
 know
 but
 i
-might  out
+mightout
 of
 sheer
 funk
@@ -18987,7 +18987,7 @@ me
 ive
 a
 perfect
-right  
+right
 get
 on
 said
@@ -19070,7 +19070,7 @@ all
 that
 but
 youll
-do  
+do
 i
 tell
 you
@@ -19081,10 +19081,10 @@ the
 man
 for
 it
-respectfully  but
+respectfullybut
 it
 is
-so  
+so
 if
 you
 dont
@@ -19168,7 +19168,7 @@ know
 all
 that
 the
-unhappy looking
+unhappylooking
 figure
 in
 the
@@ -19214,7 +19214,7 @@ marvel
 unshaven
 dirty
 and
-travel stained
+travelstained
 sitting
 with
 the
@@ -19273,7 +19273,7 @@ been
 abandoned
 in
 the
-pine woods
+pinewoods
 beyond
 bramblehurst
 in
@@ -19501,7 +19501,7 @@ theyre
 books
 theres
 some
-extra ordinary
+extraordinary
 things
 in
 books
@@ -19516,7 +19516,7 @@ mr
 marvel
 and
 some
-extra ordinary
+extraordinary
 things
 out
 of
@@ -19540,7 +19540,7 @@ about
 him
 theres
 some
-extra ordinary
+extraordinary
 things
 in
 newspapers
@@ -19672,7 +19672,7 @@ eye
 and
 then
 amplifying
-every  blessed  thing
+everyblessedthing
 i
 aint
 seen
@@ -19692,7 +19692,7 @@ at
 said
 the
 mariner
-in deed
+indeed
 said
 mr
 marvel
@@ -19712,7 +19712,7 @@ know
 here
 it
 is
-pe culiar
+peculiar
 story
 from
 iping
@@ -19726,8 +19726,8 @@ that
 the
 evidence
 is
-extra ordinary
-strong  extra ordinary
+extraordinary
+strongextraordinary
 lord
 said
 mr
@@ -19736,7 +19736,7 @@ but
 then
 its
 an
-extra ordinary
+extraordinary
 story
 there
 is
@@ -19746,12 +19746,12 @@ and
 a
 medical
 gent
-witnesses  saw
+witnessessaw
 im
 all
 right
 and
-proper  or
+properor
 leastways
 didnt
 see
@@ -19804,7 +19804,7 @@ off
 it
 was
 then
-ob served
+observed
 that
 his
 head
@@ -19898,7 +19898,7 @@ most
 astonishing
 dont
 it
-extra ordinary
+extraordinary
 i
 call
 it
@@ -19919,8 +19919,8 @@ such
 a
 lot
 of
-extra ordinary
-things  that  
+extraordinary
+thingsthat
 that
 all
 he
@@ -19958,7 +19958,7 @@ all
 said
 the
 mariner
-why  aint
+whyaint
 it
 enough
 quite
@@ -19984,7 +19984,7 @@ he
 didnt
 have
 any
-pals  it
+palsit
 dont
 say
 he
@@ -20052,11 +20052,11 @@ is
 supposed
 that
 he
-has  taken  took
+hastakentook
 i
 suppose
 they
-mean  the
+meanthe
 road
 to
 port
@@ -20106,7 +20106,7 @@ suppose
 he
 wants
 to
-rob  who
+robwho
 can
 prevent
 him
@@ -20155,7 +20155,7 @@ there
 was
 liquor
 he
-fancied  
+fancied
 hes
 got
 a
@@ -20165,7 +20165,7 @@ certainly
 said
 mr
 marvel
-and  well
+andwell
 youre
 right
 said
@@ -20225,8 +20225,8 @@ the
 fact
 of
 it
-is  i
-happen  to
+isi
+happento
 know
 just
 a
@@ -20258,7 +20258,7 @@ mariner
 and
 may
 i
-ask  
+ask
 youll
 be
 astonished
@@ -20358,7 +20358,7 @@ but
 you
 was
 just
-a going
+agoing
 to
 tell
 me
@@ -20414,7 +20414,7 @@ aint
 no
 invisible
 man
-whatsoever  blimey
+whatsoeverblimey
 but
 how
 bout
@@ -20423,7 +20423,7 @@ paper
 dyou
 mean
 to
-say  
+say
 not
 a
 word
@@ -20456,7 +20456,7 @@ slowly
 dyou
 mean
 to
-say  
+say
 i
 do
 said
@@ -20524,8 +20524,8 @@ and
 you
 you
 little
-pot bellied
-leathery faced
+potbellied
+leatheryfaced
 son
 of
 an
@@ -20535,7 +20535,7 @@ couldnt
 have
 the
 elementary
-manners  
+manners
 dont
 you
 come
@@ -20552,7 +20552,7 @@ im
 a
 jolly
 good
-mind  
+mind
 come
 up
 said
@@ -20633,10 +20633,10 @@ show
 you
 you
 silly
-ass  hoaxing
+asshoaxing
 me
 its
-here  on
+hereon
 the
 paper
 mr
@@ -20683,7 +20683,7 @@ port
 stowe
 full
 of
-extra ordinary
+extraordinary
 asses
 he
 said
@@ -20696,11 +20696,11 @@ take
 me
 down
 a
-bit  that
+bitthat
 was
 his
 silly
-game  its
+gameits
 on
 the
 paper
@@ -20840,13 +20840,13 @@ tills
 of
 shops
 and
-inns  doors
+innsdoors
 standing
 that
 sunny
 weather
 entirely
-open  money
+openmoney
 had
 been
 quietly
@@ -20917,7 +20917,7 @@ it
 was
 ten
 days
-after  and
+afterand
 indeed
 only
 when
@@ -20926,7 +20926,7 @@ burdock
 story
 was
 already
-old  that
+oldthat
 the
 mariner
 collated
@@ -20981,10 +20981,10 @@ little
 room
 with
 three
-windows  north
+windowsnorth
 west
 and
-south  and
+southand
 bookshelves
 covered
 with
@@ -20995,7 +20995,7 @@ publications
 and
 a
 broad
-writing table
+writingtable
 and
 under
 the
@@ -21148,7 +21148,7 @@ black
 running
 over
 the
-hill brow
+hillbrow
 towards
 him
 he
@@ -21197,7 +21197,7 @@ with
 the
 visible
 man
-a coming
+acoming
 sir
 i
 cant
@@ -21331,7 +21331,7 @@ walking
 back
 to
 his
-writing table
+writingtable
 but
 those
 who
@@ -21373,7 +21373,7 @@ he
 chinked
 like
 a
-well filled
+wellfilled
 purse
 that
 is
@@ -21414,7 +21414,7 @@ the
 street
 and
 his
-ill shaped
+illshaped
 mouth
 fell
 apart
@@ -21484,11 +21484,11 @@ as
 they
 still
 wondered
-something  a
-wind  a
+somethinga
+winda
 pad
 pad
-pad  a
+pada
 sound
 like
 a
@@ -21591,7 +21591,7 @@ the
 hill
 where
 the
-tram lines
+tramlines
 begin
 the
 barman
@@ -21613,7 +21613,7 @@ anaemic
 cabman
 while
 a
-black bearded
+blackbearded
 man
 in
 grey
@@ -21785,7 +21785,7 @@ go
 inside
 lock
 me
-in  somewhere
+insomewhere
 i
 tell
 you
@@ -21870,7 +21870,7 @@ like
 doors
 hell
 kill
-me  hes
+mehes
 got
 a
 knife
@@ -21878,7 +21878,7 @@ or
 something
 for
 gawds
-sake  
+sake
 here
 you
 are
@@ -22006,7 +22006,7 @@ in
 front
 of
 the
-bar parlour
+barparlour
 door
 which
 was
@@ -22084,7 +22084,7 @@ beard
 and
 if
 he
-comes  
+comes
 he
 showed
 a
@@ -22215,7 +22215,7 @@ peered
 out
 of
 the
-bar parlour
+barparlour
 and
 supplied
 information
@@ -22231,7 +22231,7 @@ asked
 marvel
 hes
 going
-round  prowling
+roundprowling
 round
 hes
 as
@@ -22253,14 +22253,14 @@ watch
 them
 doors
 i
-say  
+say
 he
 looked
 about
 him
 helplessly
 the
-bar parlour
+barparlour
 door
 slammed
 and
@@ -22279,7 +22279,7 @@ private
 door
 the
 yard
-door  
+door
 he
 rushed
 out
@@ -22293,7 +22293,7 @@ he
 reappeared
 with
 a
-carving knife
+carvingknife
 in
 his
 hand
@@ -22353,7 +22353,7 @@ come
 in
 they
 havent
-noticed  
+noticed
 have
 you
 fastened
@@ -22409,7 +22409,7 @@ door
 snapped
 and
 the
-bar parlour
+barparlour
 door
 burst
 open
@@ -22439,7 +22439,7 @@ revolver
 cracked
 and
 the
-looking glass
+lookingglass
 at
 the
 back
@@ -22677,7 +22677,7 @@ the
 door
 into
 the
-bar parlour
+barparlour
 from
 the
 kitchen
@@ -22910,7 +22910,7 @@ network
 of
 windows
 beaded
-gas lamps
+gaslamps
 and
 shops
 with
@@ -22961,7 +22961,7 @@ shone
 and
 the
 pier
-glowed  a
+gloweda
 little
 illuminated
 facetted
@@ -23049,7 +23049,7 @@ after
 this
 that
 the
-front door
+frontdoor
 bell
 rang
 he
@@ -23143,7 +23143,7 @@ she
 answered
 im
 restless
-to night
+tonight
 he
 said
 to
@@ -23253,7 +23253,7 @@ went
 down
 to
 the
-dining room
+diningroom
 in
 search
 of
@@ -23382,7 +23382,7 @@ to
 account
 for
 the
-blood spot
+bloodspot
 on
 the
 landing
@@ -23393,13 +23393,13 @@ and
 stopped
 astonished
 the
-door handle
+doorhandle
 of
 his
 own
 room
 was
-blood stained
+bloodstained
 he
 looked
 at
@@ -23450,7 +23450,7 @@ room
 his
 face
 quite
-calm  perhaps
+calmperhaps
 a
 trifle
 more
@@ -23492,7 +23492,7 @@ walked
 straight
 to
 the
-dressing table
+dressingtable
 on
 the
 further
@@ -23524,7 +23524,7 @@ low
 voice
 say
 good
-heavens  kemp
+heavenskemp
 but
 dr
 kemp
@@ -23557,7 +23557,7 @@ than
 the
 disordered
 and
-blood stained
+bloodstained
 bed
 then
 he
@@ -23570,7 +23570,7 @@ the
 room
 near
 the
-wash hand
+washhand
 stand
 all
 men
@@ -23601,7 +23601,7 @@ came
 forward
 to
 the
-dressing table
+dressingtable
 and
 put
 down
@@ -23616,19 +23616,19 @@ perceived
 a
 coiled
 and
-blood stained
+bloodstained
 bandage
 of
 linen
 rag
 hanging
 in
-mid air
+midair
 between
 him
 and
 the
-wash hand
+washhand
 stand
 he
 stared
@@ -24073,11 +24073,11 @@ am
 just
 an
 ordinary
-man  a
+mana
 man
 you
 have
-known  made
+knownmade
 invisible
 griffin
 said
@@ -24159,14 +24159,14 @@ process
 sane
 and
 intelligible
-enough  
+enough
 its
 horrible
 said
 kemp
 how
 on
-earth  
+earth
 its
 horrible
 enough
@@ -24358,9 +24358,9 @@ in
 infinite
 perplexity
 this
-is  this
+isthis
 must
-be  hypnotism
+behypnotism
 you
 have
 suggested
@@ -24384,12 +24384,12 @@ morning
 began
 kemp
 that
-invisibility  
+invisibility
 never
 mind
 what
 youve
-demonstrated  im
+demonstratedim
 starving
 said
 the
@@ -24424,7 +24424,7 @@ down
 have
 you
 a
-dressing gown
+dressinggown
 kemp
 made
 some
@@ -24460,7 +24460,7 @@ for
 a
 moment
 in
-mid air
+midair
 fluttered
 weirdly
 stood
@@ -24549,7 +24549,7 @@ a
 cutlet
 hung
 in
-mid air
+midair
 with
 a
 sound
@@ -24608,7 +24608,7 @@ all
 the
 strange
 and
-wonderful  
+wonderful
 exactly
 but
 its
@@ -24636,7 +24636,7 @@ sleep
 in
 this
 house
-to night
+tonight
 you
 must
 stand
@@ -24699,7 +24699,7 @@ confound
 it
 the
 whole
-business  its
+businessits
 unreasonable
 from
 beginning
@@ -24731,7 +24731,7 @@ gown
 a
 ray
 of
-candle light
+candlelight
 penetrating
 a
 torn
@@ -24767,13 +24767,13 @@ real
 fool
 of
 a
-man  a
+mana
 sort
 of
 confederate
 of
-mine  curse
-him  who
+minecurse
+himwho
 tried
 to
 steal
@@ -24802,7 +24802,7 @@ you
 all
 that
 im
-hungry  in
+hungryin
 pain
 and
 you
@@ -24847,8 +24847,8 @@ scared
 at
 me
 curse
-them  i
-say  i
+themi
+sayi
 want
 more
 to
@@ -24960,7 +24960,7 @@ im
 in
 a
 devilish
-scrape  ive
+scrapeive
 been
 mad
 i
@@ -24980,7 +24980,7 @@ yet
 let
 me
 tell
-you  
+you
 he
 helped
 himself
@@ -25004,7 +25004,7 @@ his
 spare
 room
 its
-wild  but
+wildbut
 i
 suppose
 i
@@ -25024,7 +25024,7 @@ men
 dont
 cool
 and
-methodical  after
+methodicalafter
 the
 first
 collapse
@@ -25156,7 +25156,7 @@ to
 give
 me
 the
-slip  he
+sliphe
 was
 always
 casting
@@ -25194,7 +25194,7 @@ i
 cant
 tell
 you
-to night
+tonight
 he
 said
 he
@@ -25238,7 +25238,7 @@ soon
 well
 have
 my
-room  have
+roomhave
 this
 room
 but
@@ -25248,7 +25248,7 @@ i
 sleep
 if
 i
-sleep  he
+sleephe
 will
 get
 away
@@ -25264,7 +25264,7 @@ wound
 asked
 kemp
 abruptly
-nothing  scratch
+nothingscratch
 and
 blood
 oh
@@ -25293,7 +25293,7 @@ being
 caught
 by
 my
-fellow men
+fellowmen
 he
 said
 slowly
@@ -25400,7 +25400,7 @@ bedroom
 and
 the
 two
-dressing room
+dressingroom
 doors
 to
 satisfy
@@ -25450,7 +25450,7 @@ that
 i
 have
 done
-to night
+tonight
 but
 i
 am
@@ -25508,7 +25508,7 @@ such
 things
 
 but
-to morrow
+tomorrow
 now
 kemp
 i
@@ -25541,7 +25541,7 @@ leave
 you
 he
 said
-its  incredible
+itsincredible
 three
 things
 happening
@@ -25550,7 +25550,7 @@ this
 overturning
 all
 my
-preconceptions  would
+preconceptionswould
 make
 me
 insane
@@ -25569,10 +25569,10 @@ you
 only
 bid
 me
-good night
+goodnight
 said
 griffin
-good night
+goodnight
 said
 kemp
 and
@@ -25588,7 +25588,7 @@ the
 door
 suddenly
 the
-dressing gown
+dressinggown
 walked
 quickly
 towards
@@ -25597,7 +25597,7 @@ understand
 me
 said
 the
-dressing gown
+dressinggown
 no
 attempts
 to
@@ -25606,7 +25606,7 @@ me
 or
 capture
 me
-or  
+or
 kemps
 face
 changed
@@ -25658,7 +25658,7 @@ the
 door
 of
 the
-dressing room
+dressingroom
 and
 that
 too
@@ -25678,7 +25678,7 @@ has
 the
 world
 gone
-mad  or
+mador
 have
 i
 he
@@ -25733,7 +25733,7 @@ bruised
 neck
 undeniable
 fact
-but  
+but
 he
 shook
 his
@@ -25746,7 +25746,7 @@ downstairs
 he
 lit
 the
-dining room
+diningroom
 lamp
 got
 out
@@ -25783,7 +25783,7 @@ in
 the
 sea
 yes
-thousands  millions
+thousandsmillions
 all
 the
 larvae
@@ -25798,7 +25798,7 @@ the
 microscopic
 things
 the
-jelly fish
+jellyfish
 in
 the
 sea
@@ -25823,8 +25823,8 @@ too
 all
 those
 little
-pond life
-things  specks
+pondlife
+thingsspecks
 of
 colourless
 translucent
@@ -25838,7 +25838,7 @@ cant
 be
 but
 after
-all  why
+allwhy
 not
 if
 a
@@ -25898,7 +25898,7 @@ went
 into
 his
 little
-consulting room
+consultingroom
 and
 lit
 the
@@ -26083,7 +26083,7 @@ had
 been
 reprinted
 he
-re read
+reread
 it
 ran
 through
@@ -26099,7 +26099,7 @@ mr
 huxter
 in
 great
-pain  still
+painstill
 unable
 to
 describe
@@ -26107,7 +26107,7 @@ what
 he
 saw
 painful
-humiliation  vicar
+humiliationvicar
 woman
 ill
 with
@@ -26124,7 +26124,7 @@ too
 good
 not
 to
-print  cum
+printcum
 grano
 he
 dropped
@@ -26147,7 +26147,7 @@ the
 paper
 again
 and
-re read
+reread
 the
 whole
 business
@@ -26193,13 +26193,13 @@ its
 pallor
 with
 the
-lamp light
+lamplight
 and
 cigar
 smoke
 of
 the
-dining room
+diningroom
 kemp
 was
 still
@@ -26231,7 +26231,7 @@ inclined
 to
 think
 that
-over study
+overstudy
 had
 worked
 this
@@ -26254,7 +26254,7 @@ two
 in
 the
 belvedere
-study  and
+studyand
 then
 to
 confine
@@ -26263,14 +26263,14 @@ to
 the
 basement
 and
-ground floor
+groundfloor
 then
 he
 continued
 to
 pace
 the
-dining room
+diningroom
 until
 the
 mornings
@@ -26329,7 +26329,7 @@ me
 keep
 with
 him
-twenty four
+twentyfour
 hours
 marvel
 testified
@@ -26348,7 +26348,7 @@ cutting
 of
 the
 village
-telegraph wire
+telegraphwire
 but
 there
 was
@@ -26476,7 +26476,7 @@ a
 breach
 of
 faith
-if  
+if
 no
 he
 went
@@ -26561,7 +26561,7 @@ flung
 over
 and
 the
-wash hand
+washhand
 stand
 tumbler
 smashed
@@ -26807,10 +26807,10 @@ griffin
 sat
 at
 the
-breakfast table  a
+breakfasttablea
 headless
 handless
-dressing gown
+dressinggown
 wiping
 unseen
 lips
@@ -26821,7 +26821,7 @@ held
 serviette
 its
 simple
-enough  and
+enoughand
 credible
 enough
 said
@@ -26843,7 +26843,7 @@ no
 doubt
 to
 you
-but  
+but
 kemp
 laughed
 well
@@ -26911,7 +26911,7 @@ is
 a
 network
 of
-riddles  a
+riddlesa
 network
 with
 solutions
@@ -26921,7 +26921,7 @@ through
 and
 being
 but
-two and twenty
+twoandtwenty
 and
 full
 of
@@ -26946,7 +26946,7 @@ fools
 we
 are
 at
-two and twenty
+twoandtwenty
 fools
 then
 or
@@ -26968,7 +26968,7 @@ but
 i
 went
 to
-work  like
+worklike
 a
 slave
 and
@@ -26991,7 +26991,7 @@ one
 of
 the
 meshes
-suddenly  blindingly
+suddenlyblindingly
 i
 found
 a
@@ -27000,7 +27000,7 @@ principle
 of
 pigments
 and
-refraction  a
+refractiona
 formula
 a
 geometrical
@@ -27033,12 +27033,12 @@ molecular
 physics
 in
 the
-books  the
+booksthe
 books
 that
 tramp
 has
-hidden  there
+hiddenthere
 are
 marvels
 miracles
@@ -27070,11 +27070,11 @@ any
 other
 property
 of
-matter  except
+matterexcept
 in
 some
 instances
-colours  to
+coloursto
 lower
 the
 refractive
@@ -27088,7 +27088,7 @@ liquid
 to
 that
 of
-air  so
+airso
 far
 as
 all
@@ -27272,7 +27272,7 @@ of
 flashing
 reflections
 and
-translucencies  a
+translucenciesa
 sort
 of
 skeleton
@@ -27879,7 +27879,7 @@ sea
 larvae
 and
 all
-jelly fish
+jellyfish
 now
 you
 have
@@ -27898,7 +27898,7 @@ year
 after
 i
 left
-london  six
+londonsix
 years
 ago
 but
@@ -27930,7 +27930,7 @@ instinct
 a
 thief
 of
-ideas  he
+ideashe
 was
 always
 prying
@@ -28035,7 +28035,7 @@ it
 can
 be
 made
-white  colourless  and
+whitecolourlessand
 remain
 with
 all
@@ -28073,7 +28073,7 @@ it
 was
 late
 at
-night  in
+nightin
 the
 daytime
 one
@@ -28083,7 +28083,7 @@ with
 the
 gaping
 silly
-students  and
+studentsand
 i
 worked
 then
@@ -28127,8 +28127,8 @@ one
 could
 make
 an
-animal  a
-tissue  transparent
+animala
+tissuetransparent
 one
 could
 make
@@ -28137,7 +28137,7 @@ invisible
 all
 except
 the
-pigments  i
+pigmentsi
 could
 be
 invisible
@@ -28210,7 +28210,7 @@ might
 mean
 to
 a
-man  the
+manthe
 mystery
 the
 power
@@ -28229,8 +28229,8 @@ and
 i
 a
 shabby
-poverty struck
-hemmed in
+povertystruck
+hemmedin
 demonstrator
 teaching
 fools
@@ -28240,7 +28240,7 @@ provincial
 college
 might
 suddenly
-become  this
+becomethis
 i
 ask
 you
@@ -28315,7 +28315,7 @@ years
 i
 had
 of
-it  
+it
 and
 after
 three
@@ -28331,7 +28331,7 @@ to
 complete
 it
 was
-impossible  impossible
+impossibleimpossible
 how
 asked
 kemp
@@ -28357,7 +28357,7 @@ i
 robbed
 the
 old
-man  robbed
+manrobbed
 my
 father
 the
@@ -28481,8 +28481,8 @@ room
 in
 a
 big
-ill managed
-lodging house
+illmanaged
+lodginghouse
 in
 a
 slum
@@ -28566,7 +28566,7 @@ scant
 ceremony
 the
 windy
-frost bitten
+frostbitten
 hillside
 and
 the
@@ -28580,7 +28580,7 @@ read
 the
 service
 over
-him  a
+hima
 shabby
 black
 bent
@@ -28812,7 +28812,7 @@ general
 inanity
 of
 things
-re entering
+reentering
 my
 room
 seemed
@@ -28944,7 +28944,7 @@ no
 not
 those
 roentgen
-vibrations  i
+vibrationsi
 dont
 know
 that
@@ -29113,11 +29113,11 @@ softly
 she
 came
 in
-purring  the
+purringthe
 poor
 beast
 was
-starving  and
+starvingand
 i
 gave
 her
@@ -29178,7 +29178,7 @@ the
 pillow
 of
 my
-truckle bed
+trucklebed
 and
 i
 gave
@@ -29224,7 +29224,7 @@ pigment
 stuff
 what
 is
-it  at
+itat
 the
 back
 of
@@ -29304,7 +29304,7 @@ bandaged
 and
 clamped
 of
-course  so
+courseso
 i
 had
 her
@@ -29335,8 +29335,8 @@ who
 suspected
 me
 of
-vivisecting  a
-drink sodden
+vivisectinga
+drinksodden
 old
 creature
 with
@@ -29396,11 +29396,11 @@ enough
 to
 her
 no
-doubt  bare
+doubtbare
 walls
 uncurtained
 windows
-truckle bed
+trucklebed
 with
 the
 gas
@@ -29444,7 +29444,7 @@ kemp
 three
 or
 four
-hours  the
+hoursthe
 cat
 the
 bones
@@ -29623,14 +29623,14 @@ had
 when
 striking
 a
-light  there
+lightthere
 were
 just
 the
 round
 eyes
 shining
-green  and
+greenand
 nothing
 round
 them
@@ -29713,9 +29713,9 @@ any
 more
 of
 it
-then  heaven
+thenheaven
 knows
-why  i
+whyi
 fell
 thinking
 of
@@ -29883,7 +29883,7 @@ a
 sunny
 day
 in
-january  one
+januaryone
 of
 those
 sunny
@@ -30188,7 +30188,7 @@ the
 night
 he
 was
-sure  the
+surethe
 old
 womans
 tongue
@@ -30211,7 +30211,7 @@ against
 vivisection
 were
 very
-severe  he
+severehe
 might
 be
 liable
@@ -30251,7 +30251,7 @@ peering
 about
 over
 his
-german silver
+germansilver
 spectacles
 and
 a
@@ -30321,7 +30321,7 @@ been
 a
 most
 respectable
-house  in
+housein
 a
 disreputable
 neighbourhood
@@ -30441,7 +30441,7 @@ most
 part
 in
 a
-bank  and
+bankand
 i
 could
 not
@@ -30495,11 +30495,11 @@ books
 of
 notes
 my
-cheque book  the
+chequebookthe
 tramp
 has
 them
-now  and
+nowand
 directed
 them
 from
@@ -30656,7 +30656,7 @@ push
 something
 under
 the
-door  a
+doora
 blue
 paper
 then
@@ -30749,7 +30749,7 @@ and
 went
 to
 the
-looking glass
+lookingglass
 then
 i
 understood
@@ -30758,7 +30758,7 @@ terror
 my
 face
 was
-white  like
+whitelike
 white
 stone
 but
@@ -30979,7 +30979,7 @@ incapable
 as
 a
 swathed
-infant  stepping
+infantstepping
 with
 limbs
 i
@@ -31000,7 +31000,7 @@ at
 nothing
 in
 my
-shaving glass
+shavingglass
 at
 nothing
 save
@@ -31331,7 +31331,7 @@ landlord
 and
 his
 two
-step sons
+stepsons
 sturdy
 young
 men
@@ -31383,7 +31383,7 @@ his
 staring
 eyes
 and
-thick lipped
+thicklipped
 bearded
 face
 came
@@ -31486,7 +31486,7 @@ and
 watched
 these
 four
-people  for
+peoplefor
 the
 old
 lady
@@ -31596,7 +31596,7 @@ my
 fellow
 lodgers
 a
-coster monger
+costermonger
 who
 shared
 the
@@ -31634,7 +31634,7 @@ hands
 of
 some
 acute
-well educated
+welleducated
 person
 would
 give
@@ -31695,7 +31695,7 @@ into
 one
 of
 the
-sitting rooms
+sittingrooms
 and
 waited
 until
@@ -31758,7 +31758,7 @@ by
 means
 of
 an
-india rubber
+indiarubber
 tube
 and
 waving
@@ -31790,7 +31790,7 @@ way
 to
 cover
 my
-trail  and
+trailand
 no
 doubt
 it
@@ -31995,7 +31995,7 @@ carrying
 a
 basket
 of
-soda water
+sodawater
 syphons
 and
 looking
@@ -32171,8 +32171,8 @@ and
 dodged
 behind
 the
-cab mans
-four wheeler
+cabmans
+fourwheeler
 i
 do
 not
@@ -32471,7 +32471,7 @@ thought
 that
 possessed
 me
-was  how
+washow
 was
 i
 to
@@ -32496,7 +32496,7 @@ with
 five
 or
 six
-yellow labelled
+yellowlabelled
 books
 hailed
 my
@@ -32863,8 +32863,8 @@ what
 said
 the
 other
-why  them
-footmarks  bare
+whythem
+footmarksbare
 like
 what
 you
@@ -32949,7 +32949,7 @@ and
 his
 foot
 was
-a bleeding
+ableeding
 the
 thick
 of
@@ -33091,7 +33091,7 @@ the
 smaller
 boy
 was
-sharp eyed
+sharpeyed
 enough
 to
 follow
@@ -33563,7 +33563,7 @@ resources
 indeed
 except
 my
-cheque book
+chequebook
 and
 the
 three
@@ -33584,7 +33584,7 @@ i
 had
 burnt
 my
-boats  if
+boatsif
 ever
 a
 man
@@ -33629,7 +33629,7 @@ in
 the
 air
 about
-me  and
+meand
 if
 it
 settled
@@ -33638,7 +33638,7 @@ me
 it
 would
 betray
-me  weary
+meweary
 cold
 painful
 inexpressibly
@@ -33688,7 +33688,7 @@ would
 have
 given
 me
-away  made
+awaymade
 a
 mere
 show
@@ -33699,11 +33699,11 @@ me
 nevertheless
 i
 was
-half minded
+halfminded
 to
 accost
 some
-passer by
+passerby
 and
 throw
 myself
@@ -33779,7 +33779,7 @@ i
 see
 clearly
 before
-me  the
+methe
 cold
 exposure
 and
@@ -33825,7 +33825,7 @@ everything
 is
 to
 be
-bought  you
+boughtyou
 know
 the
 place
@@ -33836,7 +33836,7 @@ furniture
 clothing
 oil
 paintings
-even  a
+evena
 huge
 meandering
 collection
@@ -33875,7 +33875,7 @@ and
 a
 man
 in
-uniform  you
+uniformyou
 know
 the
 kind
@@ -33885,7 +33885,7 @@ with
 omnium
 on
 his
-cap  flung
+capflung
 open
 the
 door
@@ -33897,7 +33897,7 @@ and
 walking
 down
 the
-shop  it
+shopit
 was
 a
 department
@@ -33914,7 +33914,7 @@ and
 that
 kind
 of
-thing  came
+thingcame
 to
 a
 more
@@ -33968,7 +33968,7 @@ clambered
 and
 found
 a
-resting place
+restingplace
 at
 last
 among
@@ -34109,7 +34109,7 @@ still
 imagined
 over
 my
-fellow men
+fellowmen
 closing
 time
 arrived
@@ -34404,7 +34404,7 @@ and
 intricate
 shops
 galleries
-show rooms
+showrooms
 of
 the
 place
@@ -34433,10 +34433,10 @@ to
 the
 tapping
 of
-boot heels
+bootheels
 of
 the
-passers by
+passersby
 my
 first
 visit
@@ -34545,7 +34545,7 @@ overcoat
 and
 a
 slouch
-hat  a
+hata
 clerical
 sort
 of
@@ -34612,7 +34612,7 @@ place
 in
 search
 of
-blankets  i
+blanketsi
 had
 to
 put
@@ -34624,7 +34624,7 @@ a
 heap
 of
 down
-quilts  i
+quiltsi
 came
 upon
 a
@@ -34644,7 +34644,7 @@ was
 good
 for
 me
-indeed  and
+indeedand
 some
 white
 burgundy
@@ -34665,7 +34665,7 @@ i
 found
 some
 artificial
-noses  dummy
+nosesdummy
 noses
 you
 know
@@ -34687,7 +34687,7 @@ had
 been
 a
 difficulty
-indeed  i
+indeedi
 had
 thought
 of
@@ -35135,11 +35135,11 @@ corner
 and
 came
 full
-tilt  a
+tilta
 faceless
 figure
 mind
-you  on
+youon
 a
 lanky
 lad
@@ -35209,11 +35209,11 @@ out
 of
 my
 wits
-but  odd
+butodd
 as
 it
 may
-seem  it
+seemit
 did
 not
 occur
@@ -35325,9 +35325,9 @@ a
 multitude
 of
 those
-bright coloured
+brightcoloured
 pot
-things  what
+thingswhat
 are
 they
 art
@@ -35526,7 +35526,7 @@ hunted
 out
 of
 a
-wood pile
+woodpile
 this
 way
 policeman
@@ -35636,7 +35636,7 @@ time
 and
 cursing
 my
-ill luck
+illluck
 in
 losing
 the
@@ -35646,7 +35646,7 @@ i
 went
 into
 the
-refreshment room
+refreshmentroom
 drank
 a
 little
@@ -35829,8 +35829,8 @@ condition
 i
 had
 no
-shelter  no
-covering  to
+shelterno
+coveringto
 get
 clothing
 was
@@ -35891,7 +35891,7 @@ not
 go
 abroad
 in
-snow  it
+snowit
 would
 settle
 on
@@ -35912,10 +35912,10 @@ glistening
 surface
 of
 a
-man  a
+mana
 bubble
 and
-fog  i
+fogi
 should
 be
 like
@@ -35936,10 +35936,10 @@ moreover
 as
 i
 went
-abroad  in
+abroadin
 the
 london
-air  i
+airi
 gathered
 dirt
 about
@@ -36059,7 +36059,7 @@ of
 those
 little
 miscellaneous
-shops  news
+shopsnews
 sweets
 toys
 stationery
@@ -36068,7 +36068,7 @@ christmas
 tomfoolery
 and
 so
-forth  an
+forthan
 array
 of
 masks
@@ -36094,7 +36094,7 @@ no
 longer
 aimless
 and
-went  circuitously
+wentcircuitously
 in
 order
 to
@@ -36200,7 +36200,7 @@ the
 verdict
 of
 the
-cab rank
+cabrank
 was
 that
 he
@@ -36275,12 +36275,12 @@ my
 quest
 a
 dirty
-fly blown
+flyblown
 little
 shop
 in
 a
-by way
+byway
 near
 drury
 lane
@@ -36302,7 +36302,7 @@ photographs
 the
 shop
 was
-old fashioned
+oldfashioned
 and
 low
 and
@@ -36455,7 +36455,7 @@ a
 short
 slight
 hunched
-beetle browed
+beetlebrowed
 man
 with
 long
@@ -36819,7 +36819,7 @@ shutting
 the
 door
 behind
-him  as
+himas
 he
 would
 have
@@ -36832,7 +36832,7 @@ a
 man
 for
 shutting
-doors  and
+doorsand
 i
 followed
 him
@@ -37080,7 +37080,7 @@ theres
 anyone
 in
 this
-house  
+house
 he
 cried
 with
@@ -37178,7 +37178,7 @@ was
 very
 old
 and
-tumble down
+tumbledown
 damp
 so
 that
@@ -37224,7 +37224,7 @@ with
 theatrical
 lumber
 bought
-second hand
+secondhand
 i
 judged
 from
@@ -37282,7 +37282,7 @@ heap
 and
 holding
 an
-old fashioned
+oldfashioned
 revolver
 in
 his
@@ -37295,7 +37295,7 @@ while
 he
 stared
 about
-open mouthed
+openmouthed
 and
 suspicious
 it
@@ -37481,7 +37481,7 @@ had
 a
 fit
 of
-rage  i
+ragei
 could
 hardly
 control
@@ -37522,8 +37522,8 @@ the
 head
 exclaimed
 kemp
-yes  stunned
-him  as
+yesstunned
+himas
 he
 was
 going
@@ -37549,13 +37549,13 @@ bag
 of
 old
 boots
-but  i
+buti
 say
 the
 common
 conventions
 of
-humanity  
+humanity
 are
 all
 very
@@ -37645,7 +37645,7 @@ thing
 to
 get
 out
-of  head
+ofhead
 away
 from
 the
@@ -37685,13 +37685,13 @@ be
 able
 to
 describe
-me  
+me
 but
 still
 said
 kemp
 in
-england  to day
+englandtoday
 and
 the
 man
@@ -37702,7 +37702,7 @@ own
 house
 and
 you
-were  well
+werewell
 robbing
 robbing
 confound
@@ -37785,14 +37785,14 @@ in
 a
 fix
 but
-still  
+still
 of
 course
 i
 was
 in
 a
-fix  an
+fixan
 infernal
 fix
 and
@@ -37800,7 +37800,7 @@ he
 made
 me
 wild
-too  hunting
+toohunting
 me
 about
 the
@@ -37855,7 +37855,7 @@ loaf
 and
 some
 rank
-cheese  more
+cheesemore
 than
 sufficient
 to
@@ -37875,11 +37875,11 @@ up
 past
 my
 impromptu
-bag  he
+baghe
 was
 lying
 quite
-still  to
+stillto
 the
 room
 containing
@@ -37913,7 +37913,7 @@ outside
 the
 day
 was
-bright  by
+brightby
 contrast
 with
 the
@@ -37941,7 +37941,7 @@ carts
 a
 hansom
 a
-four wheeler
+fourwheeler
 with
 a
 pile
@@ -38059,7 +38059,7 @@ some
 powder
 rouge
 and
-sticking plaster
+stickingplaster
 i
 had
 thought
@@ -38238,7 +38238,7 @@ with
 a
 little
 bedroom
-looking glass
+lookingglass
 inspecting
 myself
 from
@@ -38279,7 +38279,7 @@ confidence
 i
 took
 my
-looking glass
+lookingglass
 down
 into
 the
@@ -38427,7 +38427,7 @@ out
 into
 the
 strand
-oh  disillusionment
+ohdisillusionment
 again
 i
 thought
@@ -38446,7 +38446,7 @@ do
 whatever
 i
 chose
-everything  save
+everythingsave
 to
 give
 away
@@ -38641,7 +38641,7 @@ it
 was
 not
 their
-affair  and
+affairand
 so
 at
 last
@@ -38700,7 +38700,7 @@ absurdity
 an
 invisible
 man
-was  in
+wasin
 a
 cold
 and
@@ -38763,7 +38763,7 @@ when
 they
 are
 got
-ambition  what
+ambitionwhat
 is
 the
 good
@@ -38819,7 +38819,7 @@ i
 had
 become
 a
-wrapped up
+wrappedup
 mystery
 a
 swathed
@@ -38937,7 +38937,7 @@ of
 memoranda
 and
 my
-cheque book
+chequebook
 my
 luggage
 and
@@ -38953,7 +38953,7 @@ out
 this
 idea
 of
-mine  i
+minei
 will
 show
 you
@@ -38965,7 +38965,7 @@ as
 i
 get
 my
-books  and
+booksand
 then
 i
 started
@@ -39005,11 +39005,11 @@ found
 you
 out
 you
-rather  to
+ratherto
 judge
 by
 the
-papers  
+papers
 i
 did
 rather
@@ -39132,7 +39132,7 @@ it
 i
 shall
 go
-wild  i
+wildi
 shall
 start
 mowing
@@ -39209,7 +39209,7 @@ advancing
 up
 the
 hill
-road  with
+roadwith
 an
 intolerable
 slowness
@@ -39340,7 +39340,7 @@ man
 might
 always
 be
-invisible  and
+invisibleand
 yet
 live
 and
@@ -39566,7 +39566,7 @@ remain
 great
 possibilities
 huge
-possibilities  
+possibilities
 you
 have
 told
@@ -39593,7 +39593,7 @@ not
 a
 soul
 ah
-now  
+now
 the
 invisible
 man
@@ -39629,7 +39629,7 @@ wasted
 strength
 time
 opportunities
-alone  it
+aloneit
 is
 wonderful
 how
@@ -39658,12 +39658,12 @@ want
 kemp
 is
 a
-goal keeper
+goalkeeper
 a
 helper
 and
 a
-hiding place
+hidingplace
 an
 arrangement
 whereby
@@ -39689,7 +39689,7 @@ confederate
 with
 food
 and
-rest  a
+resta
 thousand
 things
 are
@@ -39723,16 +39723,16 @@ for
 eavesdropping
 and
 so
-forth  one
+forthone
 makes
 sounds
 its
 of
 little
-help  a
+helpa
 little
 help
-perhaps  in
+perhapsin
 housebreaking
 and
 so
@@ -39862,7 +39862,7 @@ there
 is
 an
 invisible
-man  as
+manas
 well
 as
 we
@@ -39922,7 +39922,7 @@ that
 in
 a
 thousand
-ways  scraps
+waysscraps
 of
 paper
 thrust
@@ -40058,11 +40058,11 @@ your
 results
 take
 the
-world  take
+worldtake
 the
 nation
 at
-least  into
+leastinto
 your
 confidence
 think
@@ -40073,11 +40073,11 @@ do
 with
 a
 million
-helpers  
+helpers
 the
 invisible
 man
-interrupted  arm
+interruptedarm
 extended
 there
 are
@@ -40138,7 +40138,7 @@ voice
 and
 suddenly
 the
-dressing gown
+dressinggown
 opened
 and
 sitting
@@ -40160,10 +40160,10 @@ and
 forthwith
 the
 invisible
-man  his
+manhis
 legs
 had
-vanished  sprang
+vanishedsprang
 to
 his
 feet
@@ -40292,7 +40292,7 @@ foot
 wide
 and
 the
-dressing gown
+dressinggown
 came
 wedging
 itself
@@ -40333,7 +40333,7 @@ the
 landing
 the
 empty
-dressing gown
+dressinggown
 was
 flung
 on
@@ -40504,7 +40504,7 @@ bleeding
 and
 a
 pink
-dressing gown
+dressinggown
 and
 some
 underclothing
@@ -40606,7 +40606,7 @@ this
 morning
 of
 brutal
-self seeking
+selfseeking
 he
 has
 wounded
@@ -40633,7 +40633,7 @@ he
 is
 going
 out
-now  furious
+nowfurious
 he
 must
 be
@@ -40757,7 +40757,7 @@ man
 in
 your
 police
-station  marvel
+stationmarvel
 i
 know
 said
@@ -40765,7 +40765,7 @@ adye
 i
 know
 those
-books  yes
+booksyes
 but
 the
 tramp
@@ -40835,7 +40835,7 @@ and
 rain
 the
 whole
-country side
+countryside
 must
 begin
 hunting
@@ -40889,7 +40889,7 @@ but
 why
 not
 come
-yes  you
+yesyou
 come
 too
 come
@@ -40902,10 +40902,10 @@ sort
 of
 council
 of
-war  get
+warget
 hopps
 to
-help  and
+helpand
 the
 railway
 managers
@@ -40914,7 +40914,7 @@ jove
 its
 urgent
 come
-along  tell
+alongtell
 me
 as
 we
@@ -40986,7 +40986,7 @@ come
 up
 and
 meet
-us  quickly
+usquickly
 and
 now
 kemp
@@ -41067,7 +41067,7 @@ corner
 and
 put
 all
-weapons  all
+weaponsall
 implements
 that
 might
@@ -41175,7 +41175,7 @@ establish
 a
 reign
 of
-terror  so
+terrorso
 soon
 as
 he
@@ -41186,7 +41186,7 @@ the
 emotions
 of
 this
-escape  as
+escapeas
 i
 am
 sure
@@ -41347,7 +41347,7 @@ there
 it
 was
 he
-re asserted
+reasserted
 himself
 in
 a
@@ -41443,7 +41443,7 @@ evidently
 counted
 on
 kemps
-co operation
+cooperation
 in
 his
 brutal
@@ -41473,7 +41473,7 @@ he
 did
 until
 about
-half past
+halfpast
 two
 it
 was
@@ -41689,10 +41689,10 @@ were
 hurrying
 home
 kemps
-proclamation  signed
+proclamationsigned
 indeed
 by
-adye  was
+adyewas
 posted
 over
 almost
@@ -41924,7 +41924,7 @@ points
 to
 a
 desperate
-struggle  the
+strugglethe
 trampled
 ground
 the
@@ -41935,7 +41935,7 @@ wicksteed
 received
 his
 splintered
-walking stick
+walkingstick
 but
 why
 the
@@ -41966,9 +41966,9 @@ was
 a
 man
 of
-forty five
+fortyfive
 or
-forty six
+fortysix
 steward
 to
 lord
@@ -42057,7 +42057,7 @@ before
 he
 met
 his
-victim  he
+victimhe
 must
 have
 been
@@ -42168,7 +42168,7 @@ and
 again
 with
 his
-walking stick
+walkingstick
 she
 was
 the
@@ -42271,13 +42271,13 @@ thought
 of
 the
 invisible
-man  for
+manfor
 port
 burdock
 is
 ten
 miles
-away  he
+awayhe
 may
 have
 pursued
@@ -42305,7 +42305,7 @@ the
 invisible
 man
 making
-off  quietly
+offquietly
 in
 order
 to
@@ -42325,7 +42325,7 @@ pursuing
 this
 unaccountably
 locomotive
-object  finally
+objectfinally
 striking
 at
 it
@@ -42339,7 +42339,7 @@ easily
 have
 distanced
 his
-middle aged
+middleaged
 pursuer
 under
 ordinary
@@ -42406,13 +42406,13 @@ hypothesis
 the
 only
 undeniable
-facts  for
+factsfor
 stories
 of
 children
 are
 often
-unreliable  are
+unreliableare
 the
 discovery
 of
@@ -42424,7 +42424,7 @@ death
 and
 of
 the
-blood stained
+bloodstained
 iron
 rod
 flung
@@ -42453,11 +42453,11 @@ for
 which
 he
 took
-it  if
+itif
 he
 had
 a
-purpose  was
+purposewas
 abandoned
 he
 was
@@ -42664,7 +42664,7 @@ yelping
 of
 dogs
 these
-men hunters
+menhunters
 had
 particular
 instructions
@@ -42728,7 +42728,7 @@ lost
 heart
 for
 nearly
-twenty four
+twentyfour
 hours
 save
 when
@@ -42902,7 +42902,7 @@ them
 it
 is
 under
-me  the
+methe
 terror
 this
 is
@@ -42914,7 +42914,7 @@ one
 of
 the
 new
-epoch  the
+epochthe
 epoch
 of
 the
@@ -42946,7 +42946,7 @@ for
 the
 sake
 of
-example  a
+examplea
 man
 named
 kemp
@@ -42954,7 +42954,7 @@ death
 starts
 for
 him
-to day
+today
 he
 may
 lock
@@ -42972,7 +42972,7 @@ on
 armour
 if
 he
-likes  death
+likesdeath
 the
 unseen
 death
@@ -43023,7 +43023,7 @@ fall
 upon
 you
 also
-to day
+today
 kemp
 is
 to
@@ -43076,7 +43076,7 @@ slowly
 leaving
 his
 lunch
-unfinished  the
+unfinishedthe
 letter
 had
 come
@@ -43084,7 +43084,7 @@ by
 the
 one
 oclock
-post  and
+postand
 went
 into
 his
@@ -43254,7 +43254,7 @@ he
 said
 an
 odd
-game  but
+gamebut
 the
 chances
 are
@@ -43290,7 +43290,7 @@ must
 get
 food
 every
-day  and
+dayand
 i
 dont
 envy
@@ -43305,7 +43305,7 @@ out
 in
 the
 open
-somewhere  secure
+somewheresecure
 from
 collisions
 i
@@ -43378,7 +43378,7 @@ presently
 he
 heard
 the
-front door
+frontdoor
 bell
 ringing
 and
@@ -43540,12 +43540,12 @@ and
 whistled
 softly
 and
-you  
+you
 said
 adye
 proposed
 a
-trap  like
+traplike
 a
 fool
 said
@@ -43720,7 +43720,7 @@ here
 all
 the
 downstairs
-rooms  hullo
+roomshullo
 smash
 and
 then
@@ -43738,7 +43738,7 @@ said
 kemp
 that
 must
-be  yes  its
+beyesits
 one
 of
 the
@@ -43813,9 +43813,9 @@ settle
 him
 theyre
 hard
-by  not
+bynot
 ten
-minutes  
+minutes
 another
 window
 went
@@ -43841,7 +43841,7 @@ he
 hesitated
 i
 havent
-one  at
+oneat
 least
 to
 spare
@@ -43885,7 +43885,7 @@ heard
 one
 of
 the
-first floor
+firstfloor
 bedroom
 windows
 crack
@@ -44189,7 +44189,7 @@ saw
 the
 revolver
 in
-mid air
+midair
 six
 feet
 off
@@ -44517,7 +44517,7 @@ behind
 him
 kemp
 watched
-him  puzzled
+himpuzzled
 the
 revolver
 vanished
@@ -44660,7 +44660,7 @@ the
 villas
 down
 the
-hill road
+hillroad
 were
 drawn
 but
@@ -44668,7 +44668,7 @@ in
 one
 little
 green
-summer house
+summerhouse
 was
 a
 white
@@ -44782,7 +44782,7 @@ interior
 fastenings
 of
 the
-ground floor
+groundfloor
 windows
 again
 everything
@@ -45061,7 +45061,7 @@ him
 a
 moment
 and
-then  
+then
 a
 ringing
 came
@@ -45126,7 +45126,7 @@ a
 revolver
 with
 two
-shots  left
+shotsleft
 hes
 killed
 adye
@@ -45172,14 +45172,14 @@ policemen
 hes
 in
 the
-kitchen  or
+kitchenor
 will
 be
 he
 has
 found
 an
-axe  
+axe
 suddenly
 the
 house
@@ -45206,7 +45206,7 @@ and
 retreated
 into
 the
-dining room
+diningroom
 kemp
 tried
 to
@@ -45233,7 +45233,7 @@ the
 policemen
 into
 the
-dining room
+diningroom
 doorway
 poker
 said
@@ -45255,7 +45255,7 @@ the
 policeman
 and
 the
-dining room
+diningroom
 one
 to
 the
@@ -45335,7 +45335,7 @@ ran
 to
 open
 the
-shutters  possibly
+shutterspossibly
 with
 an
 idea
@@ -45521,7 +45521,7 @@ movement
 he
 heard
 the
-dining room
+diningroom
 window
 open
 and
@@ -45574,7 +45574,7 @@ slipped
 past
 you
 doctor
-kemp  sir
+kempsir
 pause
 doctor
 kemp
@@ -45644,9 +45644,9 @@ and
 stepped
 into
 the
-dining room
+diningroom
 doctor
-kemp  
+kemp
 he
 began
 and
@@ -45666,7 +45666,7 @@ over
 his
 shoulder
 the
-dining room
+diningroom
 window
 was
 wide
@@ -45843,7 +45843,7 @@ had
 been
 deserted
 for
-weeks  after
+weeksafter
 a
 violent
 riot
@@ -45873,11 +45873,11 @@ sworn
 it
 was
 all
-right  he
+righthe
 looked
 at
 his
-watch  twenty
+watchtwenty
 minutes
 ago
 he
@@ -45902,7 +45902,7 @@ then
 as
 he
 sat
-open mouthed
+openmouthed
 came
 a
 still
@@ -45913,7 +45913,7 @@ the
 shutters
 of
 the
-drawing room
+drawingroom
 window
 were
 flung
@@ -45946,7 +45946,7 @@ appeared
 beside
 her
 helping
-her  dr
+herdr
 kemp
 in
 another
@@ -46134,7 +46134,7 @@ shut
 the
 windows
 shut
-everything  the
+everythingthe
 invisible
 man
 is
@@ -46283,17 +46283,17 @@ and
 so
 into
 the
-hill road
+hillroad
 and
 mr
 heelas
 staring
 from
 his
-window  a
+windowa
 face
 of
-horror  had
+horrorhad
 scarcely
 witnessed
 kemp
@@ -46344,7 +46344,7 @@ slam
 emerging
 into
 the
-hill road
+hillroad
 kemp
 naturally
 took
@@ -46464,7 +46464,7 @@ kemp
 discovered
 that
 the
-hill road
+hillroad
 was
 indescribably
 vast
@@ -46519,7 +46519,7 @@ they
 were
 locked
 and
-barred  by
+barredby
 his
 own
 orders
@@ -46627,7 +46627,7 @@ posts
 and
 heaps
 of
-gravel  the
+gravelthe
 drainage
 works
 he
@@ -46686,14 +46686,14 @@ tram
 driver
 and
 his
-helper  arrested
+helperarrested
 by
 the
 sight
 of
 his
 furious
-haste  stood
+hastestood
 staring
 with
 the
@@ -46853,7 +46853,7 @@ hundred
 yards
 from
 the
-tram line
+tramline
 end
 and
 immediately
@@ -46934,7 +46934,7 @@ coming
 out
 of
 a
-shop door
+shopdoor
 with
 a
 stick
@@ -46971,7 +46971,7 @@ cried
 form
 a
 line
-across  
+across
 he
 was
 hit
@@ -47125,7 +47125,7 @@ him
 screamed
 kemp
 help
-help  hold
+helphold
 hes
 down
 hold
@@ -47170,7 +47170,7 @@ no
 shouting
 after
 kemps
-cry  only
+cryonly
 a
 sound
 of
@@ -47354,7 +47354,7 @@ big
 navvy
 holding
 a
-blood stained
+bloodstained
 spade
 hes
 shamming
@@ -47497,7 +47497,7 @@ feel
 his
 heart
 his
-side  ugh
+sideugh
 suddenly
 an
 old
@@ -47577,7 +47577,7 @@ constable
 heres
 his
 feet
-a showing
+ashowing
 and
 so
 slowly
@@ -47704,7 +47704,7 @@ hair
 and
 brow
 were
-white  not
+whitenot
 grey
 with
 age
@@ -47714,7 +47714,7 @@ with
 the
 whiteness
 of
-albinism  and
+albinismand
 his
 eyes
 were
@@ -47796,7 +47796,7 @@ bed
 in
 a
 tawdry
-ill lighted
+illlighted
 bedroom
 surrounded
 by
@@ -48015,14 +48015,14 @@ at
 the
 empire
 music
-all  just
+alljust
 to
 tell
 em
 in
 my
 own
-words  barring
+wordsbarring
 one
 and
 if
@@ -48131,7 +48131,7 @@ he
 is
 a
 bachelor
-man  his
+manhis
 tastes
 were
 ever
@@ -48147,11 +48147,11 @@ the
 house
 outwardly
 he
-buttons  it
+buttonsit
 is
 expected
 of
-him  but
+himbut
 in
 his
 more
@@ -48320,13 +48320,13 @@ table
 the
 covers
 are
-weather worn
+weatherworn
 and
 tinged
 with
 an
 algal
-green  for
+greenfor
 once
 they
 sojourned
@@ -48357,7 +48357,7 @@ a
 long
 clay
 pipe
-slowly  gloating
+slowlygloating
 over
 the
 books
@@ -48376,7 +48376,7 @@ and
 begins
 to
 study
-it  turning
+itturning
 over
 the
 leaves
@@ -48402,7 +48402,7 @@ air
 cross
 and
 a
-fiddle de dee
+fiddlededee
 lord
 what
 a
@@ -48444,7 +48444,7 @@ get
 the
 haul
 of
-them  lord
+themlord
 i
 wouldnt
 do
@@ -48452,7 +48452,7 @@ what
 he
 did
 id
-just  well
+justwell
 he
 pulls
 at

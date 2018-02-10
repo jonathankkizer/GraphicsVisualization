@@ -8,6 +8,7 @@ def formatStuff(i):
 	for j in i:
 		word += j.replace(",", "").replace(".", "").replace('"', "").replace("?", "").replace("!", "").replace("-","").replace(")","").replace("'","").replace("_","").replace("$","").replace(";","").replace("*","").replace("(","").replace("[","").replace("]","").replace(":","")
 	filter(lambda x: x.isalpha(), word)
+	word.split()
 	return word.lower()
 
 # reads all words from filename, returns based on lin
