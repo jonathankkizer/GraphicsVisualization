@@ -53,7 +53,7 @@ def wordFrequency(wordCounts):
 				wordFreq += 1
 			else:
 				continue
-		outString = str(wordFreqCounter) + ": " + str(wordFreq) + "\n"
+		outString = str(wordFreqCounter) + "," + str(wordFreq) + "\n"
 		textFile.write(outString)
 		wordFreqCounter += 1
 		
