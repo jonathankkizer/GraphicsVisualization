@@ -14,7 +14,8 @@ numOccuerrences(): This function creates a dictionary to store the words from "a
 uniqueWords(dictionary): This function reads through the dictionary and writes all words which occurrence is 1 into an empty file "uniquewords.txt", one word per line. 
 wordFruquency(dictionary): This function counts the number of words with same occurrences and writes the pair (occurrence: number of words with that occurrence) into a text file "wordfrequency.txt", one pair per line.
 
-A remaining issue is how we treat "--" interjections in the text's dialogue. The author has many times that they use this writing style, which presents a problem for our parsing technique. Since the usage of "--" is different than "-", and our code currently does not retain any knowledge of n+1 characters, we made a decision to simply remove any "-" and replace it with "". This results in some occurrences of inappropriately-combined words, though with far less error than replacing "-" with " " or "\n".
+A remaining issue is how we treat "--" interjections in the text's dialogue. The author has many times that they use this writing style, which presents a problem for our parsing technique. 
+Since the usage of "--" is different than "-", and our code currently does not retain any knowledge of n+1 characters, we made a decision to simply remove any "-" and replace it with "". This results in some occurrences of inappropriately-combined words, though with far less error than replacing "-" with " " or "\n".
 
 After implementing the extract_words.py on novel <The Invisible Man>, we got three text files, "allwords.txt","uniquewords.txt"and "wordfrequency.txt", used for visualization. 
 
