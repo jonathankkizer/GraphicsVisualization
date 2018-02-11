@@ -5,7 +5,7 @@ Brandon Kerbow, Jonathan Kizer, Xinyun Zhang
 In this assignment, our group used the novel <The Invisible Man> 
 to do word extraction and visualization. 
 
-extract_words.py 
+*** extract_words.py  ***
 Functions: 
 readAllWords(file): This function takes a text file as an argument, returns a list of all words appeared in the file.
 formatStuff(string): This function gets rid of all punctuations and anything that is not an alphabet from a string/word. 
@@ -14,11 +14,13 @@ numOccuerrences(): This function creates a dictionary to store the words from "a
 uniqueWords(dictionary): This function reads through the dictionary and writes all words which occurrence is 1 into an empty file "uniquewords.txt", one word per line. 
 wordFruquency(dictionary): This function counts the number of words with same occurrences and writes the pair (occurrence: number of words with that occurrence) into a text file "wordfrequency.txt", one pair per line.
 
+A remaining issue is how we treat "--" interjections in the text's dialogue. The author has many times that they use this writing style, which presents a problem for our parsing technique. Since the usage of "--" is different than "-", and our code currently does not retain any knowledge of n+1 characters, we made a decision to simply remove any "-" and replace it with "". This results in some occurrences of inappropriately-combined words, though with far less error than replacing "-" with " " or "\n".
+
 After implementing the extract_words.py on novel <The Invisible Man>, we got three text files, "allwords.txt","uniquewords.txt"and "wordfrequency.txt", used for visualization. 
 
-We used "allwords.txt" to create a word cloud on Jason Davies website. 
+We used "allwords.txt" to create a word cloud on Jason Davies' website. 
 
-a3_novelvisualization:
+*** a3_novelvisualization: ***
 Global value:
 PFont courier: text font.
 String[] wordHistory: a list of words which have shown on the canvas already. 
@@ -48,7 +50,7 @@ In draw:
 We call the populateLineString to generate 18 lines on the canvas. 
 MouseClick:  Everything is set to initial value in order to do the draw loop all over again to show a new set of words. 
 
-a3_wordfrequency: 
+*** a3_wordfrequency: ***
 String[] freqFile: used to load the frequency pair.
 In setup:
 Set the canvas size to (500,500) and load all the frequency from “wordfrequecnt.txt”.
@@ -60,14 +62,5 @@ Translate the canvas to set the bottom left corner as (0,0) for easier dots posi
 Draw a dot for each word frequency pair, at ln(occurrence) as horizontal position and ln(number of words) as vertical position. 
 
 Extra Credit:
-
-
-
-
-
-
-
-
-
-
-
+A few areas of our code we feel may be eligible for extra credit. Primarily, a3_wordfrequency creates a graph without any sort of graphing library; we instead wrote code to convert Processing's coordinate system into one that more closely fits with a traditional coordinate-system. 
+Additionally, beyond the requirements of Assignment 3, we maintain an array of used words in a3_novelvisualization. If our random function pulls a word that has already been used, we pull another word until a distinct one is used, and proceed.
