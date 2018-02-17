@@ -1,0 +1,9 @@
+Tree Object
+				Trunk
+	Branches	Height	
+	Leaves		Width
+	
+Brief Description:
+The tree object's trunk will grow in both width and height. 
+Additionally, the branches and leaves will grow with time and with the trunk's growth.
+Finally, the tree will be able to reverse growth and "wither". All of this will be styled after a time-lapse.
