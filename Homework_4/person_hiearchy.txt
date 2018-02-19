@@ -1,0 +1,20 @@
+
+HIERARCHY OF SCENE
+								Background
+						Person object     Tree object
+						Dog object
+
+
+
+HIERARCHY OF CREATURE WITHIN SCENE
+									torso 
+					head	lShoulder	rShoulder		hips
+							lUpperArm	rUpperArm	lThigh	rThigh
+							lElbow		rElbow		lKnee	rKnee
+							lLowerArm	rlowerArm	lCalf	rCalf
+							lHand		rHand		lfoot	rCalf
+
+
+
+DESCRIPTION OF UPDATING NODES TO MOVE THE CREATURE
+	As the person translates, his shoulders will move to match a real person's walking. Because of the hierarchy, the upper arms all the way down to the hand will move with it. 

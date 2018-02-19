@@ -1,0 +1,6 @@
+Dog_hiearchy:
+		                Torso
+  Head  left-forelimb  right-forelimb  left-hindlimbs right-hindlimb  tail
+       	
+Descriptions: 
+	The dog will run back and forth with a faster speed than the person walks with. The tail will swing while the dog running. The four limbs will move in a way as a dog walks.
