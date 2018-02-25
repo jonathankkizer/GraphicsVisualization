@@ -11,3 +11,4 @@ Our scene includes sound, which requires the Sound library to be installed and i
 
 Issues included different approaches to animation; the Person class makes better use of Processing's more advanced animation function calls, while the Tree class is more simplistic in its reliance on of altering X, Y, and height and width parameters before being created/updated in the Tree.display() call. 
 
+Transitioning the color from green to fall-yellow for the treeDrop() call was also difficult, but was ultimately solved by using a lerpColor() function call to make the transition smooth and continuous. The rate of transition isn't quite perfect.
