@@ -9,7 +9,12 @@ String path;
 
 
 // Dog declarations
-
+Dog dog1;
+Dog dog2;
+float origx1;
+float origy1;
+float origx2;
+float origy2;
 
 // Tree declarations
 Tree tree1, tree2, tree3;
@@ -25,18 +30,17 @@ float thetaSpeed = 0.1000000;
 void setup() {
   size(500, 500);
   
-<<<<<<< HEAD
-  
-  // Person-related variabels/setup
-  
-=======
-  // Person-related variables/setup
   myPerson1 = new Person();
   myPerson2 = new Person();
->>>>>>> aa96d84b91443d89e57efc40153c4ca867f1e3a6
   
   // Dog-related variables/setup
-  
+  size(500,500);
+  dog1 = new Dog(10,350,100,10,color(100));
+  dog2 = new Dog(0,0,150,1,color(0));
+  origx1=dog1.x;
+  origy1=dog1.y;
+  origx2=dog2.x;
+  origy2=dog2.y;
   
   // Tree-related variables/setup
   v1 = new PVector(.1, .1);
@@ -107,9 +111,7 @@ void draw() {
     theta += thetaSpeed;
   }
   
-  
-  // Dog draw calls
-  
+    
   // tree draw calls
   tree1.display();
   tree2.display();
@@ -120,4 +122,16 @@ void draw() {
   tree1.dropLeaves(treetopDrop);
   tree3.dropLeaves(treetopDrop);
   tree2.treeCreep(treecreep1, "right");
+  
+  // Dog draw calls
+  
+   dog1.display();
+   dog2.display();
+   if (dog1.x> width){
+     dog1.x = origx1;
+   dog1.y=origy1;}
+   if (dog2.x> width-500){
+     dog2.x = origx2;
+   dog2.y=origy2;}
+  
 }
