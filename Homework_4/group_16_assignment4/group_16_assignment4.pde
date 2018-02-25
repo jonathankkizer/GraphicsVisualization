@@ -13,14 +13,27 @@ String path;
 
 // Tree declarations
 Tree tree1, tree2, tree3;
+//Tree-related globals
 PVector v1, v2, v3, v4, treecreep1, treecreep2, treetopDrop;
+
+//Person-related globals
+Person myPerson1;
+Person myPerson2;
+float theta = 0.0000000;
+float thetaSpeed = 0.1000000;
 
 void setup() {
   size(500, 500);
   
+<<<<<<< HEAD
   
   // Person-related variabels/setup
   
+=======
+  // Person-related variables/setup
+  myPerson1 = new Person();
+  myPerson2 = new Person();
+>>>>>>> aa96d84b91443d89e57efc40153c4ca867f1e3a6
   
   // Dog-related variables/setup
   
@@ -50,7 +63,50 @@ void draw() {
   fill(83, 53, 10);
   rect(0, 400, width, height);
   
+  //
   // Person draw calls
+  //
+  
+  //Person 1
+  
+  //moving the arms
+  myPerson1.leftShoulderGroup.translate(0.1000000*cos(theta),0.1000000*sin(theta));
+  myPerson1.rightShoulderGroup.translate(0.1000000*cos(theta),0.1000000*sin(theta));
+  //moving the legs
+  myPerson1.hipsGroup.translate(0.1000000*cos(theta),0.1000000*sin(theta));
+  //moving the person
+  myPerson1.entireBody.translate(0.5000000*cos(theta),0.5000000*sin(theta));
+  //translating
+  myPerson1.entireBody.translate(0.250000,0);
+  //drawing the entire person
+  myPerson1.torso.setFill(color(255,0,255));
+  shape(myPerson1.entireBody,0,-100);
+  
+  //Person 2
+  
+  //moving the arms
+  myPerson2.leftShoulderGroup.translate(0.3000000*cos(theta),0.3000000*sin(theta));
+  myPerson2.rightShoulderGroup.translate(0.3000000*cos(theta),0.3000000*sin(theta));
+  //moving the legs
+  myPerson2.hipsGroup.translate(0.1000000*cos(theta),0.1000000*sin(theta));
+  //moving the person
+  myPerson2.entireBody.translate(0.5000000*cos(theta),0.5000000*sin(theta));
+  //translating
+  myPerson2.entireBody.translate(0.50000,0);
+  //drawing the entire person
+  myPerson2.torso.setFill(color(255,255,0));
+  shape(myPerson2.entireBody,-200,-100);
+  
+  
+  
+  //changing theta1
+  if (theta >= 2.000000*PI - 0.10000) {
+    theta = 0.000000;
+  }
+  else {
+    theta += thetaSpeed;
+  }
+  
   
   // Dog draw calls
   
