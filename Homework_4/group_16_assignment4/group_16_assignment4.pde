@@ -18,6 +18,7 @@ PVector v1, v2, v3, v4, treecreep1, treecreep2, treetopDrop;
 void setup() {
   size(500, 500);
   
+  
   // Person-related variabels/setup
   
   
