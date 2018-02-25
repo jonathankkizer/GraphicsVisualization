@@ -7,6 +7,7 @@ class Tree {
   float originalX, originalY, originalH, originalW, originalTreetopX, originalTreetopY;
   boolean positiveGrowth, dropLeaves;
   
+  // tree constructor
   Tree(float x, float y, float h, float w, float treetopX, float treetopY, PVector speed) {
     this.x = x;
     this.y = y;
@@ -25,6 +26,7 @@ class Tree {
     treetopDrop = 0;
   }
   
+  // "grows" tree over time, with tree shrinking back to original size after reaching 1.5* original width
   void treeTimeLapse() {
     if (this.h > 1.5*originalH && this.w > 1.5*originalW) {
       positiveGrowth = false;
@@ -50,6 +52,7 @@ class Tree {
     }
   }
   
+  // allows tree to "creep" in either direction (left or right) based on specified parameter
   void treeCreep(PVector treeCreepSpeed, String direction) {
     if (direction == "RIGHT" || direction == "right") {
       this.x += treeCreepSpeed.x;
@@ -58,11 +61,13 @@ class Tree {
     }
   }
   
+  // flips dropLeaves boolean, which affects how the treetop is drawn in the display() call
   void dropLeaves(PVector treeCreepSpeed) {
     dropLeaves = true;
   }
   
   void display() {
+    // creates brown tree trunk, from bottom left corner up and around before closing
     treetrunk = createShape();
     treetrunk.beginShape();
     treetrunk.fill(83, 53, 10);
@@ -75,23 +80,26 @@ class Tree {
     fill(4, 116, 13);
     treetopLocX = x+(w/2);
     
+    // "drops" leaves towards the bottom of the frame, turns leaf color to fall yellow, ultimately returns treetop to original position
     if (dropLeaves == false) {
       treetopLocY = y-h;
     } else {
-      if (treetopDrop < h + treetopY) {
-        treetopDrop += speed.y;
+      if (treetopDrop < h + 2*treetopY) {
+        treetopDrop += 2*speed.y;
         treetopLocY = (y-h) + treetopDrop;
         fill(#DBA72E);
       }
-      if (treetopDrop >= h + treetopY) {
+      if (treetopDrop >= h + 2*treetopY) {
         fill(4, 116, 13);
         treetopLocY = y-h;
         treetopDrop = 0;
       }
 
     }
+    // creates treetop based on X,Y, H, W parameters)
     treetop = createShape(ELLIPSE, treetopLocX, treetopLocY, treetopX, treetopY);
     
+    // shows shapes
     shape(treetrunk);
     shape(treetop);
   }

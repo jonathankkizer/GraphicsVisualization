@@ -41,7 +41,7 @@ void draw() {
   tree4.display();
   
   tree2.treeTimeLapse();
-  //tree1.treeTimeLapse();
+  tree1.treeTimeLapse();
   tree3.treeTimeLapse();
   tree4.treeTimeLapse();
   tree4.treeCreep(treecreep2, "LEFT");
