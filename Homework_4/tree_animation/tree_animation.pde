@@ -1,3 +1,5 @@
+// setup for sound library
+// have to import through Processing as well
 import processing.sound.*;
 SoundFile file;
 String audioName = "wind_1234-mike-koenig.mp3";
@@ -8,7 +10,6 @@ PVector v1, v2, v3, v4, treecreep1, treecreep2, treetopDrop;
 
 void setup() {
   size(500,500);
-  
   
   v1 = new PVector(.1, .1);
   v2 = new PVector(.5, .5);
@@ -24,6 +25,7 @@ void setup() {
   tree3 = new Tree(110, 400, 50, 5, 70, 55, v3);
   tree4 = new Tree(250, 400, 120, 15, 125, 110, v4);
   
+  // sound components
   path = sketchPath(audioName);
   file = new SoundFile(this, path);
   file.play();
