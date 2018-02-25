@@ -5,12 +5,24 @@ SoundFile file;
 String audioName = "wind_1234-mike-koenig.mp3";
 String path;
 
+// Person declarations
+
+
+// Dog declarations
+
+
 // Tree declarations
-Tree tree1, tree2, tree3, tree4;
+Tree tree1, tree2, tree3;
 PVector v1, v2, v3, v4, treecreep1, treecreep2, treetopDrop;
 
 void setup() {
   size(500, 500);
+  
+  // Person-related variabels/setup
+  
+  
+  // Dog-related variables/setup
+  
   
   // Tree-related variables/setup
   v1 = new PVector(.1, .1);
@@ -23,7 +35,6 @@ void setup() {
   tree1 = new Tree(450, 400, 80, 20, 80, 70, v1);
   tree2 = new Tree(25, 400, 110, 25, 110, 105, v2);
   tree3 = new Tree(110, 400, 50, 5, 70, 55, v3);
-  tree4 = new Tree(250, 400, 120, 15, 125, 110, v4);
   
   // Sound setup
   path = sketchPath(audioName);
@@ -38,17 +49,18 @@ void draw() {
   fill(83, 53, 10);
   rect(0, 400, width, height);
   
+  // Person draw calls
+  
+  // Dog draw calls
+  
   // tree draw calls
   tree1.display();
   tree2.display();
   tree3.display();
-  tree4.display();
-  tree2.treeTimeLapse();
   tree1.treeTimeLapse();
+  tree2.treeTimeLapse();
   tree3.treeTimeLapse();
-  tree4.treeTimeLapse();
-  tree4.treeCreep(treecreep2, "LEFT");
   tree1.dropLeaves(treetopDrop);
+  tree3.dropLeaves(treetopDrop);
   tree2.treeCreep(treecreep1, "right");
-  
 }
