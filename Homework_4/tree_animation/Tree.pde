@@ -2,10 +2,10 @@ class Tree {
   PShape treetrunk;
   PShape treetop;
   PVector speed;
-  float x, y, h, w;
+  float x, y, h, w, treetopDrop;
   float treetopX, treetopY, treetopLocX, treetopLocY;
   float originalX, originalY, originalH, originalW, originalTreetopX, originalTreetopY;
-  boolean positiveGrowth;
+  boolean positiveGrowth, dropLeaves;
   
   Tree(float x, float y, float h, float w, float treetopX, float treetopY, PVector speed) {
     this.x = x;
@@ -22,6 +22,7 @@ class Tree {
     originalTreetopY = treetopY;
     this.speed = speed;
     positiveGrowth = true;
+    treetopDrop = 0;
   }
   
   void treeTimeLapse() {
@@ -57,8 +58,11 @@ class Tree {
     }
   }
   
+  void dropLeaves(PVector treeCreepSpeed) {
+    dropLeaves = true;
+  }
+  
   void display() {
-    
     treetrunk = createShape();
     treetrunk.beginShape();
     treetrunk.fill(83, 53, 10);
@@ -70,7 +74,22 @@ class Tree {
     
     fill(4, 116, 13);
     treetopLocX = x+(w/2);
-    treetopLocY = y-h;
+    
+    if (dropLeaves == false) {
+      treetopLocY = y-h;
+    } else {
+      if (treetopDrop < h + treetopY) {
+        treetopDrop += speed.y;
+        treetopLocY = (y-h) + treetopDrop;
+        fill(#DBA72E);
+      }
+      if (treetopDrop >= h + treetopY) {
+        fill(4, 116, 13);
+        treetopLocY = y-h;
+        treetopDrop = 0;
+      }
+
+    }
     treetop = createShape(ELLIPSE, treetopLocX, treetopLocY, treetopX, treetopY);
     
     shape(treetrunk);
