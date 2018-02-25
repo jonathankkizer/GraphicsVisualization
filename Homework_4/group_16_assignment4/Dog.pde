@@ -3,28 +3,31 @@ class Dog{
   PShape frontleg;
   PShape backleg;
   PShape tail;
-  
-  
-  float x;
-  float y;
-  float speed;
+  float xpos;
+  float ypos;
+  float origx;
+  float origy;
+  float speed=0;
   color c;
   float bodylength;
   float angle1;
   float angle2 = 0;
-  float angle3=0;
+  float yadd;
+  
   //dog constructor
-  Dog(float x, float y, float size, float speed, color c){
-    this.x = x;
-    this.y = y;
+  Dog(float x, float y, float size, float s, color c){
+    xpos = x;
+    ypos = y;
     bodylength = size; 
-    this.speed = speed;
+    speed = s;
     this.c = c;
+    origx=x;
+    origy=y;
     }
   //dog movements
-  void display(){    
+  void display(){  
     fill(c);
-    translate(x,y);
+    translate(xpos,ypos);
     //dog body
     rect(0,0,bodylength,bodylength/2);
     //dog head
@@ -37,21 +40,28 @@ class Dog{
     tail.rotate(radians(-50));
     shape(tail);
     //frontleg and backleg
-    translate(-x,-y);
-    translate(x+bodylength/4,y+bodylength*1/2);
+    translate(-xpos,-ypos);
+    translate(xpos+bodylength/4,ypos+bodylength*1/2);
     frontleg=createShape(ELLIPSE,0,0,bodylength/10,bodylength/2);
     frontleg.rotate(radians(angle2));
     shape(frontleg);
-    translate(-x-bodylength/4,-y-bodylength*1/2);
-    translate(x+bodylength*3/4,y+bodylength*1/2);
+    translate(-xpos-bodylength/4,-ypos-bodylength*1/2);
+    translate(xpos+bodylength*3/4,ypos+bodylength*1/2);
     backleg=createShape(ELLIPSE,0,0,bodylength/10,bodylength/2);
     backleg.rotate(radians(angle2));
     
-    fill(c);
-    x = x+2;
-    y=y+random(-2,2);
-     
-    angle2=angle2-speed;
+    
+    xpos+=speed;
+    if (xpos>width){
+      xpos=origx;
+      ypos=origy;
+    }
+    angle2=angle2-2;
+    if (ypos<320) {yadd=2; 
+  }else if (ypos>350){ yadd=-2;
+  }
+   ypos += yadd; 
+    
     
    
     shape(backleg);

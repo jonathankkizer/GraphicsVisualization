@@ -11,10 +11,7 @@ String path;
 // Dog declarations
 Dog dog1;
 Dog dog2;
-float origx1;
-float origy1;
-float origx2;
-float origy2;
+
 
 // Tree declarations
 Tree tree1, tree2, tree3;
@@ -35,12 +32,9 @@ void setup() {
   
   // Dog-related variables/setup
   size(500,500);
-  dog1 = new Dog(10,350,100,10,color(100));
-  dog2 = new Dog(0,0,150,1,color(0));
-  origx1=dog1.x;
-  origy1=dog1.y;
-  origx2=dog2.x;
-  origy2=dog2.y;
+  dog2 = new Dog(0,380,120,2,color(0));
+  dog1 = new Dog(10,400,100,5,color(100));
+  
   
   // Tree-related variables/setup
   v1 = new PVector(.1, .1);
@@ -126,12 +120,9 @@ void draw() {
   // Dog draw calls
   
    dog1.display();
+   translate(-dog1.xpos,-dog1.ypos);
    dog2.display();
-   if (dog1.x> width){
-     dog1.x = origx1;
-   dog1.y=origy1;}
-   if (dog2.x> width-500){
-     dog2.x = origx2;
-   dog2.y=origy2;}
+   translate(-dog2.xpos,-dog2.ypos);
+     
   
 }
