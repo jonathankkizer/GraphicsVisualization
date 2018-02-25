@@ -1,0 +1,13 @@
+Our scene represents a person walking, a dog walking, and trees growing/losing their leaves.
+
+The Person class creates a group of PShapes that represent a Person, and then animates it such that it appears to walk. The subanimation is the arms moving.
+
+The Tree class creates two PShapes that represent a tree trunk and a tree top, and then animates it such that it appears to grow and shrink over time. The subanimation is the treetop falling and turning fall-yellow, representing Fall. Tree additionally has the ability to move tree objects left or right, which was originally intended as a way to "scroll" the scene.
+
+
+The Dog class creates
+
+Our scene includes sound, which requires the Sound library to be installed and imported; see README.txt for further instructions. The included sound is simply wind, which seemed fitting for our outdoors-themed scene.
+
+Issues included different approaches to animation; the Person class makes better use of Processing's more advanced animation function calls, while the Tree class is more simplistic in its reliance on of altering X, Y, and height and width parameters before being created/updated in the Tree.display() call. 
+
