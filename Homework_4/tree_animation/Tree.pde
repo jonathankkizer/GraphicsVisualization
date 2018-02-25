@@ -80,14 +80,17 @@ class Tree {
     fill(4, 116, 13);
     treetopLocX = x+(w/2);
     
-    // "drops" leaves towards the bottom of the frame, turns leaf color to fall yellow, ultimately returns treetop to original position
+    // "drops" leaves towards the bottom of the frame if dropLeaves == True, turns leaf color to fall yellow, ultimately returns treetop to original position
     if (dropLeaves == false) {
       treetopLocY = y-h;
     } else {
       if (treetopDrop < h + 2*treetopY) {
-        treetopDrop += 2*speed.y;
+        treetopDrop += 3*speed.y;
         treetopLocY = (y-h) + treetopDrop;
-        fill(#DBA72E);
+        // inspired by: https://forum.processing.org/two/discussion/18393/how-do-i-make-a-point-have-smooth-color-transitions
+        color green = color(4, 116, 13);
+        color brown = color(#DBA72E);
+        fill(lerpColor(green, brown, (millis()%5000)/5000.0));
       }
       if (treetopDrop >= h + 2*treetopY) {
         fill(4, 116, 13);
