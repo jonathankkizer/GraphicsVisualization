@@ -15,6 +15,7 @@ class Rocket_Class {
   }
   
   
+  // code adapted from cylinder turorial here: http://vormplus.be/blog/article/drawing-a-cylinder-with-processing
   void createRocket(float bottom, float top, float h, int sides, color rocketColor) {
     pushMatrix();
     fill(rocketColor);
