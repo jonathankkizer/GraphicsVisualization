@@ -2,3 +2,5 @@ Rocket Description
 The rocket will consist of a cylinder and a cone for the top, and flames as "thrust" out of the bottom.
 The rocket itself will move up, before either being reset or reappearing at the bottom of the frame.
 The "thrust" will be the subanimation.
+
+--> You might also mention that the code for the Rocket class is essentially finished and ready for integration
