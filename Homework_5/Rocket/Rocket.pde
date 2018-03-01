@@ -1,29 +1,29 @@
 Rocket_Class rocket1;
-
-float x, y, z, zRot, xRot;
+float x, y, z;
 
 void setup() {
   size(500, 500, P3D);
-  rocket1 = new Rocket_Class(6, 100, 60);
-  x = width/2;
-  y = height/2;
+  rocket1 = new Rocket_Class(25, 25, 150, 50, color(#66CCCC));
+  x = 0;
+  y = 0;
   z = 0;
-  zRot = PI/4;
-  xRot = PI/3;
 }
 
 void draw() {
-  background(#66CCCC);
-  //translate(height/2, width/2);
-  //rocket1.display();
-  
+  clear();
+  lights();
+  //camera(mouseX, mouseY, 450.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
   translate(x, y, z);
-  rectMode(CENTER);
-  rotateZ(zRot);
-  rotateX(xRot);
-  box(100);
+  pushMatrix();
+  //translate(width/2, height);
+  rocket1.display(width/2, height, 0);
+  popMatrix();
   
-  z++;
-  //zRot += PI/16;
-  //xRot += PI/5;
+  
+  if (y < -height-100) {
+    y = 100;
+  }
+  y -= sin(PI/4);
+  //x += cos(PI/16);
+   
 }
