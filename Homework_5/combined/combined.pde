@@ -7,8 +7,11 @@ Rocket_Class rocket1;
 Rocket_Class rocket2;
 float x, y, z;
 
+//UFO 
+UFO ufo1;
 
 void setup() {
+  
   size(500, 500, P3D);
   
   
@@ -25,6 +28,9 @@ void setup() {
   z = 0;
   
   frameRate(30);
+  
+  //UFO Setup
+  ufo1=new UFO();
 }
 
 
@@ -72,5 +78,10 @@ void draw() {
   y += sin(PI/4);
   z += sin(PI/16);
   x += cos(PI/4);
+  
+  
+  //UFO draw
+  ufo1.display();  
+  
    
 }
