@@ -33,9 +33,7 @@ class Planet {
     this.ringThickness = ringThickness;
     this.ringRotationMultiplier = ringRotationMultiplier;
     
-    //Missing
     this.ringWidth = (3+(ringThickness-20)/100)*planetRadius;
-    //END
     
     //no ironman is shown if the user specifies arguments
     //ironman = loadShape("IronMan.obj");
@@ -43,7 +41,6 @@ class Planet {
     sphereDetail(10);
     
   }
-  
   
   //if the user passes in no argumnts to make an instance of a class, I will select them
   Planet() {
@@ -67,10 +64,7 @@ class Planet {
     
   }
   
-  
-  
   void displayWithIronman() {
-    
   
   //
   //The planet, moon, and ring
@@ -100,8 +94,6 @@ class Planet {
   popMatrix();
   popMatrix();
   
-  
- 
   //ring
   popMatrix();
   noFill();
@@ -112,13 +104,10 @@ class Planet {
   strokeWeight(1); //back to the default
   stroke(0); //back to black outlines
   
-  
   popMatrix();
   popMatrix(); 
   popMatrix();
   popMatrix();
-
-
 
   //
   //Ironman
@@ -141,10 +130,8 @@ class Planet {
     
   }
   
-  
   void displayWithoutIronman() {
     
-  
   //
   //The planet, moon, and ring
   //
@@ -172,8 +159,6 @@ class Planet {
   popMatrix();
   popMatrix();
   popMatrix();
-  
-  
  
   //ring
   popMatrix();
@@ -185,13 +170,10 @@ class Planet {
   strokeWeight(1); //back to the default
   stroke(0); //back to black outlines
   
-  
   popMatrix();
   popMatrix(); 
   popMatrix();
   popMatrix();
-
-
 
   //
   //Ironman
@@ -213,7 +195,5 @@ class Planet {
   */
     
   }
-  
-  
   
 }

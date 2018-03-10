@@ -1,0 +1,39 @@
+Assignment 5: a Space-themed 3D Animation 
+Brandon Kerbow
+Jonathan Kizer
+Xinyun "Alexis" Zhang
+
+CONTENTS
+I. Animation: Motivation and Context
+II. Classes
+    a. Rocket Ship
+    b. UFO
+    c. Planet
+III. Unexpected Challenges
+IV. Division of Work
+
+I. Animation: Motivation and Context
+	Our project scene is set in space and features planets, rocket ships, and a UFO. This theme was chosen because we feel that the rotation and revolution of objects in space translates nicely to practicing 3D animation. The facts that space is cool and easily recognizable were also factored in. 
+
+II. Classes
+	a. Rocket Ship
+		The rockets consist of a cylinder and cone for the top, and flames as "thrust" out the bottom. The rocket itself moves down through the scene until it disappears through the bottom. An instance of the Rocket class takes arguments of the rocket body (PShaope), the rocket nose (PShape), the rocket thrust"(PShape), and a reference coordinate from floats x, y, and z. The class has methods for displaying itself, translating, and activating its thrust.
+	b. UFO
+		A mesh of the UFO is imported as an OBJ file. It rotates about its own center while flying across space. Orbiting the UFO is its own planet. An instance of the UFO class takes arguments of the UFO size (float), movement speed (float), and whether or not the color of the UFO should change over time (boolean). 
+	c. Planet
+		A planet object consists of the planet itself, a ring, and a moon. The planets are fixed in space but rotate about their own centers. The moons both revolve around the planets and rotate about their own centers. The rings rotate about the center of the planets and change color every frame. Both the planets and moons also change color, with the moons cycling between light and dark to represent the ideas of day and night. The planet class features two constructors: one in which the user can pass in nine arguments to specify parameters such as the centers and speeds of these shapes, and one in which no arguments are required. In the case that no arguments are passed in, the class selects such values for the user. The class also has different display methods depending on whether or not the user wants to display the planet with Ironman on it. 
+
+III. Unexpected challenges
+	Our only unexpected challenge was the inability of Processing (or perhaps our GPU's) to render multiple complicated OBJ's on the screen at once. This issue came about when we attempted to render a model of Ironman on each of the planets. This caused the animation to have a long load time and inconsistent frame rate. For this reason, the submitted assignment does not feature Ironman on the planets. 
+
+IV. Division of Work
+	Each group member was responsible for one class. 
+
+	Rocket - Jonathan 
+	UFO - Alexis
+	Planet - Brandon
+
+	Each member coded their assigned class individually. Jonathan first made his Rocket class, Brandon then made his Planet class and integrated his code with Jonathan's, and then Alexis made her UFO class to integrate the final product. Brandon volunteered to write the README and project description, we rotate this job. 
+
+
+

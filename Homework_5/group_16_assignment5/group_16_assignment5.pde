@@ -1,24 +1,24 @@
-//Planet (with ironman) globals
-Planet myPlanetWithIronman; 
+// Planet globals
+
 Planet myPlanetWithoutIronman; 
+Planet myPlanetWithoutIronman2; 
 
 // Rocket Globals
 Rocket_Class rocket1;
 Rocket_Class rocket2;
 float x, y, z;
 
-//UFO 
+// UFO Globals
 UFO ufo1;
 
 void setup() {
   
   size(500, 500, P3D);
-  
+  frameRate(24);
   
   //Planet setup
-  myPlanetWithIronman = new Planet(); 
-  myPlanetWithoutIronman = new Planet(20, 100, 100, 4, 15, 10, 10, 5, 15); 
-  
+  myPlanetWithoutIronman = new Planet(50,200,250,5,30,20,7,10,10); 
+  myPlanetWithoutIronman2 = new Planet(20, 100, 100, 4, 15, 10, 10, 5, 15); 
   
   //Rocket Setup
   rocket1 = new Rocket_Class(25, 25, 150, 5, 25, color(#66CCCC));
@@ -27,16 +27,13 @@ void setup() {
   y = -650;
   z = 0;
   
-  frameRate(30);
-  
   //UFO Setup
   ufo1=new UFO();
+  
 }
-
 
 void draw() {
   
- 
   background(0);
   clear();
   lights();
@@ -44,8 +41,8 @@ void draw() {
   //
   //Planet Code
   //
-  myPlanetWithIronman.displayWithIronman();
   myPlanetWithoutIronman.displayWithoutIronman();
+  myPlanetWithoutIronman2.displayWithoutIronman();
   
   
   //
@@ -79,9 +76,9 @@ void draw() {
   z += sin(PI/16);
   x += cos(PI/4);
   
-  
-  //UFO draw
+  //
+  //UFO code
+  //
   ufo1.display();  
   
-   
 }

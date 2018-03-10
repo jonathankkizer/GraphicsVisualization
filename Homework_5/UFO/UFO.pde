@@ -1,4 +1,5 @@
 class UFO{
+  
   PShape ufo;
   PShape trooper;
   float x =0.0;
@@ -10,13 +11,9 @@ class UFO{
   float posz=0.0;
   float origx=500;
   float origy=0.0;
- 
 
-  
   UFO(){
     ufo=loadShape("UFO2.obj");
-    
-    
     
   }
   
@@ -48,7 +45,7 @@ class UFO{
       s=1;
     }
   popMatrix();
-    }
+   }
     
 }
 

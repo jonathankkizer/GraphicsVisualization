@@ -1,0 +1,1 @@
+To run the animation, simply open the file "group_16_assignment5.pde" and click run. The code will draw upon files that are within the project folder. No user interaction is required once the animation has begun.
