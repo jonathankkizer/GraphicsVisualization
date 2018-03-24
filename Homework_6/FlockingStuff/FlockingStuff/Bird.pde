@@ -7,18 +7,27 @@ class Bird {
   float maxForce;
   float maxSpeed;
   color c;
+  float sepMult, cohMult, aliMult, avoidMult;
+  Flock otherBirdFlock;
   
-  Bird(float _x, float _y, color _c, float _m) {
+  Bird(float _x, float _y, color _c, float _m, Flock _otherBirdFlock) {
     position = new PVector(_x, _y);
     c = _c;
     mass = random(_m-10, _m+10);
     
     acceleration = new PVector(0, 0);
     
+    otherBirdFlock = _otherBirdFlock;
+    
     velocity = PVector.random2D();
-    r = 5.0;
+    r = random(3.5, 6.5);
     maxSpeed = 2;
     maxForce = 0.03;
+    
+    sepMult = random(.5, 1.5);
+    cohMult = random(.5, 1.25);
+    aliMult = random(.5, 1.0);
+    avoidMult = random(.5, 1.25);
   }
   
   void runSimulation(ArrayList<Bird> birds) {
@@ -28,6 +37,7 @@ class Bird {
     render();
   }
   
+  // Draws birds (as triangles)
   void render() {
     float theta = velocity.heading() + radians(90);
     
@@ -44,34 +54,64 @@ class Bird {
     popMatrix();
   }
   
+  // sets borders so simulation can be continuous 
   void borders() {
     if (position.x < -r) position.x = width+r;
-    if (position.y < -r) position.y = height/2+r;
+    if (position.y < -r) position.y = height+r;
     if (position.x > width+r) position.x = -r;
-    if (position.y > height/2+r) position.y = -r;
+    if (position.y > height+r) position.y = -r;
   }
-  
-  void applyForce(PVector force) {
-    //acceleration.add(force.div(mass));
-    acceleration.add(force);
-  }
-  
+
   void flock(ArrayList<Bird> birds) {
     PVector sep = separate(birds);
     PVector ali = align(birds);
     PVector coh = cohesion(birds);
+    PVector avoidOtherFlock = avoidOtherFlock(otherBirdFlock);
     
     // Arbitrarily weighted forces
-    sep.mult(1.5);
-    ali.mult(1.0);
-    coh.mult(1.0);
+    sep.mult(sepMult);
+    ali.mult(aliMult);
+    coh.mult(cohMult);
+    avoidOtherFlock.mult(avoidMult);
+    
     // ADDS FORCE TO ACCELERATION
-    applyForce(sep);
-    applyForce(ali);
-    applyForce(coh);
+    acceleration.add(sep);
+    acceleration.add(ali);
+    acceleration.add(coh);
+    acceleration.add(avoidOtherFlock);
   }
   
-  // Method checks for nearby boids and steers away
+  PVector avoidOtherFlock(Flock otherBirds) {
+    float desiredSep = 200.0f;
+    PVector steer = new PVector(0, 0, 0);
+    int count = 0;
+    
+    for (Bird other: otherBirds.birds) {
+      float d = PVector.dist(position, other.position);
+      
+      if ((d > 0) && (d < desiredSep)) {
+        PVector diff = PVector.sub(position, other.position);
+        diff.normalize();
+        diff.div(d);
+        diff.div(d);
+        steer.add(diff);
+        count++;
+      }
+    }
+    
+    if (count > 0) {
+      steer.div((float)count);
+    }
+    
+    if (steer.mag() > 0) {
+      steer.setMag(maxSpeed);
+      steer.sub(velocity);
+      steer.limit(maxForce);
+    }
+    return steer;
+  }
+  
+  // Method checks for nearby birds and steers away
   PVector separate(ArrayList<Bird> birds) {
     float desiredSep = 50.0f;
     PVector steer = new PVector (0, 0, 0);
@@ -161,6 +201,7 @@ class Bird {
     steer.limit(maxForce);
     return steer;
   }
+  
   
   void update() {
     // Update velocity
