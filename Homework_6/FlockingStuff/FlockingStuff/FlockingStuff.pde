@@ -1,7 +1,5 @@
 // Code inspired by: https://processing.org/examples/flocking.html
-// TO DO: Implement awareness of "predatory birds" 
-// (i.e., avoid other birds of a different color)
-// and ??? 
+
 
 Flock flock1;
 Flock flock2;
@@ -18,13 +16,13 @@ void setup() {
   for (int i = 0; i < 50; i++) {
     float positionX, positionY;
     positionX = random(0, width);
-    positionY = random(height/2, height);
+    positionY = random(0, height);
     flock1.addBird(new Bird(positionX, positionY, c, 40, flock2));
   }
   for (int i = 0; i < 50; i++) {
     float positionX, positionY;
     positionX = random(0, width);
-    positionY = random(height/2, height);
+    positionY = random(0, height);
     flock2.addBird(new Bird(positionX, positionY, d, 40, flock1));
   }
 }
