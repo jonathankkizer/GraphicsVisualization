@@ -55,12 +55,12 @@ void birdSetup() {
     float positionX, positionY;
     positionX = random(0, width);
     positionY = random(0, height);
-    flock1.addBird(new Bird(positionX, positionY, c, 40, flock2));
+    flock1.addBird(new Bird(mouseX, mouseY, c, 40, flock2));
   }
   for (int i = 0; i < 50; i++) {
     float positionX, positionY;
     positionX = random(0, width);
     positionY = random(0, height);
-    flock2.addBird(new Bird(positionX, positionY, d, 40, flock1));
+    flock2.addBird(new Bird(mouseX, mouseY, d, 40, flock1));
   }
 }
