@@ -7,6 +7,9 @@ color d;
 BouncyParticle[] arrayOfBouncyParticles = new BouncyParticle[20];
 PImage img;
 
+//pendulum 
+Pendulum pen1;
+
 void setup() {
   size(500, 500);
   // Flocking/ Bird Setup
@@ -22,6 +25,9 @@ void setup() {
   }
   
   // Pendulum Setup
+  pen1 = new Pendulum(0.002,0.005,2);
+  
+  
 }
 
 void draw() {
@@ -39,6 +45,9 @@ void draw() {
   // Flocking Draw Calls
   flock1.runSimulation();
   flock2.runSimulation();
+  
+  //pendulum simulation
+   pen1.display();
 }
 
 void mousePressed() {

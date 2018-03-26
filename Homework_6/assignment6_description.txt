@@ -1,0 +1,25 @@
+Assignment 6: Simulation
+Brandon Kerbow
+Jonathan Kizer
+Xinyun "Alexis" Zhang
+
+CONTENTS
+I. Simulation: Our project includes three objects simulation, they are bird flock, particle bouncing out from a fountain and pendulum swinging. 
+II. Classes: 
+a. Particle/BouncyParticle: The BouncyParticle class uses particle simulation by extending the Particle class which we were provided with. An instance of the BouncyParticle class will take as parameters values for the initial position (_x and_y), initial velocity (_vx and _vy), a radius _r, dimensions of the screen (screenWidth and screenHeight), and an elastic coefficient. A bouncy particle behaves exactly like a normal particle except it bounces off of the “walls” created by the edges of the canvas.
+
+b. Bird/Flock: The Birds represents a rules-based flocking simulation. The regular Bird() objects will be controlled by three rules(controlled in class flock):
+1. They move in the average direction of all other bird objects,
+2. They move so that they are in the same average position as their neighbors,
+3. They move so that they avoid “crowding” (or occupying the same 2D space)
+
+c. Pendulum: The pendulum is created with two PShapes, a rope and a ball. The pendulum  swings back and forth with a swing simulation and dampening force. It stops when the velocity decreases to 0. 
+
+III. Extra Credit: Interactivity: 
+Our project has a interactive simulation, when click the mouse, the birds flock would flying dispersively from the point where user clicked on the canvas. 
+
+IV. IV. Division of Work
+	Bird/Flock - Jonathan 
+	               Pendulum - Alexis
+	BouncyParticle - Brandon
+
