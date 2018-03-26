@@ -1,6 +1,3 @@
-// Code here and in Bird inspired by: https://processing.org/examples/flocking.html
-// Implemented two new rules, tweaked drawing procedures, and how forces are applied to acceleration, etc.
-
 class Flock {
   ArrayList<Bird> birds; // ArrayList for all birds
   
@@ -18,3 +15,10 @@ class Flock {
     birds.add(b);
   }
 }
+/*
+Code here and in Bird inspired by: 
+http://www.kfish.org/boids/pseudocode.html
+https://www.openprocessing.org/sketch/126516
+http://harry.me/blog/2011/02/17/neat-algorithms-flocking/
+https://processing.org/examples/flocking.html
+*/ 

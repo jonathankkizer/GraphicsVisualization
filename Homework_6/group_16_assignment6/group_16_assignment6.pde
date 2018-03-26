@@ -48,6 +48,8 @@ void draw() {
   
   //pendulum simulation
    pen1.display();
+   
+   //saveFrame();
 }
 
 void mousePressed() {

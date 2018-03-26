@@ -12,14 +12,16 @@ II. Classes:
 		1. They move in the average direction of all other bird objects,
 		2. They move so that they are in the same average position as their neighbors,
 		3. They move so that they avoid “crowding” (or occupying the same 2D space)
+	One issue remains: in some simulations, the birds will "jump" in a strange behavior if drawn/flocking on the edge of the screen; Jonathan wasn't able to figure out what exactly happens in this situation, and it occurred so rarely that it was difficult to reproduce (particularly with all of the random() function calls to set certain Bird/Flock attributes)
 
 	c. Pendulum: The pendulum is created with two PShapes, a rope and a ball. The pendulum  swings back and forth with a swing simulation and dampening 	force. It stops when the velocity decreases to 0. 
 
 III. Extra Credit: Interactivity: 
-	Our project has a interactive simulation, when click the mouse, the birds flock would flying dispersively from the point where user clicked on the 	canvas. 
+	Our project has a interactive simulation, when click the mouse, the birds flock would flying dispersively from the point where user clicked on the canvas. 
 
  IV. Division of Work:
 	Bird/Flock - Jonathan 
 	Pendulum - Alexis
 	BouncyParticle - Brandon
 
+Finally, Jonathan implemented the saveFrame() code to create a short movie of the animation. He converted the resulting .tif images into a .mpeg movie using ffmpeg, a popular image and video open-source CLI tool. http://ffmpeg.org

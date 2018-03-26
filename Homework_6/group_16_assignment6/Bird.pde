@@ -30,6 +30,16 @@ class Bird {
     avoidMult = random(.5, 1.25);
   }
   
+  void update() {
+    // Update velocity
+    velocity.add(acceleration);
+    // Limit speed
+    velocity.limit(maxSpeed);
+    position.add(velocity);
+    // Reset acceleration to 0 each iteration
+    acceleration.mult(0);
+  }
+  
   void runSimulation(ArrayList<Bird> birds) {
     flock(birds);
     update();
@@ -200,16 +210,5 @@ class Bird {
     PVector steer = PVector.sub(desired, velocity);
     steer.limit(maxForce);
     return steer;
-  }
-  
-  
-  void update() {
-    // Update velocity
-    velocity.add(acceleration);
-    // Limit speed
-    velocity.limit(maxSpeed);
-    position.add(velocity);
-    // Reset acceleration to 0 each iteration
-    acceleration.mult(0);
   }
 }
