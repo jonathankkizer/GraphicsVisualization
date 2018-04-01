@@ -10,8 +10,8 @@ class BeeSpawns {
     this.y = beeSpawnY;
   }
   
-  BeeSpawns generateRandomBee() {
-    return new BeeSpawns(20,int(random(50,width-50)),int(random(50,height-50)));
+  BeeSpawns generateRandomBee(int radius) {
+    return new BeeSpawns(radius,int(random(50,width-50)),int(random(50,height-50)));
   }
   
   void display() {

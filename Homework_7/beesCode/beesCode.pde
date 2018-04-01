@@ -3,7 +3,7 @@
 Bee queenBee; //the bee in the front, she is special and distinct from the "child" bees 
 float ks = 0.1; //spring stiffness value
 float kd = 0.3; //spring damping coefficient
-int beeRadius = 20; //also change the BeeSpawns radius in the BeeSpawns class
+int beeRadius = 50; //changes radius of bees and beeSpawns
 
 BeeSpawns beeSpawnNest; //used to call the beeSpawns since processing doesnt seem to let me have statics
 int framesBeforeABeeSpawnAppears = int(random(60,300)); //a bee will randomly spawn on screen every x-y frames seconds
@@ -18,7 +18,7 @@ void setup() {
   //Bee(float _x, float _y,float _vx, float _vy, float _ax, float _ay, float _r,  float _m, 
   //float _rx, float _ry, float _ks, float _kd)
   queenBee = new Bee(250,250,0,0,0,0,beeRadius,1,250,250,ks,kd);
-  beeSpawnNest = new BeeSpawns(20,250,250);
+  beeSpawnNest = new BeeSpawns(beeRadius,250,250);
 }
 
 void draw() {
@@ -46,7 +46,7 @@ void draw() {
 
 void checkIfItIstimeToSpawnABee() {
   if (framesPassedSinceBeeSpawn == framesBeforeABeeSpawnAppears) {
-     beeSpawn = beeSpawnNest.generateRandomBee();
+     beeSpawn = beeSpawnNest.generateRandomBee(beeRadius);
      beeSpawnList.add(beeSpawn);
      framesPassedSinceBeeSpawn = 0;
      framesBeforeABeeSpawnAppears = int(random(60,300));
@@ -86,7 +86,7 @@ void checkCollisionsWithBeeSpawns() {
   
   //for each bee spaw, check if the queen hit it
   for(int i = 0; i < beeSpawnList.size(); i++) {
-    if ( dist(queenBee.x, queenBee.y, beeSpawnList.get(i).x, beeSpawnList.get(i).y ) <= 2 * beeRadius ) {
+    if ( dist(queenBee.x, queenBee.y, beeSpawnList.get(i).x, beeSpawnList.get(i).y ) <= beeRadius ) {
       //if the queen hit a spawn then remove it from the spawn list and add a child to the end of the bee line
       beeSpawnList.remove(i);
       Bee theLastChild = queenBee.getLastChild();
