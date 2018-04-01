@@ -34,7 +34,14 @@ _fx, float _fy) {
  }
  
  void display() {
- ellipse(x, y, r, r);
+   PShape ellipse = createShape(ELLIPSE,x,y,r,r);
+    if (frameCount % 2 == 0) {
+      ellipse.setFill(color(255,255,0));
+    } else {
+      ellipse.setFill(color(0,0,0));
+    }
+    
+    shape(ellipse,0,0);
  }
 
 }
