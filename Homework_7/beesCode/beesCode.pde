@@ -3,7 +3,7 @@
 Bee queenBee; //the bee in the front, she is special and distinct from the "child" bees 
 float ks = 0.1; //spring stiffness value
 float kd = 0.3; //spring damping coefficient
-int beeRadius = 50; //changes radius of bees and beeSpawns
+int beeRadius = 20; //changes radius of bees and beeSpawns
 
 BeeSpawns beeSpawnNest; //used to call the beeSpawns since processing doesnt seem to let me have statics
 int framesBeforeABeeSpawnAppears = int(random(60,300)); //a bee will randomly spawn on screen every x-y frames seconds
