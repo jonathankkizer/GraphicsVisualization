@@ -1,12 +1,19 @@
 //The smooth motion of particles is caused by modeling the bees as particles which are attached to a spring
 
 Bee queenBee; //the bee in the front, she is special and distinct from the "child" bees 
+
+//Controls for Customizing Feel of the Game
 float ks = 0.1; //spring stiffness value
 float kd = 0.3; //spring damping coefficient
 int beeRadius = 20; //changes radius of bees and beeSpawns
+//a bee will randomly spawn on screen every x-y frames, where x and y are the lower and upper bound
+int lowerBoundForHowManyFramesABeeTakesToAppear = 30;
+int upperBoundForHowManyFramesABeeTakesToAppear = 150;
 
+
+//a bee will randomly spawn on screen every x-y frames
+int framesBeforeABeeSpawnAppears = int(random(lowerBoundForHowManyFramesABeeTakesToAppear,upperBoundForHowManyFramesABeeTakesToAppear)); 
 BeeSpawns beeSpawnNest; //used to call the beeSpawns since processing doesnt seem to let me have statics
-int framesBeforeABeeSpawnAppears = int(random(60,300)); //a bee will randomly spawn on screen every x-y frames seconds
 int framesPassedSinceBeeSpawn = 0; //a counter used in determining when to spawn a new bee on screen
 BeeSpawns beeSpawn; //a bee to spawn
 ArrayList<BeeSpawns> beeSpawnList = new ArrayList<BeeSpawns>(); //list of spawnes bees
@@ -49,7 +56,7 @@ void checkIfItIstimeToSpawnABee() {
      beeSpawn = beeSpawnNest.generateRandomBee(beeRadius);
      beeSpawnList.add(beeSpawn);
      framesPassedSinceBeeSpawn = 0;
-     framesBeforeABeeSpawnAppears = int(random(60,300));
+     framesBeforeABeeSpawnAppears = int(random(lowerBoundForHowManyFramesABeeTakesToAppear,upperBoundForHowManyFramesABeeTakesToAppear));
    }
 }
 
