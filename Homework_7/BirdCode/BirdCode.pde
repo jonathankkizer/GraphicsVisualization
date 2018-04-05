@@ -13,10 +13,11 @@ void setup() {
   birdNestX = width/2;
   birdNestY = height/4;
   
-  numBirds = 10;
+  numBirds = 15;
   
   d = color(#CC6666);
   c = color(#66CCCC);
+  
 }
 
 void draw() {
@@ -28,18 +29,19 @@ void draw() {
     birdPos = flock1.updatePosition();
     
     // prints current position from FloatList
-    flock1.printPosition();
+    //flock1.printPosition();
     
     // removes birds that have flown beyond the screen
     flock1.cullFlock();
     
     // adds birds if the total number falls below numBirds
-    if (flock1.getSize() <= numBirds) {
+    if (flock1.getSize() < numBirds) {
       flock1.addBird(new Bird(birdNestX, birdNestY, c, 40/*, flock2*/));
     }
   }
   //flock2.runSimulation();
   //saveFrame();
+  print(flock1.getSize(), "\n");
 }
 
 

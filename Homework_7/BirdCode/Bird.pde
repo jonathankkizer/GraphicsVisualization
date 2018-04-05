@@ -20,7 +20,7 @@ class Bird {
     //otherBirdFlock = _otherBirdFlock;
     
     velocity = PVector.random2D();
-    r = random(3.5, 6.5);
+    r = random(4.5, 9.5);
     maxSpeed = 3;
     maxForce = 0.03;
     
