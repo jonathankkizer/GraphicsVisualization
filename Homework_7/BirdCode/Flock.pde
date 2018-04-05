@@ -24,13 +24,17 @@ class Flock {
     }
   }
   
+  int getSize() {
+    return(birds.size());
+  }
+  
   void cullFlock() {
     for (int i = 0; i < birds.size(); i++) {
       if (birds.get(i).isOnScreen() == false) {
         birds.remove(i);
       }
     }
-    print(birds);
+    //print(birds);
   }
   
   void runSimulation() {

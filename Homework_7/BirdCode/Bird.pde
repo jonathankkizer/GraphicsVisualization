@@ -21,12 +21,12 @@ class Bird {
     
     velocity = PVector.random2D();
     r = random(3.5, 6.5);
-    maxSpeed = 2;
+    maxSpeed = 3;
     maxForce = 0.03;
     
-    sepMult = random(.5, 1.5);
-    cohMult = random(.5, 1.25);
-    aliMult = random(.5, 1.0);
+    sepMult = random(.5, 1.75);
+    cohMult = random(.5, .75);
+    aliMult = random(.5, .6)*-1;
     //avoidMult = random(.5, 1.25);
   }
   
@@ -72,14 +72,7 @@ class Bird {
     popMatrix();
   }
   
-  // sets borders so simulation can be continuous 
-  void borders() {
-    if (position.x < -r) position.x = width+r;
-    if (position.y < -r) position.y = height+r;
-    if (position.x > width+r) position.x = -r;
-    if (position.y > height+r) position.y = -r;
-  }
-  
+  // returns "false" if bird is off screen
   boolean isOnScreen() {
     if (position.x < -r) return false;
     if (position.y < -r) return false;
