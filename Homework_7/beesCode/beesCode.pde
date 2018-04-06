@@ -18,14 +18,26 @@ int framesPassedSinceBeeSpawn = 0; //a counter used in determining when to spawn
 BeeSpawns beeSpawn; //a bee to spawn
 ArrayList<BeeSpawns> beeSpawnList = new ArrayList<BeeSpawns>(); //list of spawnes bees
 
+
+Timer myTimer;
+boolean gameIsPaused = false;
+PFont courier;
+
+
 void setup() {
   size(500,500); //feel free to change this, code is modular to these arguments
   frameRate(60); 
+  
+  courier = createFont("Trebuchet MS", 20);
+  textFont(courier);
   
   //Bee(float _x, float _y,float _vx, float _vy, float _ax, float _ay, float _r,  float _m, 
   //float _rx, float _ry, float _ks, float _kd)
   queenBee = new Bee(250,250,0,0,0,0,beeRadius,1,250,250,ks,kd);
   beeSpawnNest = new BeeSpawns(beeRadius,250,250);
+  
+  myTimer = new Timer(true);
+  delay(1500);
 }
 
 void draw() {
@@ -49,6 +61,11 @@ void draw() {
    
    //counter
    framesPassedSinceBeeSpawn += 1;
+   
+   //showing how much in game time has ellapsed,
+   //this is paused when the game is paused with "p"
+   fill(255,60,60);
+   text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 20, 40);
 }
 
 void checkIfItIstimeToSpawnABee() {
@@ -104,10 +121,27 @@ void checkCollisionsWithBeeSpawns() {
   }
 }
 
-//cheat code - press up to instantly get another bee
+
 void keyPressed() {
+  //cheat code - press up to instantly get another bee
   if (keyCode == UP) {
     Bee theLastChild = queenBee.getLastChild();
     theLastChild.attachChildParticle(new Bee(theLastChild.x,theLastChild.y,0,0,0,0,beeRadius,1,250,250,ks,kd));
+  } else {
+    
+    //pausing the game
+    if (key == 'p') {
+      //when user presses p, flip state of this boolean
+      gameIsPaused = !gameIsPaused;
+      
+      if (gameIsPaused) {
+        myTimer.pause();
+        text("PAUSED", width/2 - 30, height/2 - 30);
+      } else {
+        myTimer.resume();
+      }
+    }
+    
+    
   }
 }
