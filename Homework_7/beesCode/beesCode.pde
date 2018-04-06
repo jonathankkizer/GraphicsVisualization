@@ -66,6 +66,7 @@ void draw() {
    //this is paused when the game is paused with "p"
    fill(255,60,60);
    text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 20, 40);
+   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),300,40);
 }
 
 void checkIfItIstimeToSpawnABee() {

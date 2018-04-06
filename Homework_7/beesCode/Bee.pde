@@ -114,4 +114,12 @@ class Bee extends ParticleWithMass {
     
   }
   
+  int getNumberOfChildren() {
+    if (this.childBee == null) {
+      return 1;
+  } else {
+    return 1 + this.childBee.getNumberOfChildren();
+    }
+  }
+  
 }
