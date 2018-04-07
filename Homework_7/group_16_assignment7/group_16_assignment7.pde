@@ -160,6 +160,7 @@ void checkCollisionsWithWall() {
   //if the queen bee hit a wall then game over
   if (queenBee.x > width-10 || queenBee.x < 10 || queenBee.y > height-10 || queenBee.y < 10) {
     background(0);
+    text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
     noLoop();
   } else {
   //otherwiise, if the queen had children then check of those hit a wall 
