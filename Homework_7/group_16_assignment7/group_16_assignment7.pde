@@ -45,6 +45,8 @@ String fileNameToLoadBee;
 //End bee sprite animation stfff
 //
 
+int backgroundInt = 255;
+
 
 void setup() {
   frameRate(60);
@@ -83,7 +85,7 @@ void setup() {
 }
 
 void draw() {
-  background(255);
+  background(backgroundInt);
   
 
   flock1.runSimulation();
@@ -276,6 +278,23 @@ void keyPressed() {
       }
     }
     
+    if (key == '1') {
+      backgroundInt = 255;
+    }
     
-  }
+    if (key == '2') {
+      backgroundInt = 225;
+    }
+    
+    if (key == '3') {
+      backgroundInt = 195;
+    }
+    
+    if (key == '4') {
+      backgroundInt = 165;
+    }
+    
+    
+  } 
+    
 }
