@@ -20,7 +20,7 @@ class Flock {
   
   void printPosition() {
     for (int i = 0; i < currentBirdPosition.size(); i+=2) {
-      print(currentBirdPosition.get(i), ", ", currentBirdPosition.get(i+1), "\n");
+      print("Bird Position: ", currentBirdPosition.get(i), ", ", currentBirdPosition.get(i+1), "\n");
     }
   }
   

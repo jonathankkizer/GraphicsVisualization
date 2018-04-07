@@ -42,7 +42,7 @@ void setup() {
   birdNestX = width/2;
   birdNestY = height/4;
   
-  numBirds = 15;
+  numBirds = 1;
   
   d = color(#CC6666);
   c = color(#66CCCC);
@@ -80,12 +80,8 @@ void draw() {
     if (flock1.getSize() < numBirds) {
       flock1.addBird(new Bird(birdNestX, birdNestY, c, 40/*, flock2*/));
     }
-  }
-  //flock2.runSimulation();
-  //saveFrame();
-  print(flock1.getSize(), "\n");
-  
-  // Bees Draw
+    
+    // Bees Draw
   checkIfItIstimeToSpawnABee();
    
    //show all the beespawns
@@ -105,11 +101,21 @@ void draw() {
    //counter
    framesPassedSinceBeeSpawn += 1;
    
+   // Checks collisions with birds and bees
+   checkBeeBirdCollision();
+   
    //showing how much in game time has ellapsed,
    //this is paused when the game is paused with "p"
    fill(255,60,60);
    text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 20, 40);
    text("Number of Bees: " + str(queenBee.getNumberOfChildren()),300,40);
+    
+  }
+  //flock2.runSimulation();
+  //saveFrame();
+  //print(flock1.getSize(), "\n");
+  
+  
 }
 
 void checkIfItIstimeToSpawnABee() {
@@ -134,6 +140,35 @@ void checkCollisionsWithWall() {
         checkChildrensCollisionsWithWall(queenBee.childBee);
       }
     }
+}
+
+void checkBeeBirdCollision() {
+  for(int counter = 0; counter < birdPos.size(); counter+=2) {
+    if ((birdPos.get(counter) <= (queenBee.x + 15)) && (birdPos.get(counter) >= (queenBee.x-15))) {
+      if ((birdPos.get(counter+1) <= (queenBee.y + 15)) && (birdPos.get(counter+1) >= (queenBee.y-15))) {
+        background(0);
+        noLoop();
+      }
+    }
+  }
+  if (queenBee.childBee != null) {
+    checkChildrenBeeBirdCollision(queenBee.childBee);
+  }
+}
+
+void checkChildrenBeeBirdCollision(Bee childBeeToCheck) {
+  for(int counter = 0; counter < birdPos.size(); counter+=2) {
+    if ((birdPos.get(counter) <= (childBeeToCheck.x + 25)) && (birdPos.get(counter) >= (childBeeToCheck.x-25))) {
+      if ((birdPos.get(counter+1) <= (childBeeToCheck.y + 25)) && (birdPos.get(counter+1) >= (childBeeToCheck.y-25))) {
+        (childBeeToCheck).parentBee.deleteBeesChildren();
+        print("Child bees deleted from bird strike!\n");
+      }
+    } else {
+      if (childBeeToCheck.childBee != null) {
+        checkChildrenBeeBirdCollision(childBeeToCheck.childBee);
+      }
+    }
+  }
 }
 
 void checkChildrensCollisionsWithWall(Bee childBeeToCheck) {
