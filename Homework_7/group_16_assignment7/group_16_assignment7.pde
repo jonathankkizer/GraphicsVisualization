@@ -35,6 +35,7 @@ PFont courier;
 
 
 void setup() {
+  frameRate(60);
   size(500, 500);
   background(0);
   flock1 = new Flock();
@@ -42,13 +43,13 @@ void setup() {
   birdNestX = width/2;
   birdNestY = height/4;
   
-  numBirds = 1;
+  // NOTE: at 5 birds, performance issues don't show up until greater than 15 bees; at 15 Birds, 9 bees makes game unplayable
+  numBirds = 10;
   
   d = color(#CC6666);
   c = color(#66CCCC);
   
   // Bees setup
-  frameRate(60); 
   courier = createFont("Trebuchet MS", 20);
   textFont(courier);
   
@@ -109,6 +110,7 @@ void draw() {
    fill(255,60,60);
    text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 20, 40);
    text("Number of Bees: " + str(queenBee.getNumberOfChildren()),300,40);
+   text("Frame Rate: " + str(frameRate), 20, 480);
     
   }
   //flock2.runSimulation();
@@ -142,35 +144,6 @@ void checkCollisionsWithWall() {
     }
 }
 
-void checkBeeBirdCollision() {
-  for(int counter = 0; counter < birdPos.size(); counter+=2) {
-    if ((birdPos.get(counter) <= (queenBee.x + 15)) && (birdPos.get(counter) >= (queenBee.x-15))) {
-      if ((birdPos.get(counter+1) <= (queenBee.y + 15)) && (birdPos.get(counter+1) >= (queenBee.y-15))) {
-        background(0);
-        noLoop();
-      }
-    }
-  }
-  if (queenBee.childBee != null) {
-    checkChildrenBeeBirdCollision(queenBee.childBee);
-  }
-}
-
-void checkChildrenBeeBirdCollision(Bee childBeeToCheck) {
-  for(int counter = 0; counter < birdPos.size(); counter+=2) {
-    if ((birdPos.get(counter) <= (childBeeToCheck.x + 25)) && (birdPos.get(counter) >= (childBeeToCheck.x-25))) {
-      if ((birdPos.get(counter+1) <= (childBeeToCheck.y + 25)) && (birdPos.get(counter+1) >= (childBeeToCheck.y-25))) {
-        (childBeeToCheck).parentBee.deleteBeesChildren();
-        print("Child bees deleted from bird strike!\n");
-      }
-    } else {
-      if (childBeeToCheck.childBee != null) {
-        checkChildrenBeeBirdCollision(childBeeToCheck.childBee);
-      }
-    }
-  }
-}
-
 void checkChildrensCollisionsWithWall(Bee childBeeToCheck) {
   
   //if a child bee hit a wall then get the pees parent and delete that parents children, thus deleting the
@@ -196,6 +169,37 @@ void checkCollisionsWithBeeSpawns() {
       //add the new bee to the end of the trail
       theLastChild.attachChildParticle(new Bee(theLastChild.x,theLastChild.y,0,0,0,0,beeRadius,1,250,250,ks,kd));
      
+    }
+  }
+}
+
+// checks whether the queen bee has hit a bird; if yes, kills game; if not, checks children with helper function
+void checkBeeBirdCollision() {
+  for(int counter = 0; counter < birdPos.size(); counter+=2) {
+    if ((birdPos.get(counter) <= (queenBee.x + 15)) && (birdPos.get(counter) >= (queenBee.x-15))) {
+      if ((birdPos.get(counter+1) <= (queenBee.y + 15)) && (birdPos.get(counter+1) >= (queenBee.y-15))) {
+        background(0);
+        noLoop();
+      }
+    }
+  }
+  if (queenBee.childBee != null) {
+    checkChildrenBeeBirdCollision(queenBee.childBee);
+  }
+}
+
+// recursively checks to see if children have hit bird; if yes, child and its subsequent nodes are deleted
+void checkChildrenBeeBirdCollision(Bee childBeeToCheck) {
+  for(int counter = 0; counter < birdPos.size(); counter+=2) {
+    if ((birdPos.get(counter) <= (childBeeToCheck.x + 25)) && (birdPos.get(counter) >= (childBeeToCheck.x-25))) {
+      if ((birdPos.get(counter+1) <= (childBeeToCheck.y + 25)) && (birdPos.get(counter+1) >= (childBeeToCheck.y-25))) {
+        (childBeeToCheck).parentBee.deleteBeesChildren();
+        //print("Child bees deleted from bird strike!\n");
+      }
+    } else {
+      if (childBeeToCheck.childBee != null) {
+        checkChildrenBeeBirdCollision(childBeeToCheck.childBee);
+      }
     }
   }
 }
