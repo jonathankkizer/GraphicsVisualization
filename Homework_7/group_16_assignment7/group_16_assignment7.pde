@@ -206,9 +206,6 @@ void checkChildrenBeeBirdCollision(Bee childBeeToCheck) {
 
 
 void keyPressed() {
-  if (key == 'j') {
-    paused ^= true;
-  }
   //cheat code - press up to instantly get another bee
   if (keyCode == UP) {
     Bee theLastChild = queenBee.getLastChild();
