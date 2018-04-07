@@ -31,6 +31,19 @@ Timer myTimer;
 boolean gameIsPaused = false;
 PFont courier;
 
+//
+//Bee sprite animation stuff
+float animationTimerBee = 0.0; //value you pick based on how much time has ellapsed
+float animationTimerValueBee = 0.25; //take 0.25 seconds to change to bees next image frame
+int currentFrameBee = 0; //start out on the 1's frame
+int numFramesBee = 3; //number of frames your animation has, three for bee
+
+PImage arrayOfBeeFrameImages [] = new PImage[numFramesBee];
+String fileNameToLoadBee;
+
+
+//End bee sprite animation stfff
+//
 
 
 void setup() {
@@ -38,12 +51,11 @@ void setup() {
   size(500, 500);
   background(0);
   flock1 = new Flock();
-  paused = false;
   birdNestX = width/2;
-  birdNestY = height/4;
+  birdNestY = height/2;
   
   // NOTE: at 5 birds, performance issues don't show up until greater than 15 bees; at 15 Birds, 9 bees makes game unplayable
-  numBirds = 10;
+  numBirds = 15;
   
   d = color(#CC6666);
   c = color(#66CCCC);
@@ -54,16 +66,26 @@ void setup() {
   
   //Bee(float _x, float _y,float _vx, float _vy, float _ax, float _ay, float _r,  float _m, 
   //float _rx, float _ry, float _ks, float _kd)
-  queenBee = new Bee(250,250,0,0,0,0,beeRadius,1,250,250,ks,kd);
+  queenBee = new Bee(250,250,0,0,0,0,beeRadius,1,mouseX,mouseY,ks,kd);
   beeSpawnNest = new BeeSpawns(beeRadius,250,250);
   
   myTimer = new Timer(true);
+  
+  
+  //populates the array of mario image frames
+   for(int i=0;i<numFramesBee;i++) {
+     fileNameToLoadBee= "bee" + str(i+1) + ".jpg";
+     arrayOfBeeFrameImages[i] = loadImage(fileNameToLoadBee);
+   }
+  
   delay(1500);
   
 }
 
 void draw() {
   background(255);
+  
+
   flock1.runSimulation();
     
   // updates the FloatList showing current X,Y coordinates
@@ -105,13 +127,21 @@ void draw() {
    
   //showing how much in game time has ellapsed,
   //this is paused when the game is paused with "p"
+  //also showing number of bees and objective
   fill(255,60,60);
-  text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 20, 40);
-  text("Number of Bees: " + str(queenBee.getNumberOfChildren()),300,40);
-  text("Frame Rate: " + str(frameRate), 20, 480);
+  text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 10, 30);
+  text("Collect 8 bess to win. Avoid birds.", 90, 480);
+  text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280,30);
+  text("Frame Rate: " + str(frameRate), 20, 60);
   //flock2.runSimulation();
   //saveFrame();
   //print(flock1.getSize(), "\n");
+  
+  //check win condition
+  checkNumberOfBees();
+  
+  //show the bee sprite
+  determineNextImageToShowAndShowIt(arrayOfBeeFrameImages);
 }
 
 void checkIfItIstimeToSpawnABee() {
@@ -173,6 +203,7 @@ void checkBeeBirdCollision() {
     if ((birdPos.get(counter) <= (queenBee.x + 15)) && (birdPos.get(counter) >= (queenBee.x-15))) {
       if ((birdPos.get(counter+1) <= (queenBee.y + 15)) && (birdPos.get(counter+1) >= (queenBee.y-15))) {
         background(0);
+        text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
         noLoop();
       }
     }
@@ -196,6 +227,32 @@ void checkChildrenBeeBirdCollision(Bee childBeeToCheck) {
       }
     }
   }
+}
+
+void checkNumberOfBees() {
+  
+  if (queenBee.getNumberOfChildren() > 7) {
+     text("8 bees collected: You win!", width/2 - 130, height/2 - 30);
+    noLoop();
+  }
+  
+}
+
+//just a function which has the logic for animating a sprite, in this case mario, at an fps other than the framerate of 60
+void determineNextImageToShowAndShowIt(PImage[] arrayOfImageFrames) {
+  
+  //>= because the framerate may not always be at 60 fps, may be
+  //minor drop in speed. if this much time has ellapses or more,
+  //thne because you're resetting animationTimer to get back on track
+  
+  if ((myTimer.getElapsedTime() - animationTimerBee) >= animationTimerValueBee*1000)  {
+    //println(myTimer.getElapsedTime());
+    currentFrameBee = (currentFrameBee + 1) % numFramesBee; //loops between all the frames
+                                                   //by updating the current frame
+    animationTimerBee = myTimer.getElapsedTime();
+  }
+  arrayOfImageFrames[currentFrameBee].resize(40,40);
+  image(arrayOfImageFrames[currentFrameBee], 460, 0);
 }
 
 
