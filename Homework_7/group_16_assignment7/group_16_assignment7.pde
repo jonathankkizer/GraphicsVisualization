@@ -1,7 +1,6 @@
 // Bird & Flock Initialization
 Flock flock1;
 //Flock flock2;
-Boolean paused;
 FloatList birdPos;
 color c, d;
 int birdNestX, birdNestY, numBirds;
@@ -65,59 +64,54 @@ void setup() {
 
 void draw() {
   background(255);
-  if (paused == false) {
-    flock1.runSimulation();
+  flock1.runSimulation();
     
-    // updates the FloatList showing current X,Y coordinates
-    birdPos = flock1.updatePosition();
+  // updates the FloatList showing current X,Y coordinates
+  birdPos = flock1.updatePosition();
     
-    // prints current position from FloatList
-    //flock1.printPosition();
+  // prints current position from FloatList
+  //flock1.printPosition();
     
-    // removes birds that have flown beyond the screen
-    flock1.cullFlock();
+  // removes birds that have flown beyond the screen
+  flock1.cullFlock();
     
-    // adds birds if the total number falls below numBirds
-    if (flock1.getSize() < numBirds) {
-      flock1.addBird(new Bird(birdNestX, birdNestY, c, 40/*, flock2*/));
-    }
+  // adds birds if the total number falls below numBirds
+  if (flock1.getSize() < numBirds) {
+    flock1.addBird(new Bird(birdNestX, birdNestY, c, 40/*, flock2*/));
+  }
     
-    // Bees Draw
+  // Bees Draw
   checkIfItIstimeToSpawnABee();
    
-   //show all the beespawns
-   for(BeeSpawns myBeeSpawn: beeSpawnList) {
-     myBeeSpawn.display();
-   }
-   
-   //See if the queen hit a beespawn, thus adding the bee to the chain
-   checkCollisionsWithBeeSpawns();
-   
-   //see if any bees hit a wall, thus killing them. if the queen hits a wall then game over
-   checkCollisionsWithWall();
-   
-   //the bee class is more or less a linked list, displaying the queenbee displays the children too
-   queenBee.displayBeeAndChildren();
-   
-   //counter
-   framesPassedSinceBeeSpawn += 1;
-   
-   // Checks collisions with birds and bees
-   checkBeeBirdCollision();
-   
-   //showing how much in game time has ellapsed,
-   //this is paused when the game is paused with "p"
-   fill(255,60,60);
-   text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 20, 40);
-   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),300,40);
-   text("Frame Rate: " + str(frameRate), 20, 480);
-    
+  //show all the beespawns
+  for(BeeSpawns myBeeSpawn: beeSpawnList) {
+    myBeeSpawn.display();
   }
+   
+  //See if the queen hit a beespawn, thus adding the bee to the chain
+  checkCollisionsWithBeeSpawns();
+   
+  //see if any bees hit a wall, thus killing them. if the queen hits a wall then game over
+  checkCollisionsWithWall();
+   
+  //the bee class is more or less a linked list, displaying the queenbee displays the children too
+  queenBee.displayBeeAndChildren();
+   
+  //counter
+  framesPassedSinceBeeSpawn += 1;
+   
+  // Checks collisions with birds and bees
+  checkBeeBirdCollision();
+   
+  //showing how much in game time has ellapsed,
+  //this is paused when the game is paused with "p"
+  fill(255,60,60);
+  text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 20, 40);
+  text("Number of Bees: " + str(queenBee.getNumberOfChildren()),300,40);
+  text("Frame Rate: " + str(frameRate), 20, 480);
   //flock2.runSimulation();
   //saveFrame();
   //print(flock1.getSize(), "\n");
-  
-  
 }
 
 void checkIfItIstimeToSpawnABee() {
