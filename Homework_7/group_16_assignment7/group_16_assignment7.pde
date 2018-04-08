@@ -132,9 +132,9 @@ void draw() {
   //also showing number of bees and objective
   fill(255,60,60);
   text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 10, 30);
-  text("Collect 8 bess to win. Avoid birds.", 90, 480);
+  text("Collect 8 Bees to win. Avoid birds.", 90, 480);
   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280,30);
-  text("Frame Rate: " + str(frameRate), 20, 60);
+  //text("Frame Rate: " + str(frameRate), 10, 60);
   //flock2.runSimulation();
   //saveFrame();
   //print(flock1.getSize(), "\n");
@@ -144,6 +144,8 @@ void draw() {
   
   //show the bee sprite
   determineNextImageToShowAndShowIt(arrayOfBeeFrameImages);
+  
+  //saveFrame();
 }
 
 void checkIfItIstimeToSpawnABee() {
