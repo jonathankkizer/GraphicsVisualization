@@ -1,0 +1,32 @@
+Assignment 7: Game—Collecting Bees 
+Brandon Kerbow
+Jonathan Kizer
+Xinyun "Alexis" Zhang
+
+CONTENTS
+I.  Classes: a. Bee   b. Bird
+II. Game Design: User controls bees to collect more bees and avoids being eaten by birds
+III. Extra Credits
+
+I. Classes:
+a. Bee (Bee spawns)
+The bee class is implemented as a class of nodes, which each bee node being a particle which exhibits the behavior of a damped spring. By making an initial “queen bee” that the user controls directly and child bees which follow their parent bee, the trail of bees was implemented as a double linked list of these Bee nodes. New bee nodes will randomly pop up on the screen and when the queen bee meet with the popped bee node, the new bee will be added in to the line. 
+b. Bird (Flock)
+The bird flock will disperse from the center of the canvas and use the position list to store their locations to meet interaction with bees. When a bird hit a bee, the bird will disappear, and the bees affected (along with their children) will be eaten. If the bird does not hit a bee, the bird will simply fly off screen and disappear before another spawn. There may be multiple birds on screen at any point. 
+
+II. Game Design: 
+	The story of our game is simple: the user uses a mouse to controls a trail of bees, aims to collect more bees, and tries to avoid being eaten by birds and hitting edges. The queen bee will always follow the movements of mouse. Individual bee will spawn randomly on the screen. Bees are collected when the user-controlled queen bee runs into a randomly spawned bee, like the game Snake. When one of the birds hits a bee in line, the bee will be eaten. That bee, along with any bees which are behind it in the trail of bees (its “children), will cease to exist. The game is won when the user has attained a chain of 8 bees, the game is lost when queen bee (the one users control) hits canvas’ edges or is eaten by a bird. 
+A virtual display at up right corner of the canvas will show the current number of bees in the trail and a GUI at left corner will display the time elapsed.
+	
+Keyboard interactions: 
+By hitting key “P”, users could pause the game or resume the game. 
+	By hitting “1”,”2”,”3”,”4”, to change game’s background color. 
+Rules decided in main code: 
+	Spring stiffness value and damping coefficient of the moving bee group.
+	The size of the bee. 
+	The frequency of a bee spawn on the screen. 
+
+III. Extra Credits 
+Pause screen interaction: By hitting key “P”, users could pause the game or resume the game. 
+Animated sprites: the flying bee animation on the top right corner by the bee counts. 
+Animation Artifact:  saveFrame() function included in our game code. 

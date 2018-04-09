@@ -8,4 +8,4 @@ CONTROLS:
 	*1,2,3, and 4 to change the background color (white, the default color, is 1)
 	*cheat code: up arrow to instantly add another bee in your trail
 
-NOTE: Upon startung the game, move your cursor to be within the Processign canvas but not in the very center. The bees spawn in the center, and can instantly kill your queen bee if the queen bee is directly in the center.
+NOTE: Upon starting the game, move your cursor to be within the Processign canvas but not in the very center. The birds spawn in the center, and can instantly kill your queen bee if the queen bee is directly in the center.
