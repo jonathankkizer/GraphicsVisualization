@@ -1,4 +1,3 @@
-// Data sourced from here: https://data.world/health/expenditures-for-cancer-care
 // Part 2 Data Visualization Initializations/ Global Vars
 color c;
 Table cancerDataTable;
@@ -69,7 +68,7 @@ void part2DataVis() {
     initCostSum += i;
   }
   avgInitCost = initCostSum / initYearCost.size();
-  print(avgInitCost);
+  //print(avgInitCost);
   for (int i : totalCosts) {
     normalizedTotCost.append((i-avgTotCost)/100);
   } 
@@ -82,7 +81,6 @@ void part2DataVis() {
   for (int i = 0; i < totalCosts.size(); i++) {
     dataVis d;
     nameLookup(i);
-    println(c);
     float y = 250 * (1+((-normalizedInitCost.get(i))/100));
     float r = 15 * (1+(normalizedTotCost.get(i)/100));
     String n = cancerSite.get(i);

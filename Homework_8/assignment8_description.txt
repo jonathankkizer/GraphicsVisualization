@@ -1,0 +1,12 @@
+Part 1:
+
+Part 2:
+Part 2 includes a .csv with information on cancer expenses. The visualization combines the type of cancer, the average initial year of treatment cost, and the total cost over a lifetime of treatment. Total cost is conveyed with the size of each circle, while the initial year is shown with the y-axis. Type of cancer is conveyed through the color of each circle. Mousing over any circle displays the relevant numbers below the visualization.
+
+A description is included above the visualization.
+
+The data source used was taken from here: https://data.world/health/expenditures-for-cancer-care
+SQL queries were used before download to trim the file size down and specify the data to be across all ages and genders and geographic areas.
+
+Part 3:
+
