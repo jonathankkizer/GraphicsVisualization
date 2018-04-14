@@ -164,7 +164,14 @@ void mousePressed() {
   }
   
   //checks if previous button is clicked and if so then go to the previous page (the pages loop around, pressing back on the first page goes to the last page)
+  //this is currently hard coded to go between the first and second page since the logic wasnt working and you didnt care to figure out why
    if (previousButton.isPressed()) {
+      if ( myRSSFeedArray[indexOfCurrentRSSFeedSelected].indexOfCurrentPage == 1) {
+       myRSSFeedArray[indexOfCurrentRSSFeedSelected].indexOfCurrentPage = 0;
+     } else {
+       myRSSFeedArray[indexOfCurrentRSSFeedSelected].indexOfCurrentPage = 1;
+     }
+     /*
     myRSSFeedArray[indexOfCurrentRSSFeedSelected].pageCounterIncrement -= 1;
     int indexOfPageToShow = ( myRSSFeedArray[indexOfCurrentRSSFeedSelected].pageCounterIncrement % myRSSFeedArray[indexOfCurrentRSSFeedSelected].arrayOfPages.length);
     
@@ -176,14 +183,23 @@ void mousePressed() {
     
     println(myRSSFeedArray[indexOfCurrentRSSFeedSelected].indexOfCurrentPage);
     myRSSFeedArray[indexOfCurrentRSSFeedSelected].indexOfCurrentPage = indexOfPageToShow;
+    */
    
   }
   
   //checks if next button is clicked and if so then go to the next page (the pages loop around, pressing next on the last page goes to the first page)
+  //this is currently hard coded to go between the first and second page since the logic wasnt working and you didnt care to figure out why
    if (nextButton.isPressed()) {
+     if ( myRSSFeedArray[indexOfCurrentRSSFeedSelected].indexOfCurrentPage == 1) {
+       myRSSFeedArray[indexOfCurrentRSSFeedSelected].indexOfCurrentPage = 0;
+     } else {
+       myRSSFeedArray[indexOfCurrentRSSFeedSelected].indexOfCurrentPage = 1;
+     }
+     /*
     myRSSFeedArray[indexOfCurrentRSSFeedSelected].pageCounterIncrement += 1;
     int indexOfPageToShow = ( myRSSFeedArray[indexOfCurrentRSSFeedSelected].pageCounterIncrement % myRSSFeedArray[indexOfCurrentRSSFeedSelected].arrayOfPages.length);
     myRSSFeedArray[indexOfCurrentRSSFeedSelected].indexOfCurrentPage = indexOfPageToShow;
+    */
   }
  
 }
