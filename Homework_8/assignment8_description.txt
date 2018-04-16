@@ -1,6 +1,19 @@
-Part 1:
+Brandon Kerbow
+Jonathan Kizer
+Xinyun "Alexis" Zhang
 
-Part 2:
+
+
+This description describes the three parts of this assignment and indicates who worked on which part.
+
+
+
+~~Part 1:~~
+
+
+
+~~Part 2:~~
+
 Part 2 includes a .csv with information on cancer expenses. The visualization combines the type of cancer, the average initial year of treatment cost, and the total cost over a lifetime of treatment. Total cost is conveyed with the size of each circle, while the initial year is shown with the y-axis. Type of cancer is conveyed through the color of each circle. Mousing over any circle displays the relevant numbers below the visualization.
 
 A description is included above the visualization.
@@ -8,5 +21,29 @@ A description is included above the visualization.
 The data source used was taken from here: https://data.world/health/expenditures-for-cancer-care
 SQL queries were used before download to trim the file size down and specify the data to be across all ages and genders and geographic areas.
 
-Part 3:
+
+
+~~Part 3:~~
+
+This RSS Reader draws from RSS feeds available here: https://www.nasa.gov/content/nasa-rss-feeds#what. Specifically, the reader draws from the 5 "topical news feeds".
+The reader allows the user to click through the 5 radio buttons to select the different RSS feeds. Each feed is populated with bullet points of article articles. Hovering over these article titles shows a description and clicking on them opens a browser to link to the article source. All of the feeds contain more than one page so that article titles which do not fit on the first page (max of 6 per page) can be placed on subsequent pages. The "next" and "previous" buttons allow for the scrolling through these pages. 
+
+The most difficult part of this assignment was determining the best way to organize the code. I chose to include different classes which provide functionality or ease of organization. Comments on these classes can be found in the code but a brief description of each is below:
+
+RSS_Feed - a class for the RSS Feeds, there are five of them and the radio buttons indicate which one the user is viewing
+Radio - radio button class, as shown in lecture and used in this code to select the RSS reader of interest
+ButtonRect - rectangle button class, as shown in lecture and used in this code for the "next" and "previous" buttons
+Button - included because it is a parent class of ButtonRect
+Page - each RSS feed contains pages, so making a page a class made sense
+Bullet point - each page contains bullet points (i.e. the article titles), so making a bullet point a class made sense
+Article - used to store the information obtained from articles from the XML source, as shown in lecture
+
+Also included is an animated sprite of a rocketship. Since interactivity is included via the mouse hovering and clicking, the inclusion of an animated sprite is to meet the full criteria for extra credit.
+
+
+
+~~Which team member worked on each part:~~
+Alexis Zhang - Part 1
+Jonathan Kizer - Part 2
+Brandon Kerbow - Part 3
 
