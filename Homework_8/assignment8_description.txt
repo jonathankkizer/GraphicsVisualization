@@ -10,7 +10,11 @@ This description describes the three parts of this assignment and indicates who 
 
 ~~Part 1:~~
 
+A .csv file is included in the part1 folder. The dataset includes statistics for a large number of US Colleges from the 1995 issue of US News and World Report. Only 2 varibales are used in part 1, one is the acceptance rate for each college and the other is the percent of new students those who were top 10% students in high school. 
 
+The bar graph shows a relationship between this two varibals, as a higher rate of new students were top 10% in high school, the schools' average acceptance rate would be lower. 
+
+Interaction: a scroll bar on the botton allows viewers to adjust the size of the bars, the percentage range each bar describes. With a wider range of percentage, the pattern is easier to see.  
 
 ~~Part 2:~~
 
