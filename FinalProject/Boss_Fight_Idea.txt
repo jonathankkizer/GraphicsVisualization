@@ -1,6 +1,6 @@
 Note that the person doing the boss fight or challenge mode is free to do whatever they would like since this is not directly required. Rather, we are doing this so we fulfil Dr. Abahram's spoken wish of making sure every group member has the oppurtunity to contribute meaningfully. 
 
-Here are the ideas we had for a potential boss fight or challenge mode:
+Here are the ideas we had for a potential boss fight or challenge mode, basically we just want something interesting to happen before the game is ACTUALLY won:
 
 idea 1: Upon collecting 8 bees (the win condition), instead of the program calling noLoop() and displaying the text "you win", all of the queen bees' children could dissapear and the number of birds could drastically icnrease. Then the user would have to survive for 30 more seconds* (or so) to ACTUALLY win the game
 
