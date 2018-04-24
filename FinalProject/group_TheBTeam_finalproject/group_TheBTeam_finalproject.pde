@@ -1,6 +1,6 @@
 // Sound Import
 import processing.sound.*;
-SoundFile intro, birdStrike, win, musicTrack, gameOver;
+SoundFile intro, birdStrike, win, musicTrack, gameOver, collectBee;
 
 // Bird & Flock Initialization
 Flock flock1;
@@ -64,6 +64,7 @@ void setup() {
   musicTrack.amp(.6);
   gameOver = new SoundFile(this, "gameOver.wav");
   gameOver.amp(.8);
+  collectBee = new SoundFile(this, "pickUp.wav");
   intro.play();
   
 
@@ -217,6 +218,7 @@ void checkCollisionsWithBeeSpawns() {
       beeSpawnList.remove(i);
       Bee theLastChild = queenBee.getLastChild();
       //add the new bee to the end of the trail
+      collectBee.play();
       theLastChild.attachChildParticle(new Bee(theLastChild.x,theLastChild.y,0,0,0,0,beeRadius,1,250,250,ks,kd));
      
     }
