@@ -87,13 +87,10 @@ void setup() {
   
   //Bee(float _x, float _y,float _vx, float _vy, float _ax, float _ay, float _r,  float _m, 
   //float _rx, float _ry, float _ks, float _kd)
-<<<<<<< HEAD
   queenBee = new Bee(250,250,0,0,0,0,beeRadius,1,mouseX,mouseY,ks,kd);
   beeSpawnNest = new BeeSpawns(beeRadius,250,250, "yellow");
-=======
   queenBee = new Bee(width/2,height/2,0,0,0,0,beeRadius,1,mouseX,mouseY,ks,kd);
-  beeSpawnNest = new BeeSpawns(beeRadius,250,250);
->>>>>>> d6b15a74b09074ecd86357857d0eb7a38f38ea3a
+  beeSpawnNest = new BeeSpawns(beeRadius,250,250, "yellow");
   
   myTimer = new Timer(true);
   
