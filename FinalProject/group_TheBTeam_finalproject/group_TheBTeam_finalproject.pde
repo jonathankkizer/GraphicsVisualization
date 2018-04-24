@@ -1,6 +1,6 @@
 // Sound Import
 import processing.sound.*;
-SoundFile intro, birdStrike, win;
+SoundFile intro, birdStrike, win, musicTrack, gameOver;
 
 // Bird & Flock Initialization
 Flock flock1;
@@ -55,9 +55,17 @@ int backgroundInt = 255;
 
 void setup() {
   intro = new SoundFile(this, "achievement.wav");
+  intro.amp(.8);
   birdStrike = new SoundFile(this, "hit.wav");
+  birdStrike.amp(.8);
   win = new SoundFile(this, "win.wav");
+  win.amp(.8);
+  musicTrack = new SoundFile(this, "musicTrack.wav");
+  musicTrack.amp(.6);
+  gameOver = new SoundFile(this, "gameOver.wav");
+  gameOver.amp(.8);
   intro.play();
+  
 
   //frameRate(60);
   size(500, 500);
@@ -95,6 +103,9 @@ void setup() {
 }
 
 void draw() {
+  if (frameCount == 1) {
+    musicTrack.loop();
+  }
   background(backgroundInt);
   
 
@@ -218,6 +229,9 @@ void checkBeeBirdCollision() {
     if ((birdPos.get(counter) <= (queenBee.x + 15)) && (birdPos.get(counter) >= (queenBee.x-15))) {
       if ((birdPos.get(counter+1) <= (queenBee.y + 15)) && (birdPos.get(counter+1) >= (queenBee.y-15))) {
         background(0);
+        musicTrack.stop();
+        birdStrike.play();
+        gameOver.play();
         text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
         noLoop();
       }
@@ -249,6 +263,7 @@ void checkNumberOfBees() {
   
   if (queenBee.getNumberOfChildren() > 7) {
      text("8 bees collected: You win!", width/2 - 130, height/2 - 30);
+     musicTrack.stop();
      win.play();
     noLoop();
   }
