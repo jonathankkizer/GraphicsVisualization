@@ -1,3 +1,7 @@
+// Sound Import
+import processing.sound.*;
+SoundFile intro, birdStrike, win;
+
 // Bird & Flock Initialization
 Flock flock1;
 //Flock flock2;
@@ -48,8 +52,14 @@ String fileNameToLoadBee;
 int backgroundInt = 255;
 
 
+
 void setup() {
-  frameRate(60);
+  intro = new SoundFile(this, "achievement.wav");
+  birdStrike = new SoundFile(this, "hit.wav");
+  win = new SoundFile(this, "win.wav");
+  intro.play();
+
+  //frameRate(60);
   size(500, 500);
   background(0);
   flock1 = new Flock();
@@ -223,6 +233,7 @@ void checkChildrenBeeBirdCollision(Bee childBeeToCheck) {
   for(int counter = 0; counter < birdPos.size(); counter+=2) {
     if ((birdPos.get(counter) <= (childBeeToCheck.x + 25)) && (birdPos.get(counter) >= (childBeeToCheck.x-25))) {
       if ((birdPos.get(counter+1) <= (childBeeToCheck.y + 25)) && (birdPos.get(counter+1) >= (childBeeToCheck.y-25))) {
+        birdStrike.play();
         (childBeeToCheck).parentBee.deleteBeesChildren();
         //print("Child bees deleted from bird strike!\n");
       }
@@ -238,6 +249,7 @@ void checkNumberOfBees() {
   
   if (queenBee.getNumberOfChildren() > 7) {
      text("8 bees collected: You win!", width/2 - 130, height/2 - 30);
+     win.play();
     noLoop();
   }
   
