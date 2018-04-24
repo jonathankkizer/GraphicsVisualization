@@ -1,0 +1,13 @@
+Note that the person doing the boss fight or challenge mode is free to do whatever they would like since this is not directly required. Rather, we are doing this so we fulfil Dr. Abahram's spoken wish of making sure every group member has the oppurtunity to contribute meaningfully. 
+
+Here are the ideas we had for a potential boss fight or challenge mode, basically we just want something interesting to happen before the game is ACTUALLY won:
+
+idea 1: Upon collecting 8 bees (the win condition), instead of the program calling noLoop() and displaying the text "you win", all of the queen bees' children could dissapear and the number of birds could drastically icnrease. Then the user would have to survive for 30 more seconds* (or so) to ACTUALLY win the game
+
+idea 2: upon collecting 8 bees, the game is reinitialized so it looks as if a new game has been started, but this time the birds move twice as fast or something
+
+
+*Note that there is a timer class so that the in-game time is tracked, make use of this class so that you're only counting the time when the game is unpaused. The time displayed in the upper left corner of the screen is the time the game has ellapsed, i.e. the time the game has been unpaused
+
+
+(once again you can be creative in how you want to do a "boss fight" or challenge mode, you dont have to use these ideas)
