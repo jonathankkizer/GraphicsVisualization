@@ -3,27 +3,23 @@ class BeeSpawns {
   int radius;
   int x;
   int y;
+  String beeColor;
   
-  BeeSpawns(int beeRadius, int beeSpawnX, int beeSpawnY) {
+  BeeSpawns(int beeRadius, int beeSpawnX, int beeSpawnY, String _c) {
     this.radius = beeRadius;
     this.x = beeSpawnX;
     this.y = beeSpawnY;
+    _c = beeColor;
   }
   
-  BeeSpawns generateRandomBee(int radius) {
-    return new BeeSpawns(radius,int(random(50,width-50)),int(random(50,height-50)));
+  BeeSpawns generateRandomBee(int radius, String beeColor) {
+    return new BeeSpawns(radius,int(random(50,width-50)),int(random(50,height-50)), beeColor);
   }
   
   void display() {
+    fill(#FFCC00);
     
-    PShape ellipse = createShape(ELLIPSE,x,y,radius,radius);
-    if (frameCount % 2 == 0) {
-      ellipse.setFill(color(0,0,0));
-    } else {
-      ellipse.setFill(color(255,255,0));
-    }
-    
-    shape(ellipse,0,0);
+    ellipse(x, y, beeRadius, beeRadius);
   }
   
   

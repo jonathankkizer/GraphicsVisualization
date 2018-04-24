@@ -90,7 +90,7 @@ void setup() {
   //Bee(float _x, float _y,float _vx, float _vy, float _ax, float _ay, float _r,  float _m, 
   //float _rx, float _ry, float _ks, float _kd)
   queenBee = new Bee(250,250,0,0,0,0,beeRadius,1,mouseX,mouseY,ks,kd);
-  beeSpawnNest = new BeeSpawns(beeRadius,250,250);
+  beeSpawnNest = new BeeSpawns(beeRadius,250,250, "yellow");
   
   myTimer = new Timer(true);
   
@@ -174,7 +174,11 @@ void draw() {
 
 void checkIfItIstimeToSpawnABee() {
   if (framesPassedSinceBeeSpawn == framesBeforeABeeSpawnAppears) {
-     beeSpawn = beeSpawnNest.generateRandomBee(beeRadius);
+    if (frameCount % 2 == 0) {
+      beeSpawn = beeSpawnNest.generateRandomBee(beeRadius, "black");
+    } else {
+      beeSpawn = beeSpawnNest.generateRandomBee(beeRadius, "yellow");
+    }
      beeSpawnList.add(beeSpawn);
      framesPassedSinceBeeSpawn = 0;
      framesBeforeABeeSpawnAppears = int(random(lowerBoundForHowManyFramesABeeTakesToAppear,upperBoundForHowManyFramesABeeTakesToAppear));
