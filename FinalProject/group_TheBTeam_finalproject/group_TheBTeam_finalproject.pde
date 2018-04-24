@@ -36,7 +36,7 @@ boolean gameIsPaused = false;
 PFont courier;
 
 //
-//Bee sprite animation stuff
+//Bee sprite animation stuff - this is just the random animated sprite in the upper right corner
 float animationTimerBee = 0.0; //value you pick based on how much time has ellapsed
 float animationTimerValueBee = 0.25; //take 0.25 seconds to change to bees next image frame
 int currentFrameBee = 0; //start out on the 1's frame
@@ -46,12 +46,10 @@ PImage arrayOfBeeFrameImages [] = new PImage[numFramesBee];
 String fileNameToLoadBee;
 
 
-//End bee sprite animation stfff
-//
+//End bee sprite animation stuff
 
+//the user can change the background color with 1-4 so this is just the initial color
 int backgroundInt = 255;
-
-
 
 void setup() {
   // Sound setup code
@@ -89,19 +87,24 @@ void setup() {
   
   //Bee(float _x, float _y,float _vx, float _vy, float _ax, float _ay, float _r,  float _m, 
   //float _rx, float _ry, float _ks, float _kd)
+<<<<<<< HEAD
   queenBee = new Bee(250,250,0,0,0,0,beeRadius,1,mouseX,mouseY,ks,kd);
   beeSpawnNest = new BeeSpawns(beeRadius,250,250, "yellow");
+=======
+  queenBee = new Bee(width/2,height/2,0,0,0,0,beeRadius,1,mouseX,mouseY,ks,kd);
+  beeSpawnNest = new BeeSpawns(beeRadius,250,250);
+>>>>>>> d6b15a74b09074ecd86357857d0eb7a38f38ea3a
   
   myTimer = new Timer(true);
   
   
-  //populates the array of mario image frames
+  //populates the array of bee image frames
    for(int i=0;i<numFramesBee;i++) {
      fileNameToLoadBee= "bee" + str(i+1) + ".jpg";
      arrayOfBeeFrameImages[i] = loadImage(fileNameToLoadBee);
    }
   
-  delay(1500);
+  delay(1500); //the game doesnt start immediately, but rater waits this many milliseconds
   
 }
 
