@@ -54,6 +54,7 @@ int backgroundInt = 255;
 
 
 void setup() {
+  // Sound setup code
   intro = new SoundFile(this, "achievement.wav");
   intro.amp(.8);
   birdStrike = new SoundFile(this, "hit.wav");
@@ -65,6 +66,7 @@ void setup() {
   gameOver = new SoundFile(this, "gameOver.wav");
   gameOver.amp(.8);
   collectBee = new SoundFile(this, "pickUp.wav");
+  collectBee.amp(.7);
   intro.play();
   
 
