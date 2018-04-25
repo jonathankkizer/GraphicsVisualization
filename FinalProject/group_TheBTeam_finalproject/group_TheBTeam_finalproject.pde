@@ -22,7 +22,6 @@ int beeRadius = 20; //changes radius of bees and beeSpawns
 int lowerBoundForHowManyFramesABeeTakesToAppear = 30;
 int upperBoundForHowManyFramesABeeTakesToAppear = 150;
 
-
 //a bee will randomly spawn on screen every x-y frames
 int framesBeforeABeeSpawnAppears = int(random(lowerBoundForHowManyFramesABeeTakesToAppear,upperBoundForHowManyFramesABeeTakesToAppear)); 
 BeeSpawns beeSpawnNest; //used to call the beeSpawns since processing doesnt seem to let me have statics
@@ -44,7 +43,6 @@ int numFramesBee = 3; //number of frames your animation has, three for bee
 
 PImage arrayOfBeeFrameImages [] = new PImage[numFramesBee];
 String fileNameToLoadBee;
-
 
 //End bee sprite animation stuff
 
