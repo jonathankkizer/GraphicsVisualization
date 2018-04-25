@@ -153,7 +153,7 @@ void draw() {
   //this is paused when the game is paused with "p"
   //also showing number of bees and objective
   fill(255,60,60);
-  text("Time: " + str(int(myTimer.getElapsedTime()/1000)), 10, 30);
+  text("Time: " + str(myTimer.getElapsedTime()/1000), 10, 30);
   text("Collect 8 Bees to win. Avoid birds.", 90, 480);
   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280,30);
   //text("Frame Rate: " + str(frameRate), 10, 60);
