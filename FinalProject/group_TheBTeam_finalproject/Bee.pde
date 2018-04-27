@@ -32,6 +32,21 @@ class Bee extends ParticleWithMass {
     }
   }
   
+  void displayBeeAndChildrenAsInvincible() {
+    //before you display a bee, update its location based on the spring physics
+    updateLocation();
+    colorMode(HSB);
+    fill(random(255),random(255),200);
+    colorMode(RGB);
+    ellipse(x,y,r,r);
+    
+    //if the bee has children then display its children
+    if (this.childBee != null) {
+      
+      this.childBee.displayInvincibleChildren(this.x,this.y); //passing in the current bees x and y position as rx and ry
+    }
+  }
+  
   void updateLocation() {
    //code borrows form dr abarams lectures: it models a spring with dampening
    //y
@@ -63,6 +78,20 @@ class Bee extends ParticleWithMass {
     if (this.childBee != null) {
       
       this.childBee.displayChildren(this.x,this.y); //keep displaying all the children until you reach the end of the linked list
+    }
+  }
+  
+  void displayInvincibleChildren(float rx,float ry) {
+    //childrens location is updated with a different updateLocation method, one which requires two arguments
+    updateLocation(rx,ry); //pased on the passed in rx and ry which were assigned as the this.x and this.y, aka the position of the parent
+    colorMode(HSB);
+    fill(random(255),random(255),200);
+    colorMode(RGB);
+    ellipse(x,y,r,r);
+    
+    if (this.childBee != null) {
+      
+      this.childBee.displayInvincibleChildren(this.x,this.y); //keep displaying all the children until you reach the end of the linked list
     }
   }
   
