@@ -1,6 +1,6 @@
 // Sound Import
 import processing.sound.*;
-SoundFile intro, birdStrike, win, musicTrack, gameOver, collectBee, underEffectOfPowerUp, collectPowerUp;
+SoundFile intro, birdStrike, win, musicTrack, gameOver, collectBee, underEffectOfPowerUp, collectPowerUp, electricShock;
 
 //background pictue
 PImage backgroundPicture;
@@ -27,6 +27,7 @@ int lowerBoundForHowManyFramesABeeTakesToAppear = 60;
 int upperBoundForHowManyFramesABeeTakesToAppear = 250;
 int numberOfBeesToWin = 10;
 int numberOfSecondsInAFullDay = 30; //the background changes to day and night
+int numberOfFramesBeforeBirdsStartDoingDamage = 100;
 
 //a bee will randomly spawn on screen every x-y frames
 int framesBeforeABeeSpawnAppears = int(random(lowerBoundForHowManyFramesABeeTakesToAppear,upperBoundForHowManyFramesABeeTakesToAppear)); 
@@ -35,11 +36,14 @@ int framesPassedSinceBeeSpawn = 0; //a counter used in determining when to spawn
 BeeSpawns beeSpawn; //a bee to spawn
 ArrayList<BeeSpawns> beeSpawnList = new ArrayList<BeeSpawns>(); //list of spawnes bees
 
-
+//Timer stuff
 Timer myTimer;
 boolean gameIsPaused = false;
-PFont courier;
 float elapsedTime;
+//give the time user to move the mouse to the canvas
+int howLongGameIsDelayedBeforeStarting = 1500; //wait 1500ms before starting the game
+//used to assign the ammount of time that setup took
+int timeSetUpCompleted;
 
 //
 //Bee sprite animation stuff - this is just the random animated sprite in the upper right corner
@@ -52,12 +56,8 @@ PImage arrayOfBeeFrameImages [] = new PImage[numFramesBee];
 String fileNameToLoadBee;
 
 //End bee sprite animation stuff
+//
 
-//the user can change the background color with 1-4 so this is just the initial color
-int backgroundInt = 255;
-
-//give the time user to move the mouse to the canvas
-int howLongGameIsDelayedBeforeStarting = 1500; //wait 1500ms before starting the game
 
 //power-up stuff
 //
@@ -65,8 +65,8 @@ int howLongGameIsDelayedBeforeStarting = 1500; //wait 1500ms before starting the
 //
 int onAverageAPowerUpAppearsAfterThisManySecondsHasPassed = 1;
 float howManySecondsAPowerUpLasts = 10;
-int powerUpimageWidth = 30;
-int powerUpimageHeight = 30;
+int powerUpimageWidth = 50;
+int powerUpimageHeight = 50;
 //TO CONTROL WHAT AREA OF THE CANVAS THE POWERUP MOVES IN - AND HOW QUICKLY IT MOVES - SEE THE CONTROLS IN THE POWERUP CLASS
 //
 //
@@ -83,9 +83,32 @@ float timePowerUpWasActivated;
 //longer the effect of the power-up will last. these variables are assigned in the void keyPressed() when the key == ' ' (aka spacebar)
 float b,m,x;
 
+
+//the electric fence border pic
+PImage electricFenceBorder;
+
+//font
+PFont courier;
+int defaultTextSize;
+
+//make it so the user has some time for immuninity so that they dont die instantly
+int powerUpXPositionWhenInBox;
+int powerUpYPositionWhenInBox;
+
 void setup() {
-  size(500, 500);
+  
+  //size is modular , 800x800 is reccomended but if you change it then everything else will (mostly) change accordingly
+  size(800, 800);
   frameRate(60);
+  
+  stroke(255);
+  strokeWeight(2);
+ 
+  defaultTextSize = int( 20 + (((width+height)/2.0)-500)/30.0  );
+  
+  
+  //for trying to make the game more modular when size() parameters changed
+  textSize(defaultTextSize);
   
   // Sound setup code
   intro = new SoundFile(this, "achievement.wav");
@@ -100,18 +123,22 @@ void setup() {
   gameOver.amp(.8);
   collectBee = new SoundFile(this, "pickUp.wav");
   collectBee.amp(.7);
-  //brandons power up music - source of powerup music, free online: https://www.dl-sounds.com/royalty-free/8-bit-arcade4/
+  //brandons music
+  // source of powerup music, free online: https://www.dl-sounds.com/royalty-free/8-bit-arcade4/
   underEffectOfPowerUp = new SoundFile(this, "underEffectOfPowerUp.mp3");
   underEffectOfPowerUp.amp(1);
-  
   collectPowerUp = new SoundFile(this, "collect.wav");
   collectPowerUp.amp(1);
+  //electric fence collosion - source: https://www.freesoundeffects.com/free-sounds/electric-sounds-10032/
+  electricShock = new SoundFile(this, "electricShock.wav");
   
   intro.play();
   
+  //background and border
   backgroundPicture = loadImage("backgroundPicture.png"); //source: https://4vector.com/free-vector/cloud-trees-scene-93393
-  backgroundPicture.resize(500,500);
-  
+  backgroundPicture.resize(width,height);
+  electricFenceBorder = loadImage("electricFenceBorder.png");
+  electricFenceBorder.resize(width,height);
   
   
   flock1 = new Flock();
@@ -125,13 +152,11 @@ void setup() {
   c = color(#66CCCC);
   
   // Bees setup
-  courier = createFont("Trebuchet MS", 20);
+  courier = createFont("Trebuchet MS", defaultTextSize);
   textFont(courier);
   
   //Bee(float _x, float _y,float _vx, float _vy, float _ax, float _ay, float _r,  float _m, 
   //float _rx, float _ry, float _ks, float _kd)
-  queenBee = new Bee(250,250,0,0,0,0,beeRadius,1,mouseX,mouseY,ks,kd);
-  beeSpawnNest = new BeeSpawns(beeRadius,250,250, "yellow");
   queenBee = new Bee(width/2,height/2,0,0,0,0,beeRadius,1,mouseX,mouseY,ks,kd);
   beeSpawnNest = new BeeSpawns(beeRadius,250,250, "yellow");
   
@@ -147,19 +172,30 @@ void setup() {
   //powerup stuff
   powerUpImage = loadImage("starImage.png");
   beeThemedPictureFrame = loadImage("beeThemedPictureFrame.jpg");
-  beeThemedPictureFrame.resize(50,50);
+  beeThemedPictureFrame.resize(powerUpimageWidth + 20,powerUpimageHeight + 20);
   myPowerUp = new PowerUp(powerUpImage, powerUpimageWidth, powerUpimageHeight);
+  //another attempt at modular code based on setup() size
+  powerUpXPositionWhenInBox = myPowerUp.xPosition = int(180*(width/500.0) + (width-500)/4.0 + powerUpimageWidth/2.72   - (powerUpimageWidth - 30)*1.85    );
+  powerUpYPositionWhenInBox = myPowerUp.yPosition = int(10*(height/500.0)+(height-500)/10.0 + powerUpimageHeight/3.0   - (powerUpimageHeight - 30)*0.35   );
    
   
    
   
   delay(howLongGameIsDelayedBeforeStarting); //the game doesnt start immediately, but rater waits this many milliseconds
   
+  timeSetUpCompleted = millis();
+  
+  
+  
+  
+  
+  
 }
 
 void draw() {
   
-  elapsedTime = (myTimer.getElapsedTime() - howLongGameIsDelayedBeforeStarting)/1000;
+  elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
+  
   
   //to cycle between day and night we use a sine functions. numbers selected to best show day and night modes
   //tint(50,50,139); //night mode
@@ -170,6 +206,7 @@ void draw() {
   tint(redTintValue,greenTintValue,blueTintValue);
   image(backgroundPicture,0,0);
   noTint();
+  image(electricFenceBorder,0,0);
   
   if (frameCount == 1) {
     musicTrack.loop();
@@ -177,8 +214,9 @@ void draw() {
  
  
   
-
+  if (frameCount >= numberOfFramesBeforeBirdsStartDoingDamage) {
   flock1.runSimulation();
+  }
     
   // updates the FloatList showing current X,Y coordinates
   birdPos = flock1.updatePosition();
@@ -226,7 +264,7 @@ void draw() {
   framesPassedSinceBeeSpawn += 1;
    
   // Checks collisions with birds and bees
-  if(beeIsCurrentlyUnderEffectOfPowerUp == false) {
+  if(beeIsCurrentlyUnderEffectOfPowerUp == false && frameCount > numberOfFramesBeforeBirdsStartDoingDamage) {
     checkBeeBirdCollision();
   }
    
@@ -236,9 +274,9 @@ void draw() {
   
   //fill(255,60,60);
   fill(255,0,0);
-  text("Time: " + str(elapsedTime), 10, 30);
-  text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90, 480);
-  text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280,30);
+  text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
+  text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
+  text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
   //text("Frame Rate: " + str(frameRate), 10, 60);
   //flock2.runSimulation();
   //saveFrame();
@@ -248,7 +286,7 @@ void draw() {
   determineNextImageToShowAndShowIt(arrayOfBeeFrameImages);
   
   //show the bee-themed picture frame for the powerup to be in
-  image(beeThemedPictureFrame,180,10);
+  image(beeThemedPictureFrame,180*(width/500.0) + (width-500)/4.0 - ( (powerUpimageWidth+powerUpimageHeight)/2.0 - 30)*1.5 ,10*(height/500.0)+(height-500)/10.0);
   
   //check win condition
   checkNumberOfBees();
@@ -268,8 +306,8 @@ void draw() {
   
   if(powerupInStorageBox) {
     //display the star in there
-    myPowerUp.xPosition = 191;
-    myPowerUp.yPosition = 18;
+    myPowerUp.xPosition = powerUpXPositionWhenInBox;
+    myPowerUp.yPosition = powerUpYPositionWhenInBox;
     myPowerUp.displayWithoutShaking();
   }
   
@@ -306,8 +344,22 @@ void checkCollisionsWithWall() {
     //if the queen bee hit a wall then game over
     if (queenBee.x > width-10 || queenBee.x < 10 || queenBee.y > height-10 || queenBee.y < 10) {
       background(0);
-      text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
+      //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
+      textSize(defaultTextSize);
+      text("The queen has died", width/2 - 130, height/2 - 80);
+      textSize(50);
+      text("GAME OVER", width/2 - 130, height/2 - 20);
+      textSize(defaultTextSize);
+      musicTrack.stop();
+      //this just sounds good tbh
+      for(int i = 0; i<10; i++) {
+        electricShock.play();
+      }
+      
+      gameOver.play();
+      
       noLoop();
+      
     } else {
     //otherwiise, if the queen had children then check of those hit a wall 
         if (queenBee.childBee != null) {
@@ -324,6 +376,9 @@ void checkChildrensCollisionsWithWall(Bee childBeeToCheck) {
   //bee that hit a wall and all its children
   if (childBeeToCheck.x > width-10 || childBeeToCheck.x < 10 || childBeeToCheck.y > height-10 || childBeeToCheck.y < 10) {
     (childBeeToCheck).parentBee.deleteBeesChildren();
+    electricShock.play(); 
+    electricShock.play();
+    
   } else {
   //otherwise if the child bee didnt hit a wall, keep checking all the children (remember it's a linked list of bees)
     if (childBeeToCheck.childBee != null) {
@@ -357,7 +412,12 @@ void checkBeeBirdCollision() {
         musicTrack.stop();
         birdStrike.play();
         gameOver.play();
-        text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
+        //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
+        textSize(defaultTextSize);
+        text("The queen has died", width/2 - 130, height/2 - 80);
+        textSize(50);
+        text("GAME OVER", width/2 - 130, height/2 - 20);
+        textSize(defaultTextSize);
         noLoop();
       }
     }
@@ -411,7 +471,7 @@ void determineNextImageToShowAndShowIt(PImage[] arrayOfImageFrames) {
     animationTimerBee = myTimer.getElapsedTime();
   }
   arrayOfImageFrames[currentFrameBee].resize(40,40);
-  image(arrayOfImageFrames[currentFrameBee], 460, 0);
+  image(arrayOfImageFrames[currentFrameBee], width-40, 0);
 }
 
 void checkToSeeIfItIstimeForThePowerEffectToDissapear() {
@@ -432,8 +492,8 @@ void checkToSeeIfItIstimeForThePowerEffectToDissapear() {
       colorMode(HSB);
       fill(random(255),random(255),200);
       textSize(50);
-      text(str( int(howManySecondsAPowerUpLasts - (elapsedTime - timePowerUpWasActivated))),194,102);
-      textSize(20);
+      text(str( int(howManySecondsAPowerUpLasts - (elapsedTime - timePowerUpWasActivated))),(2.0/5.0)*width + (width-500)/5.4545 - (powerUpimageWidth-30)/1.053 ,height/5.0  + (powerUpimageWidth-30)/2.0);
+      textSize(defaultTextSize);
       fill(255,0,0);
       colorMode(RGB);
     } 
@@ -455,7 +515,7 @@ void spawnPowerUpBasedOnRNG() {
 void checkCollisionWitPowerUpAndActAccordingly() {
   //if you hit a powerup then change the booleans which indicate this, and play a sound to indicate it has been collected
   
-  boolean powerUpIsNotWithinBox = !(myPowerUp.xPosition == 191 && myPowerUp.yPosition == 18);
+  boolean powerUpIsNotWithinBox = !(myPowerUp.xPosition == powerUpXPositionWhenInBox && myPowerUp.yPosition == powerUpYPositionWhenInBox);
   boolean queenBeeCollidedWithPowerUp = queenBee.x >= myPowerUp.xPosition && queenBee.x <= (myPowerUp.xPosition + myPowerUp.imageWidth) &&
   queenBee.y >= myPowerUp.yPosition && queenBee.y <= (myPowerUp.yPosition + myPowerUp.imageHeight);
   
@@ -491,6 +551,22 @@ void keyPressed() {
         b = 0 - m*howManySecondsAPowerUpLasts;
       }
   } 
+  
+  //cheat code: instantly get the effect of a powerup even if you dont have one in storage
+  if (keyCode == DOWN) {
+    if (beeIsCurrentlyUnderEffectOfPowerUp==false) {
+        beeIsCurrentlyUnderEffectOfPowerUp = true;
+        powerupInStorageBox = false;
+        timePowerUpWasActivated = elapsedTime;
+        musicTrack.amp(0); //still playing in the background just at a volume of 0
+        underEffectOfPowerUp.loop(); //play the powerup music
+        //the variables in the linear model which allows the power-up music to be lessened in volume as the powerup runs out
+        m = (0-1) / ( howManySecondsAPowerUpLasts - 0 ) ;
+        x = elapsedTime - timePowerUpWasActivated;
+        b = 0 - m*howManySecondsAPowerUpLasts;
+      }
+    
+  } 
     
   //pausing the game
   if (key == 'p') {
@@ -499,27 +575,12 @@ void keyPressed() {
     
     if (gameIsPaused) {
       myTimer.pause();
-      text("PAUSED", width/2 - 30, height/2 - 30);
+      textSize(50);
+      text("PAUSED", width/2 - 85, height/2 - 20);
+      textSize(defaultTextSize);
     } else {
       myTimer.resume();
     }
   }
-    
-  if (key == '1') {
-    backgroundInt = 255;
-  }
-  
-  if (key == '2') {
-    backgroundInt = 225;
-  }
-  
-  if (key == '3') {
-    backgroundInt = 195;
-  }
-  
-  if (key == '4') {
-    backgroundInt = 165;
-  }
-    
     
 }

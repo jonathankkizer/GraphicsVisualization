@@ -77,8 +77,9 @@ class PowerUp {
     //gives the star its shaking behavior, aka its 2nd level of animation
     this.xPosition += random(-15,15);
     this.yPosition += random(-15,15);
-    
+    tint(random(255),random(255),random(255));
     image(powerUpImage,xPosition,yPosition);
+    noTint();
   
     
   }
