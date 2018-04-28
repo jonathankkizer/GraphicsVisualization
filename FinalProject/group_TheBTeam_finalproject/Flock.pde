@@ -28,10 +28,17 @@ class Flock {
     return(birds.size());
   }
   
-  
-  void updateSpeed(int newMaxSpeed) {
+  // updates LIMIT for max speed; must increase this (default is 3) if using updateBirdVelocity or else it will be capped at 3
+  void updateMaxSpeed(int newMaxSpeed) {
     for (int i = 0; i < birds.size(); i++) {
       birds.get(i).maxSpeed = newMaxSpeed;
+    }
+  }
+  
+  // multiplies bird vector by an int, thus increasing max speed while maintaining headings; MUST UPDATE MAX SPEED or else max velocity limit is capped at 3 by default
+  void updateBirdVelocity(int newVelocity) {
+    for (int i = 0; i < birds.size(); i++) {
+      birds.get(i).velocity = birds.get(i).velocity.mult(newVelocity);
     }
   }
   

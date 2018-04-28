@@ -1,4 +1,3 @@
-float val = 0;
 // Sound Import
 import processing.sound.*;
 SoundFile intro, birdStrike, win, musicTrack, gameOver, collectBee, underEffectOfPowerUp, collectPowerUp, electricShock;
@@ -12,6 +11,7 @@ Flock flock1;
 FloatList birdPos;
 color c, d;
 int birdNestX, birdNestY, numBirds;
+float val = 0;
 
 //Bee Initialization
 //The smooth motion of particles is caused by modeling the bees as particles which are attached to a spring
@@ -320,10 +320,12 @@ void draw() {
   //saveFrame();
 }
 
+// spawn new birds from fixed point (center of display)
 void birdFixedSpawn() {
   flock1.addBird(new Bird(birdNestX, birdNestY, c, 40));
 }
 
+// spawn new birds from a circle around the center of the display
 void birdCircleSpawn() {
   float speed = 10;
   float x = sin(val);
