@@ -1,3 +1,4 @@
+float val = 0;
 // Sound Import
 import processing.sound.*;
 SoundFile intro, birdStrike, win, musicTrack, gameOver, collectBee, underEffectOfPowerUp, collectPowerUp, electricShock;
@@ -222,8 +223,9 @@ void draw() {
   flock1.cullFlock();
     
   // adds birds if the total number falls below numBirds
+  // if in boss mode, circular spawn is used; if not, regular fixed spawn is used
   if (flock1.getSize() < numBirds) {
-    flock1.addBird(new Bird(birdNestX, birdNestY, c, 40/*, flock2*/));
+    birdCircleSpawn();
   }
     
   // Bees Draw
@@ -316,6 +318,27 @@ void draw() {
   
   
   //saveFrame();
+}
+
+void birdFixedSpawn() {
+  flock1.addBird(new Bird(birdNestX, birdNestY, c, 40));
+}
+
+void birdCircleSpawn() {
+  float speed = 10;
+  float x = sin(val);
+  float y = cos(val);
+  
+  x *= width/4;
+  y *= height/4;
+  x += width/2;
+  y += height/2;
+  println(x);
+  println(y);
+  
+  flock1.addBird(new Bird(x, y, c, 40));
+  
+  val += speed;
 }
 
 
