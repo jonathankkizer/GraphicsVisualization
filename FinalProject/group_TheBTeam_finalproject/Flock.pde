@@ -28,6 +28,13 @@ class Flock {
     return(birds.size());
   }
   
+  
+  void updateSpeed(int newMaxSpeed) {
+    for (int i = 0; i < birds.size(); i++) {
+      birds.get(i).maxSpeed = newMaxSpeed;
+    }
+  }
+  
   void cullFlock() {
     for (int i = 0; i < birds.size(); i++) {
       if (birds.get(i).isOnScreen() == false) {

@@ -8,7 +8,6 @@ PImage backgroundPicture;
 
 // Bird & Flock Initialization
 Flock flock1;
-//Flock flock2;
 FloatList birdPos;
 color c, d;
 int birdNestX, birdNestY, numBirds;
@@ -185,15 +184,10 @@ void setup() {
   
   timeSetUpCompleted = millis();
   
-  
-  
-  
-  
-  
 }
 
 void draw() {
-  
+   
   elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
   
   

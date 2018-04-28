@@ -100,36 +100,6 @@ class Bird {
     //acceleration.add(avoidOtherFlock);
   }
   
-  /*PVector avoidOtherFlock(Flock otherBirds) {
-    float desiredSep = 200.0f;
-    PVector steer = new PVector(0, 0, 0);
-    int count = 0;
-    
-    for (Bird other: otherBirds.birds) {
-      float d = PVector.dist(position, other.position);
-      
-      if ((d > 0) && (d < desiredSep)) {
-        PVector diff = PVector.sub(position, other.position);
-        diff.normalize();
-        diff.div(d);
-        diff.div(d);
-        steer.add(diff);
-        count++;
-      }
-    }
-    
-    if (count > 0) {
-      steer.div((float)count);
-    }
-    
-    if (steer.mag() > 0) {
-      steer.setMag(maxSpeed);
-      steer.sub(velocity);
-      steer.limit(maxForce);
-    }
-    return steer;
-  }*/
-  
   // Method checks for nearby birds and steers away
   PVector separate(ArrayList<Bird> birds) {
     float desiredSep = 50.0f;
