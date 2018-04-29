@@ -8,6 +8,7 @@ class Bird {
   float maxSpeed;
   color c;
   float sepMult, cohMult, aliMult, avoidMult;
+  PShape birdSvg;
   //Flock otherBirdFlock;
   
   Bird(float _x, float _y, color _c, float _m/*, Flock _otherBirdFlock*/) {
@@ -20,7 +21,7 @@ class Bird {
     //otherBirdFlock = _otherBirdFlock;
     
     velocity = PVector.random2D();
-    r = random(4.5, 9.5);
+    r = random(4.5, 13.5);
     maxSpeed = 3;
     maxForce = 0.03;
     
@@ -28,6 +29,8 @@ class Bird {
     cohMult = random(.5, .75);
     aliMult = random(.5, .6)*-1;
     //avoidMult = random(.5, 1.25);
+    
+    birdSvg = loadShape("birdShape.svg");
   }
   
   float getX() {
@@ -64,11 +67,7 @@ class Bird {
     pushMatrix();
     translate(position.x, position.y);
     rotate(theta);
-    beginShape(TRIANGLES);
-    vertex(0, -r*2);
-    vertex(-r, r*2);
-    vertex(r, r*2);
-    endShape();
+    shape(birdSvg, 0, 0, 35, 35);
     popMatrix();
   }
   

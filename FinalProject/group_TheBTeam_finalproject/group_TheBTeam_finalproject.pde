@@ -150,7 +150,7 @@ void setup() {
   numBirds = 5;
   
   d = color(#CC6666);
-  c = color(#66CCCC);
+  c = color(#4a7090);
   
   // Bees setup
   courier = createFont("Trebuchet MS", defaultTextSize);
