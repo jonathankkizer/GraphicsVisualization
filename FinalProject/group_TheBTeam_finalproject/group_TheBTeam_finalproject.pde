@@ -17,11 +17,12 @@ float val = 0;
 //The smooth motion of particles is caused by modeling the bees as particles which are attached to a spring
 
 Bee queenBee; //the bee in the front, she is special and distinct from the "child" bees 
+boolean beesFacingRight = true;
 
 //Controls for Customizing Feel of the Game
 float ks = 0.1; //spring stiffness value
 float kd = 0.3; //spring damping coefficient
-int beeRadius = 20; //changes radius of bees and beeSpawns
+int beeRadius = 35; //changes radius of bees and beeSpawns
 //a bee will randomly spawn on screen every x-y frames, where x and y are the lower and upper bound
 int lowerBoundForHowManyFramesABeeTakesToAppear = 60;
 int upperBoundForHowManyFramesABeeTakesToAppear = 250;
@@ -316,6 +317,16 @@ void draw() {
   //check if it is time for the effects of the activiated powerup to go away
   checkToSeeIfItIstimeForThePowerEffectToDissapear();
   
+  //check to see if you should turn the bees around
+  if(mouseX - 5 > pmouseX) {
+     beesFacingRight = true;
+  }
+  
+  if (mouseX + 5 < pmouseX) {
+    beesFacingRight = false;
+  }
+  
+ 
   
   //saveFrame();
 }
@@ -335,8 +346,8 @@ void birdCircleSpawn() {
   y *= height/4;
   x += width/2;
   y += height/2;
-  println(x);
-  println(y);
+  //println(x);
+  //println(y);
   
   flock1.addBird(new Bird(x, y, c, 40));
   
@@ -361,7 +372,7 @@ void checkIfItIstimeToSpawnABee() {
 void checkCollisionsWithWall() {
   
     //if the queen bee hit a wall then game over
-    if (queenBee.x > width-10 || queenBee.x < 10 || queenBee.y > height-10 || queenBee.y < 10) {
+    if (queenBee.x > width- beeRadius/2 || queenBee.x < beeRadius/2 || queenBee.y > height - beeRadius/2 || queenBee.y < beeRadius/2) {
       background(0);
       //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
       textSize(defaultTextSize);
@@ -393,7 +404,7 @@ void checkChildrensCollisionsWithWall(Bee childBeeToCheck) {
   
   //if a child bee hit a wall then get the pees parent and delete that parents children, thus deleting the
   //bee that hit a wall and all its children
-  if (childBeeToCheck.x > width-10 || childBeeToCheck.x < 10 || childBeeToCheck.y > height-10 || childBeeToCheck.y < 10) {
+  if (childBeeToCheck.x > width - beeRadius/2 || childBeeToCheck.x < beeRadius/2 || childBeeToCheck.y > height - beeRadius/2 || childBeeToCheck.y < beeRadius/2) {
     (childBeeToCheck).parentBee.deleteBeesChildren();
     electricShock.play(); 
     electricShock.play();
@@ -425,8 +436,8 @@ void checkCollisionsWithBeeSpawns() {
 // checks whether the queen bee has hit a bird; if yes, kills game; if not, checks children with helper function
 void checkBeeBirdCollision() {
   for(int counter = 0; counter < birdPos.size(); counter+=2) {
-    if ((birdPos.get(counter) <= (queenBee.x + 15)) && (birdPos.get(counter) >= (queenBee.x-15))) {
-      if ((birdPos.get(counter+1) <= (queenBee.y + 15)) && (birdPos.get(counter+1) >= (queenBee.y-15))) {
+    if ((birdPos.get(counter) <= (queenBee.x + beeRadius/2 + 10)) && (birdPos.get(counter) >= (queenBee.x - beeRadius/2 - 10))) {
+      if ((birdPos.get(counter+1) <= (queenBee.y + beeRadius/2 + 10)) && (birdPos.get(counter+1) >= (queenBee.y - beeRadius/2 - 10))) {
         background(0);
         musicTrack.stop();
         birdStrike.play();
@@ -449,8 +460,8 @@ void checkBeeBirdCollision() {
 // recursively checks to see if children have hit bird; if yes, child and its subsequent nodes are deleted
 void checkChildrenBeeBirdCollision(Bee childBeeToCheck) {
   for(int counter = 0; counter < birdPos.size(); counter+=2) {
-    if ((birdPos.get(counter) <= (childBeeToCheck.x + 25)) && (birdPos.get(counter) >= (childBeeToCheck.x-25))) {
-      if ((birdPos.get(counter+1) <= (childBeeToCheck.y + 25)) && (birdPos.get(counter+1) >= (childBeeToCheck.y-25))) {
+    if ((birdPos.get(counter) <= (childBeeToCheck.x + beeRadius/2 + 10)) && (birdPos.get(counter) >= (childBeeToCheck.x - beeRadius/2 - 10))) {
+      if ((birdPos.get(counter+1) <= (childBeeToCheck.y + beeRadius/2 + 10)) && (birdPos.get(counter+1) >= (childBeeToCheck.y - beeRadius/2 -5))) {
         birdStrike.play();
         (childBeeToCheck).parentBee.deleteBeesChildren();
         //print("Child bees deleted from bird strike!\n");
@@ -535,8 +546,8 @@ void checkCollisionWitPowerUpAndActAccordingly() {
   //if you hit a powerup then change the booleans which indicate this, and play a sound to indicate it has been collected
   
   boolean powerUpIsNotWithinBox = !(myPowerUp.xPosition == powerUpXPositionWhenInBox && myPowerUp.yPosition == powerUpYPositionWhenInBox);
-  boolean queenBeeCollidedWithPowerUp = queenBee.x >= myPowerUp.xPosition && queenBee.x <= (myPowerUp.xPosition + myPowerUp.imageWidth) &&
-  queenBee.y >= myPowerUp.yPosition && queenBee.y <= (myPowerUp.yPosition + myPowerUp.imageHeight);
+  
+  boolean queenBeeCollidedWithPowerUp = checkIfQueenCollidedWithPowerUp();
   
 
     if (queenBeeCollidedWithPowerUp && powerUpIsNotWithinBox){ 
@@ -547,6 +558,12 @@ void checkCollisionWitPowerUpAndActAccordingly() {
     } 
     //else do nothing
     
+}
+
+boolean checkIfQueenCollidedWithPowerUp() {
+  return queenBee.x + beeRadius/2 >= myPowerUp.xPosition && queenBee.x - beeRadius/2 <= (myPowerUp.xPosition + myPowerUp.imageWidth) &&
+  queenBee.y + beeRadius/2 >= myPowerUp.yPosition && queenBee.y - beeRadius/2 <= (myPowerUp.yPosition + myPowerUp.imageHeight);
+  
 }
 
 void keyPressed() {
