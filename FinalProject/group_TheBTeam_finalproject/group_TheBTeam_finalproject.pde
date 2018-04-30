@@ -153,7 +153,7 @@ void setup() {
   electricShock.amp(1);
   //explosion for missle - source: https://freesound.org/people/tommccann/sounds/235968/
   explosion = new SoundFile(this, "explosion.wav");
-  explosion.amp(0.5);
+  
   
   intro.play();
   
@@ -212,6 +212,7 @@ void setup() {
   
 }
 
+
 void draw() {
   
   if (onLevel1) {
@@ -221,296 +222,10 @@ void draw() {
     if (onLevel2) {
       drawLoopForLevel2();
     } else {
-      println("on neither level");
+      println("on neither level for some reason - you shouldnt ever see this");
     }
   }
-     
- 
 }
-
-
-
-void drawLoopForLevel2() {
-  
-   elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted - 1000*timeLevel1WasCompleted)/1000;
-  
-  
-  //to cycle between day and night we use a sine functions. numbers selected to best show day and night modes
-  //tint(50,50,139); //night mode
-  //tint(255,255,255); //day mode
-  int redTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
-  int greenTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
-  int blueTintValue = int(58*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 197) ;
-  tint(redTintValue,greenTintValue,blueTintValue);
-  image(backgroundPicture,0,0);
-  noTint();
-  image(electricFenceBorder,0,0);
-  
-  if (frameCount == 1) {
-    musicTrack.loop();
-  }
- 
- 
-  
-  if (frameCount >= numberOfFramesBeforeBirdsStartDoingDamage) {
-  flock1.runSimulation();
-  }
-    
-  // updates the FloatList showing current X,Y coordinates
-  birdPos = flock1.updatePosition();
-    
-  // prints current position from FloatList
-  //flock1.printPosition();
-    
-  // removes birds that have flown beyond the screen
-  flock1.cullFlock();
-    
-  // adds birds if the total number falls below numBirds
-  // if in boss mode, circular spawn is used; if not, regular fixed spawn is used
-  if (flock1.getSize() < numBirds) {
-    birdCircleSpawn();
-  }
-    
-  // Bees Draw
-  checkIfItIstimeToSpawnABee();
-   
-  //show all the beespawns
-  
-  for(BeeSpawns myBeeSpawn: beeSpawnList) {
-    myBeeSpawn.display();
-  }
-  
-   
-  //See if the queen hit a beespawn, thus adding the bee to the chain
-  checkCollisionsWithBeeSpawns();
-  
-   
-  //see if any bees hit a wall, thus killing them. if the queen hits a wall then game over
-  //the powerup makes you invincible
-  if(beeIsCurrentlyUnderEffectOfPowerUp == false) {
-    checkCollisionsWithWall();
-  }
-   
-  //the bee class is more or less a linked list, displaying the queenbee displays the children too
-  //invincible bees are displayed differently
-  if(beeIsCurrentlyUnderEffectOfPowerUp) {
-    queenBee.displayBeeAndChildrenAsInvincible();
-  } else {
-    queenBee.displayBeeAndChildren();
-  }
-   
-  //counter
-  framesPassedSinceBeeSpawn += 1;
-   
-  // Checks collisions with birds and bees
-  if(beeIsCurrentlyUnderEffectOfPowerUp == false && frameCount > numberOfFramesBeforeBirdsStartDoingDamage + 60) {
-    checkBeeBirdCollision();
-  }
-   
-  //showing how much in game time has ellapsed,
-  //this is paused when the game is paused with "p"
-  //also showing number of bees and objective
-  
-  //fill(255,60,60);
-  fill(255,0,0);
-  text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
-  text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
-  text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
-  //text("Frame Rate: " + str(frameRate), 10, 60);
-  //flock2.runSimulation();
-  //saveFrame();
-  //print(flock1.getSize(), "\n");
-  
-  //show the bee sprite
-  determineNextImageToShowAndShowIt(arrayOfBeeFrameImages);
-  
-  //show the bee-themed picture frame for the powerup to be in
-  image(beeThemedPictureFrame,180*(width/500.0) + (width-500)/4.0 - ( (powerUpimageWidth+powerUpimageHeight)/2.0 - 30)*1.5 ,10*(height/500.0)+(height-500)/10.0);
-  
-  
-  
-  //check if its time for a powerup to spawn
-  //as long as one is neither on the screen nor in the storage box
-  if (powerupOnScreenAlready==false && powerupInStorageBox == false) {
-    spawnPowerUpBasedOnRNG();
-  }
-  
-  //move and show the powerup if its on the screen moving
-  if (powerupOnScreenAlready) {
-    //move it somehow...based on the ingame time
-    myPowerUp.moveIt();
-    myPowerUp.display();
-  }
-  
-  if(powerupInStorageBox) {
-    //display the star in there
-    myPowerUp.xPosition = powerUpXPositionWhenInBox;
-    myPowerUp.yPosition = powerUpYPositionWhenInBox;
-    myPowerUp.displayWithoutShaking();
-  }
-  
-
-  
-  //see if the queen bee hit a powerup
-  checkCollisionWitPowerUpAndActAccordingly();
-  
-  
-  //check if it is time for the effects of the activiated powerup to go away
-  checkToSeeIfItIstimeForThePowerEffectToDissapear();
-  
-  //check to see if you should turn the bees around
-  if(mouseX - 5 > pmouseX) {
-     beesFacingRight = true;
-  }
-  
-  if (mouseX + 5 < pmouseX) {
-    beesFacingRight = false;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  if( myMissle.missleCurrentlyUnderway) {
-    
-      myMissle.move();
-      myMissle.display();
-      
-      if (beeIsCurrentlyUnderEffectOfPowerUp == false) {
-        checkBeeAndMissleCollision();
-      }
-    
-  } else {
-    
-    rngToDetermineIfAMissleWillBeLaunchedThisFrame();
-  }
-  
-
- 
- 
- 
-  //check win condition
-  checkNumberOfBees();
-  
-  
-  //saveFrame();
-}
-
-
-void checkBeeAndMissleCollision() {
-  
-  if (myMissle.whichWallTheMissleAppearsfrom == 1) {
-
-    boolean queenBeeOverlappingWithMissle = 
-    (queenBee.x + beeRadius/2) >= myMissle.x - myMissle.missleHeight && (queenBee.x - beeRadius/2) <= (myMissle.x  ) &&
-    (queenBee.y + beeRadius/2) >= myMissle.y  && (queenBee.y - beeRadius/2) <= (myMissle.y + myMissle.missleWidth );
-    if (queenBeeOverlappingWithMissle) {
-        background(0);
-        musicTrack.stop();
-        explosion.play();
-        gameOver.play();
-        //text("Queen bee diped. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
-        textSize(defaultTextSize);
-        text("The queen has died", width/2 - 130, height/2 - 80);
-        textSize(50);
-        text("GAME OVER", width/2 - 130, height/2 - 20);
-        textSize(defaultTextSize);
-        noLoop();
-    }
-    
-  }
-  
-  if (myMissle.whichWallTheMissleAppearsfrom == 2) {
-    boolean queenBeeOverlappingWithMissle = 
-    (queenBee.x + beeRadius/2) >= myMissle.x -myMissle.missleWidth && (queenBee.x - beeRadius/2) <= (myMissle.x) &&
-    (queenBee.y + beeRadius/2) >= myMissle.y && (queenBee.y - beeRadius/2) <= (myMissle.y + myMissle.missleHeight );
-    if (queenBeeOverlappingWithMissle) {
-        background(0);
-        musicTrack.stop();
-        explosion.play();
-        gameOver.play();
-        //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
-        textSize(defaultTextSize);
-        text("The queen has died", width/2 - 130, height/2 - 80);
-        textSize(50);
-        text("GAME OVER", width/2 - 130, height/2 - 20);
-        textSize(defaultTextSize);
-        noLoop();
-    }
-    
-  }
-  
-  if (myMissle.whichWallTheMissleAppearsfrom == 3) {
-    
-    println("bee",queenBee.x - beeRadius/2);
-    println("missle",myMissle.x + myMissle.missleHeight);
-    
-    boolean queenBeeOverlappingWithMissle = 
-    (queenBee.x + beeRadius/2) >= myMissle.x  && (queenBee.x - beeRadius/2) <= (myMissle.x + myMissle.missleHeight  ) &&
-    (queenBee.y + beeRadius/2) >= myMissle.y - myMissle.missleWidth  && (queenBee.y - beeRadius/2) <= (myMissle.y  );
-    if (queenBeeOverlappingWithMissle) {
-        background(0);
-        musicTrack.stop();
-        explosion.play();
-        gameOver.play();
-        //text("Queen bee diped. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
-        textSize(defaultTextSize);
-        text("The queen has died", width/2 - 130, height/2 - 80);
-        textSize(50);
-        text("GAME OVER", width/2 - 130, height/2 - 20);
-        textSize(defaultTextSize);
-        noLoop();
-    }
-    
-  }
-  
-  if (myMissle.whichWallTheMissleAppearsfrom == 4) {
-    boolean queenBeeOverlappingWithMissle = 
-    (queenBee.x + beeRadius/2) >= myMissle.x && (queenBee.x - beeRadius/2) <= (myMissle.x +myMissle.missleWidth) &&
-    (queenBee.y + beeRadius/2) >= myMissle.y && (queenBee.y - beeRadius/2) <= (myMissle.y +myMissle.missleHeight);
-    if (queenBeeOverlappingWithMissle) {
-        background(0);
-        musicTrack.stop();
-        explosion.play();
-        gameOver.play();
-        //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
-        textSize(defaultTextSize);
-        text("The queen has died", width/2 - 130, height/2 - 80);
-        textSize(50);
-        text("GAME OVER", width/2 - 130, height/2 - 20);
-        textSize(defaultTextSize);
-        noLoop();
-    }
-  }
-  
-  
-  
-}
-
-void checkChildrenBeeMissleCollision() {
-  
-}
-
-
-void rngToDetermineIfAMissleWillBeLaunchedThisFrame() {
-  
-  int randomIntToDetermindIfMissleIsLaunched = int(random(1,onAverageAMissleAppearsAfterThisManySecondsHasPassed*frameRate)) + 5;
-  
-
-  
-  if (randomIntToDetermindIfMissleIsLaunched == int(onAverageAMissleAppearsAfterThisManySecondsHasPassed*frameRate)) {
-    
-    myMissle.shoot();
-    
-  }
-  
-  
-}
-
 
 
 
@@ -659,6 +374,173 @@ void drawLoopForLevel1() {
   
   //saveFrame();
 }
+
+
+
+void drawLoopForLevel2() {
+  
+   elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted - 1000*timeLevel1WasCompleted)/1000;
+  
+
+  //to cycle between day and night we use a sine functions. numbers selected to best show day and night modes
+  //tint(50,50,139); //night mode
+  //tint(255,255,255); //day mode
+  int redTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
+  int greenTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
+  int blueTintValue = int(58*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 197) ;
+  tint(redTintValue,greenTintValue,blueTintValue);
+  image(backgroundPicture,0,0);
+  noTint();
+  image(electricFenceBorder,0,0);
+  
+  if (frameCount == 1) {
+    musicTrack.loop();
+  }
+ 
+ 
+  
+  if (frameCount >= numberOfFramesBeforeBirdsStartDoingDamage) {
+  flock1.runSimulation();
+  }
+    
+  // updates the FloatList showing current X,Y coordinates
+  birdPos = flock1.updatePosition();
+    
+  // prints current position from FloatList
+  //flock1.printPosition();
+    
+  // removes birds that have flown beyond the screen
+  flock1.cullFlock();
+    
+  // adds birds if the total number falls below numBirds
+  // if in boss mode, circular spawn is used; if not, regular fixed spawn is used
+  if (flock1.getSize() < numBirds) {
+    birdCircleSpawn();
+  }
+    
+  // Bees Draw
+  checkIfItIstimeToSpawnABee();
+   
+  //show all the beespawns
+  
+  for(BeeSpawns myBeeSpawn: beeSpawnList) {
+    myBeeSpawn.display();
+  }
+  
+   
+  //See if the queen hit a beespawn, thus adding the bee to the chain
+  checkCollisionsWithBeeSpawns();
+  
+   
+  //see if any bees hit a wall, thus killing them. if the queen hits a wall then game over
+  //the powerup makes you invincible
+  if(beeIsCurrentlyUnderEffectOfPowerUp == false) {
+    checkCollisionsWithWall();
+  }
+   
+  //the bee class is more or less a linked list, displaying the queenbee displays the children too
+  //invincible bees are displayed differently
+  if(beeIsCurrentlyUnderEffectOfPowerUp) {
+    queenBee.displayBeeAndChildrenAsInvincible();
+  } else {
+    queenBee.displayBeeAndChildren();
+  }
+   
+  //counter
+  framesPassedSinceBeeSpawn += 1;
+   
+  // Checks collisions with birds and bees
+  if(beeIsCurrentlyUnderEffectOfPowerUp == false && frameCount > numberOfFramesBeforeBirdsStartDoingDamage + 60) {
+    checkBeeBirdCollision();
+  }
+   
+  //showing how much in game time has ellapsed,
+  //this is paused when the game is paused with "p"
+  //also showing number of bees and objective
+  
+  //fill(255,60,60);
+  fill(255,0,0);
+  text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
+  text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
+  text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
+  //text("Frame Rate: " + str(frameRate), 10, 60);
+  //flock2.runSimulation();
+  //saveFrame();
+  //print(flock1.getSize(), "\n");
+  
+  //show the bee sprite
+  determineNextImageToShowAndShowIt(arrayOfBeeFrameImages);
+  
+  //show the bee-themed picture frame for the powerup to be in
+  image(beeThemedPictureFrame,180*(width/500.0) + (width-500)/4.0 - ( (powerUpimageWidth+powerUpimageHeight)/2.0 - 30)*1.5 ,10*(height/500.0)+(height-500)/10.0);
+  
+  
+  
+  //check if its time for a powerup to spawn
+  //as long as one is neither on the screen nor in the storage box
+  if (powerupOnScreenAlready==false && powerupInStorageBox == false) {
+    spawnPowerUpBasedOnRNG();
+  }
+  
+  //move and show the powerup if its on the screen moving
+  if (powerupOnScreenAlready) {
+    //move it somehow...based on the ingame time
+    myPowerUp.moveIt();
+    myPowerUp.display();
+  }
+  
+  if(powerupInStorageBox) {
+    //display the star in there
+    myPowerUp.xPosition = powerUpXPositionWhenInBox;
+    myPowerUp.yPosition = powerUpYPositionWhenInBox;
+    myPowerUp.displayWithoutShaking();
+  }
+  
+
+  
+  //see if the queen bee hit a powerup
+  checkCollisionWitPowerUpAndActAccordingly();
+  
+  
+  //check if it is time for the effects of the activiated powerup to go away
+  checkToSeeIfItIstimeForThePowerEffectToDissapear();
+  
+  //check to see if you should turn the bees around
+  if(mouseX - 5 > pmouseX) {
+     beesFacingRight = true;
+  }
+  
+  if (mouseX + 5 < pmouseX) {
+    beesFacingRight = false;
+  }
+  
+ 
+  
+  if( myMissle.missleCurrentlyUnderway) {
+    
+      myMissle.move();
+      myMissle.display();
+      
+      if (beeIsCurrentlyUnderEffectOfPowerUp == false) {
+        checkBeeAndMissleCollision();
+      }
+    
+  } else {
+    
+    rngToDetermineIfAMissleWillBeLaunchedThisFrame();
+  }
+  
+
+ 
+  //check win condition
+  checkNumberOfBees();
+  
+ 
+  //saveFrame();
+}
+
+
+
 
 // spawn new birds from fixed point (center of display)
 void birdFixedSpawn() {
@@ -824,7 +706,11 @@ void checkNumberOfBees() {
        powerupInStorageBox = false;
        powerupOnScreenAlready = false;
        numberOfFramesBeforeBirdsStartDoingDamage = frameCount + 60;
-       beeIsCurrentlyUnderEffectOfPowerUp = false;
+       if (beeIsCurrentlyUnderEffectOfPowerUp) {
+         beeIsCurrentlyUnderEffectOfPowerUp = false;
+         underEffectOfPowerUp.stop();
+         musicTrack.loop(); //unknown bug: music doesnt restart on level 2 if the bee ends level 1 on a powerup
+       }
        
        noLoop();
 
@@ -925,11 +811,193 @@ boolean checkIfQueenCollidedWithPowerUp() {
   
 }
 
+void checkBeeAndMissleCollision() {
+  
+  if (myMissle.whichWallTheMissleAppearsfrom == 1) {
+
+    boolean queenBeeOverlappingWithMissle = 
+    (queenBee.x + beeRadius/2) >= myMissle.x - myMissle.missleHeight && (queenBee.x - beeRadius/2) <= (myMissle.x  ) &&
+    (queenBee.y + beeRadius/2) >= myMissle.y  && (queenBee.y - beeRadius/2) <= (myMissle.y + myMissle.missleWidth );
+    if (queenBeeOverlappingWithMissle) {
+        background(0);
+        musicTrack.stop();
+        explosion.amp(0.4);
+        explosion.play();
+        gameOver.play();
+        //text("Queen bee diped. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
+        textSize(defaultTextSize);
+        text("The queen has died", width/2 - 130, height/2 - 80);
+        textSize(50);
+        text("GAME OVER", width/2 - 130, height/2 - 20);
+        textSize(defaultTextSize);
+        noLoop();
+    }
+    
+  }
+  
+  if (myMissle.whichWallTheMissleAppearsfrom == 2) {
+    boolean queenBeeOverlappingWithMissle = 
+    (queenBee.x + beeRadius/2) >= myMissle.x -myMissle.missleWidth && (queenBee.x - beeRadius/2) <= (myMissle.x) &&
+    (queenBee.y + beeRadius/2) >= myMissle.y && (queenBee.y - beeRadius/2) <= (myMissle.y + myMissle.missleHeight );
+    if (queenBeeOverlappingWithMissle) {
+        background(0);
+        musicTrack.stop();
+        explosion.amp(0.4);
+        explosion.play();
+        gameOver.play();
+        //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
+        textSize(defaultTextSize);
+        text("The queen has died", width/2 - 130, height/2 - 80);
+        textSize(50);
+        text("GAME OVER", width/2 - 130, height/2 - 20);
+        textSize(defaultTextSize);
+        noLoop();
+    }
+    
+  }
+  
+  if (myMissle.whichWallTheMissleAppearsfrom == 3) {
+    
+    println("bee",queenBee.x - beeRadius/2);
+    println("missle",myMissle.x + myMissle.missleHeight);
+    
+    boolean queenBeeOverlappingWithMissle = 
+    (queenBee.x + beeRadius/2) >= myMissle.x  && (queenBee.x - beeRadius/2) <= (myMissle.x + myMissle.missleHeight  ) &&
+    (queenBee.y + beeRadius/2) >= myMissle.y - myMissle.missleWidth  && (queenBee.y - beeRadius/2) <= (myMissle.y  );
+    if (queenBeeOverlappingWithMissle) {
+        background(0);
+        musicTrack.stop();
+        explosion.amp(0.4);
+        explosion.play();
+        gameOver.play();
+        //text("Queen bee diped. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
+        textSize(defaultTextSize);
+        text("The queen has died", width/2 - 130, height/2 - 80);
+        textSize(50);
+        text("GAME OVER", width/2 - 130, height/2 - 20);
+        textSize(defaultTextSize);
+        noLoop();
+    }
+    
+  }
+  
+  if (myMissle.whichWallTheMissleAppearsfrom == 4) {
+    boolean queenBeeOverlappingWithMissle = 
+    (queenBee.x + beeRadius/2) >= myMissle.x && (queenBee.x - beeRadius/2) <= (myMissle.x +myMissle.missleWidth) &&
+    (queenBee.y + beeRadius/2) >= myMissle.y && (queenBee.y - beeRadius/2) <= (myMissle.y +myMissle.missleHeight);
+    if (queenBeeOverlappingWithMissle) {
+        background(0);
+        musicTrack.stop();
+        explosion.amp(0.4);
+        explosion.play();
+        gameOver.play();
+        //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
+        textSize(defaultTextSize);
+        text("The queen has died", width/2 - 130, height/2 - 80);
+        textSize(50);
+        text("GAME OVER", width/2 - 130, height/2 - 20);
+        textSize(defaultTextSize);
+        noLoop();
+    }
+  }
+  
+  
+  //now check children missle collisons
+  if(queenBee.childBee != null) {
+    checkChildrenBeeMissleCollision(queenBee.childBee);
+  }
+  
+  
+  
+}
+
+void checkChildrenBeeMissleCollision(Bee childBeeToCheck) {
+  
+  if (myMissle.whichWallTheMissleAppearsfrom == 1) {
+
+    boolean childBeeToCheckOverlappingWithMissle = 
+    (childBeeToCheck.x + beeRadius/2) >= myMissle.x - myMissle.missleHeight && (childBeeToCheck.x - beeRadius/2) <= (myMissle.x  ) &&
+    (childBeeToCheck.y + beeRadius/2) >= myMissle.y  && (childBeeToCheck.y - beeRadius/2) <= (myMissle.y + myMissle.missleWidth );
+    if (childBeeToCheckOverlappingWithMissle) {
+        
+        explosion.amp(0.2);
+        explosion.play();
+        (childBeeToCheck).parentBee.deleteBeesChildren();
+
+    }
+    
+  }
+  
+  if (myMissle.whichWallTheMissleAppearsfrom == 2) {
+    boolean childBeeToCheckOverlappingWithMissle = 
+    (childBeeToCheck.x + beeRadius/2) >= myMissle.x -myMissle.missleWidth && (childBeeToCheck.x - beeRadius/2) <= (myMissle.x) &&
+    (childBeeToCheck.y + beeRadius/2) >= myMissle.y && (childBeeToCheck.y - beeRadius/2) <= (myMissle.y + myMissle.missleHeight );
+    if (childBeeToCheckOverlappingWithMissle) {
+        
+        explosion.amp(0.2);
+        explosion.play();
+        (childBeeToCheck).parentBee.deleteBeesChildren();
+
+    }
+    
+  }
+  
+  if (myMissle.whichWallTheMissleAppearsfrom == 3) {
+    
+    println("bee",childBeeToCheck.x - beeRadius/2);
+    println("missle",myMissle.x + myMissle.missleHeight);
+    
+    boolean childBeeToCheckOverlappingWithMissle = 
+    (childBeeToCheck.x + beeRadius/2) >= myMissle.x  && (childBeeToCheck.x - beeRadius/2) <= (myMissle.x + myMissle.missleHeight  ) &&
+    (childBeeToCheck.y + beeRadius/2) >= myMissle.y - myMissle.missleWidth  && (childBeeToCheck.y - beeRadius/2) <= (myMissle.y  );
+    if (childBeeToCheckOverlappingWithMissle) {
+        
+        explosion.amp(0.2);
+        explosion.play();
+        (childBeeToCheck).parentBee.deleteBeesChildren();
+  
+    }
+    
+  }
+  
+  if (myMissle.whichWallTheMissleAppearsfrom == 4) {
+    boolean childBeeToCheckOverlappingWithMissle = 
+    (childBeeToCheck.x + beeRadius/2) >= myMissle.x && (childBeeToCheck.x - beeRadius/2) <= (myMissle.x +myMissle.missleWidth) &&
+    (childBeeToCheck.y + beeRadius/2) >= myMissle.y && (childBeeToCheck.y - beeRadius/2) <= (myMissle.y +myMissle.missleHeight);
+    if (childBeeToCheckOverlappingWithMissle) {
+        
+        explosion.amp(0.2);
+        explosion.play();
+        (childBeeToCheck).parentBee.deleteBeesChildren();
+  
+    }
+  }
+  if (childBeeToCheck.childBee != null) {
+      checkChildrenBeeMissleCollision(childBeeToCheck.childBee);
+    }
+  
+}
+
+
+void rngToDetermineIfAMissleWillBeLaunchedThisFrame() {
+  
+  int randomIntToDetermindIfMissleIsLaunched = int(random(1,onAverageAMissleAppearsAfterThisManySecondsHasPassed*frameRate)) + 5;
+
+  if (randomIntToDetermindIfMissleIsLaunched == int(onAverageAMissleAppearsAfterThisManySecondsHasPassed*frameRate)) {
+    
+    myMissle.shoot();
+    
+  }
+}
+
 void mouseClicked() {
   if(level1WasJustCompleted) {
     timeLevel1WasCompleted = elapsedTime;
     myTimer.resume();
+    //underEffectOfPowerUp.stop();
     level1WasJustCompleted = false;
+    musicTrack.loop();
+    delay(10);
     musicTrack.loop();
     loop();
   }
