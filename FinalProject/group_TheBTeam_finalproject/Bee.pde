@@ -93,7 +93,7 @@ class Bee extends ParticleWithMass {
       displayLeftFacingBee();
     }
     
-    println("in invincicle mode right now");
+ 
     
     //if the bee has children then display its children
     if (this.childBee != null) {
@@ -171,7 +171,7 @@ class Bee extends ParticleWithMass {
       displayLeftFacingBee();
     }
     
-    println("in invincible mode rn");
+  
     
     if (this.childBee != null) {
       
