@@ -11,14 +11,13 @@ class Bird {
   PShape birdSvg;
   //Flock otherBirdFlock;
   
-  Bird(float _x, float _y, color _c, float _m/*, Flock _otherBirdFlock*/) {
+  Bird(float _x, float _y, color _c, float _m) {
     position = new PVector(_x, _y);
     c = _c;
     mass = random(_m-10, _m+10);
     
     acceleration = new PVector(0, 0);
     
-    //otherBirdFlock = _otherBirdFlock;
     
     velocity = PVector.random2D();
     r = random(4.5, 13.5);
@@ -28,7 +27,6 @@ class Bird {
     sepMult = random(.5, 1.75);
     cohMult = random(.5, .75);
     aliMult = random(.5, .6)*-1;
-    //avoidMult = random(.5, 1.25);
     
     birdSvg = loadShape("birdShape.svg");
   }
