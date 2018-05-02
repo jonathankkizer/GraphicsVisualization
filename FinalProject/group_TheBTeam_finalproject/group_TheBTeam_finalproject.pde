@@ -99,7 +99,9 @@ int powerUpYPositionWhenInBox;
 //level control
 boolean onLevel1 = true;
 boolean onLevel2 = false;
+boolean onBoss = false;
 boolean level1WasJustCompleted = false;
+boolean level2WasJustCompleted = false;
 float timeLevel1WasCompleted;
 
 //leevl 2: missle stuff
@@ -221,7 +223,11 @@ void draw() {
   
     if (onLevel2) {
       drawLoopForLevel2();
-    } else {
+    }
+    else if (onBoss){
+      drawLoopForBoss();
+    }
+    else {
       println("on neither level for some reason - you shouldnt ever see this");
     }
   }
@@ -538,9 +544,112 @@ void drawLoopForLevel2() {
  
   //saveFrame();
 }
+Line line1;
+boolean bossHasStarted = false;
+Bee bee1;
+void drawLoopForBoss() {  
 
+  
+  elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted - 1000*timeLevel1WasCompleted)/1000;
+  //to cycle between day and night we use a sine functions. numbers selected to best show day and night modes
+  //tint(50,50,139); //night mode
+  //tint(255,255,255); //day mode
+  int redTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
+  int greenTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
+  int blueTintValue = int(58*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 197) ;
+  tint(redTintValue,greenTintValue,blueTintValue);
+  image(backgroundPicture,0,0);
+  noTint();
+  image(electricFenceBorder,0,0);
+  if (frameCount == 1) {
+    musicTrack.loop();
+  }
+  if (bossHasStarted == false){
+    fill(0);
+    text("Click the yellow circle \nto begin the final level",width/2,height/2);
+    fill(255,255,0);
+    ellipse(50, height/2,30,30);
+  } else{
+  
+  //checkCollisionWithLines();
+  line1 = new Line(width/2, 50);
+  line1.display();
+  bee1 = new Bee(width - 30,height/2,0,0,0,0,beeRadius,1,0,0,0,0);
+  //beeSpawnList.add(new Bee();
+  bee1.displayBeeAndChildren();
+  for(BeeSpawns myBeeSpawn: beeSpawnList) {
+    myBeeSpawn.display();
+  }
+  
+  if(beeIsCurrentlyUnderEffectOfPowerUp) {
+    queenBee.displayBeeAndChildrenAsInvincible();
+  } else {
+    queenBee.displayBeeAndChildren();
+  }
+   if(beeIsCurrentlyUnderEffectOfPowerUp == false) {
+    checkCollisionsWithWall();
+  }
+    if (powerupOnScreenAlready==false && powerupInStorageBox == false) {
+    spawnPowerUpBasedOnRNG();
+  }
+  checkCollisionsWithBeeSpawns();
+  framesPassedSinceBeeSpawn += 1;
+   
+  // Checks collisions with birds and bees
 
+  fill(255,0,0);
+  text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
+  text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
+  text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
+  determineNextImageToShowAndShowIt(arrayOfBeeFrameImages);
+  
+  //show the bee-themed picture frame for the powerup to be in
+  image(beeThemedPictureFrame,180*(width/500.0) + (width-500)/4.0 - ( (powerUpimageWidth+powerUpimageHeight)/2.0 - 30)*1.5 ,10*(height/500.0)+(height-500)/10.0);
+  
+  //See if the queen hit a beespawn, thus adding the bee to the chain
+  checkCollisionsWithBeeSpawns();
+  
+  //check if its time for a powerup to spawn
+  //as long as one is neither on the screen nor in the storage box
+  if (powerupOnScreenAlready==false && powerupInStorageBox == false) {
+    spawnPowerUpBasedOnRNG();
+  }
+  
+  //move and show the powerup if its on the screen moving
+  if (powerupOnScreenAlready) {
+    //move it somehow...based on the ingame time
+    myPowerUp.moveIt();
+    myPowerUp.display();
+  }
+  
+  if(powerupInStorageBox) {
+    //display the star in there
+    myPowerUp.xPosition = powerUpXPositionWhenInBox;
+    myPowerUp.yPosition = powerUpYPositionWhenInBox;
+    myPowerUp.displayWithoutShaking();
+  }
+  if(mouseX - 5 > pmouseX) {
+     beesFacingRight = true;
+  }
+  
+  if (mouseX + 5 < pmouseX) {
+    beesFacingRight = false;
+  }
+  checkCollisionWitPowerUpAndActAccordingly();
+  checkToSeeIfItIstimeForThePowerEffectToDissapear();
+  checkNumberOfBees();
+  }
+} //closes the draw loop for boss
+ArrayList<Line> lineList = new ArrayList<Line>();
+float randomGap;
 
+//creates a new line and appends it to the list with a random gap
+
+void createNewLine(){
+  randomGap = 100 + (int)(Math.random() * (height-200));
+  line1 = new Line(50,randomGap);
+  lineList.add(line1);
+}
 
 // spawn new birds from fixed point (center of display)
 void birdFixedSpawn() {
@@ -700,6 +809,7 @@ void checkNumberOfBees() {
        textSize(defaultTextSize);
        level1WasJustCompleted = true;
        onLevel1 = false;
+       onBoss = false;
        onLevel2 = true;
        myTimer.pause();
        beeSpawnList.clear();
@@ -716,19 +826,46 @@ void checkNumberOfBees() {
 
        
        
-    } else {
+    } else{
     
       if (onLevel2) {
+       textSize(35);
+       text(str(numberOfBeesToWin)+ " bees collected: Click to go \nto Final Level!", width/2 - 215, height/2 - 10);
+       musicTrack.stop();
+       underEffectOfPowerUp.stop();
+       win.play();
+       queenBee.deleteBeesChildren();
+       textSize(defaultTextSize);
+       level1WasJustCompleted = true;
+       onLevel1 = false;
+       onBoss = true;
+       onLevel2 = false;
+       myTimer.pause();
+       beeSpawnList.clear();
+       powerupInStorageBox = false;
+       powerupOnScreenAlready = false;
+       numberOfFramesBeforeBirdsStartDoingDamage = frameCount + 60;
+       if (beeIsCurrentlyUnderEffectOfPowerUp) {
+         beeIsCurrentlyUnderEffectOfPowerUp = false;
+         underEffectOfPowerUp.stop();
+         musicTrack.loop(); //unknown bug: music doesnt restart on level 2 if the bee ends level 1 on a powerup
+       }
+       
+       noLoop();
+      }
+
+    }
+    
+  }
+  else if (onBoss && (queenBee.getNumberOfChildren() >= numberOfBeesToWin - 8)) {
          textSize(35);
-         text(str(numberOfBeesToWin)+ " bees collected: You win!", width/2 - 215, height/2 - 10);
+         text("The Final bee has been collected: \nYou win!", width/2 - 215, height/2 - 10);
          musicTrack.stop();
          underEffectOfPowerUp.stop();
          win.play();
          noLoop();
+        
       }
-    }
-    
-  }
   
 }
 
@@ -1001,9 +1138,28 @@ void mouseClicked() {
     musicTrack.loop();
     loop();
   }
-  
+  if(level2WasJustCompleted) {
+    timeLevel1WasCompleted = elapsedTime;
+    myTimer.resume();
+    //underEffectOfPowerUp.stop();
+    level2WasJustCompleted = false;
+    musicTrack.loop();
+    delay(10);
+    musicTrack.loop();
+    loop();
+  }
+
 }
 
+void mousePressed(){
+   if(onBoss==true && bossHasStarted ==false){
+    if((mouseX >= 20) && (mouseX <= 80)) {
+      if(mouseY >= ((height/2)-30) && (mouseY <= ((height/2)+30)))
+        bossHasStarted = true;
+    }
+  } 
+  
+}
 void keyPressed() {
   //cheat code - press up to instantly get another bee
   if (keyCode == UP) {
