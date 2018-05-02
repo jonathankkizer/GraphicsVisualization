@@ -9,7 +9,6 @@ PImage backgroundPicture;
 // Bird & Flock Initialization
 Flock flock1;
 FloatList birdPos;
-color c, d;
 int birdNestX, birdNestY, numBirds;
 float val = 0;
 
@@ -172,9 +171,6 @@ void setup() {
   
   // NOTE: at 5 birds, performance issues don't show up until greater than 15 bees; at 15 Birds, 9 bees makes game unplayable
   numBirds = 5;
-  
-  d = color(#CC6666);
-  c = color(#4a7090);
   
   // Bees setup
   courier = createFont("Trebuchet MS", defaultTextSize);
@@ -653,6 +649,9 @@ void createNewLine(){
   line1 = new Line(50,randomGap);
   lineList.add(line1);
 }
+
+color d = color(#B33A3A);
+color c = color(#B33A3A);
 
 // spawn new birds from fixed point (center of display)
 void birdFixedSpawn() {

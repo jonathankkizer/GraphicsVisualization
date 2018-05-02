@@ -56,9 +56,11 @@ class Bird {
     render();
   }
   
-  // Draws birds (as triangles)
+  // Draws birds with .svg
   void render() {
     float theta = velocity.heading() + radians(90);
+    
+    
     pushMatrix();
     fill(c);
     stroke(255);
