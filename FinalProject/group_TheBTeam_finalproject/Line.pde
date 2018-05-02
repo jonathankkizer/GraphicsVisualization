@@ -7,20 +7,19 @@ class Line {
   Line(float _xpos, float _gap_pos) {
     xpos = _xpos;
     gap_pos = _gap_pos;
-    gapLength = 70;
-    speedX = 2;
+    gapLength = 85;
+    speedX = -1;
   }
   
   void display(){
     stroke(0);
-    strokeWeight(2);
+    strokeWeight(4);
     line(xpos,0,xpos,gap_pos);
     line(xpos,gap_pos + gapLength,xpos,height);
   }
-  
   void move(){
-    xpos -= speedX;
-    display();
+    xpos += speedX;
+    
   }
   float getXpos(){
     return xpos; 

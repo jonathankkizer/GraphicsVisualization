@@ -543,16 +543,20 @@ void drawLoopForLevel2() {
  
   //saveFrame();
 }
-Line line1;
+
+
+
 boolean bossHasStarted = false;
 Bee bee1;
-void drawLoopForBoss() {  
 
-  
-  elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted - 1000*timeLevel1WasCompleted)/1000;
+float randomGap = 100 + (int)(Math.random() * (height-200));
+Line line1 = new Line(800,(height /2));
+
+void drawLoopForBoss() {  
   //to cycle between day and night we use a sine functions. numbers selected to best show day and night modes
   //tint(50,50,139); //night mode
   //tint(255,255,255); //day mode
+  //elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
   int redTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
   int greenTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
   int blueTintValue = int(58*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 197) ;
@@ -569,16 +573,24 @@ void drawLoopForBoss() {
     fill(255,255,0);
     ellipse(50, height/2,30,30);
   } else{
-  
+   elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
   //checkCollisionWithLines();
-  line1 = new Line(width/2, 50);
-  line1.display();
-  bee1 = new Bee(width - 30,height/2,0,0,0,0,beeRadius,1,0,0,0,0);
+  //line1.display();
+  //line1.move();
+  //lineList.add(line1);
+  createNewLine();
+  for (Line lineSpawn: lineList){
+    lineSpawn.display();
+    lineSpawn.move();
+  }
+  //  for(BeeSpawns myBeeSpawn: beeSpawnList) {
+  //  myBeeSpawn.display();
+  //}
+  
+  bee1 = new Bee(width - 80,height/2,0,0,0,0,beeRadius,1,0,0,0,0);
   //beeSpawnList.add(new Bee();
   bee1.displayBeeAndChildren();
-  for(BeeSpawns myBeeSpawn: beeSpawnList) {
-    myBeeSpawn.display();
-  }
+
   
   if(beeIsCurrentlyUnderEffectOfPowerUp) {
     queenBee.displayBeeAndChildrenAsInvincible();
@@ -634,21 +646,29 @@ void drawLoopForBoss() {
   if (mouseX + 5 < pmouseX) {
     beesFacingRight = false;
   }
+  framesPassedSinceLineSpawn += 1;
   checkCollisionWitPowerUpAndActAccordingly();
   checkToSeeIfItIstimeForThePowerEffectToDissapear();
   checkNumberOfBees();
   }
 } //closes the draw loop for boss
 ArrayList<Line> lineList = new ArrayList<Line>();
-float randomGap;
+int framesPassedSinceLineSpawn = 0;
+int framesBeforeALineAppears = 125;
+Line lineSpawn;
 
 //creates a new line and appends it to the list with a random gap
-
 void createNewLine(){
-  randomGap = 100 + (int)(Math.random() * (height-200));
-  line1 = new Line(50,randomGap);
-  lineList.add(line1);
-}
+  randomGap = 200 + (int)(Math.random() * (height-300));
+  if (framesPassedSinceLineSpawn == framesBeforeALineAppears) {
+     lineSpawn = new Line(800,randomGap);
+     lineList.add(lineSpawn);
+     framesPassedSinceLineSpawn = 0;
+   }
+
+  }
+  
+
 
 color d = color(#B33A3A);
 color c = color(#B33A3A);
