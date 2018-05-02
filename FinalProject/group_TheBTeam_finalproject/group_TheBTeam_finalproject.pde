@@ -381,9 +381,10 @@ void drawLoopForLevel1() {
   //saveFrame();
 }
 
-
+color levelTwoColor = color(#B33A3A);
 
 void drawLoopForLevel2() {
+  
   
    elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted - 1000*timeLevel1WasCompleted)/1000;
   
@@ -400,13 +401,15 @@ void drawLoopForLevel2() {
   image(electricFenceBorder,0,0);
   
   if (frameCount == 1) {
-    musicTrack.loop();
+    //musicTrack.loop();
+    
   }
- 
- 
   
+  flock1.updateColor(levelTwoColor);
   if (frameCount >= numberOfFramesBeforeBirdsStartDoingDamage) {
-  flock1.runSimulation();
+    flock1.updateMaxSpeed(8);
+    flock1.updateBirdVelocity(2);
+    flock1.runSimulation();
   }
     
   // updates the FloatList showing current X,Y coordinates
@@ -562,7 +565,7 @@ void drawLoopForBoss() {
   noTint();
   image(electricFenceBorder,0,0);
   if (frameCount == 1) {
-    musicTrack.loop();
+    //musicTrack.loop();
   }
   if (bossHasStarted == false){
     fill(0);

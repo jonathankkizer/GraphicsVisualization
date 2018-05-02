@@ -59,10 +59,9 @@ class Bird {
   // Draws birds (as triangles)
   void render() {
     float theta = velocity.heading() + radians(90);
-    
+    pushMatrix();
     fill(c);
     stroke(255);
-    pushMatrix();
     translate(position.x, position.y);
     rotate(theta);
     shape(birdSvg, 0, 0, 35, 35);
