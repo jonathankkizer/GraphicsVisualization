@@ -590,8 +590,9 @@ void drawLoopForBoss() {
   
   bee1 = new Bee(width - 80,height/2,0,0,0,0,beeRadius,1,0,0,0,0);
   //beeSpawnList.add(new Bee();
+  if (gotFinalBee == false){
   bee1.displayBeeAndChildren();
-
+  }
   if (startingLineDone == false){
     Line line1 = new Line(300,100 + (int)(Math.random() * (height-200)));
     Line line2 = new Line(450,100 + (int)(Math.random() * (height-200)));
@@ -663,14 +664,16 @@ Line lineSpawn;
 float lineX;
 float gapUpper;
 float gapLower;
-
+boolean gotFinalBee = false;
 void checkGotFinalBee(){
-  if (mouseX <= width - 75 && mouseX >= width - 85){
-   if (mouseY >= ((height/2) - 2) && mouseY <= ((height/2) + 2)){
+  if (mouseX <= width - 70 && mouseX >= width - 90){
+   if (mouseY >= ((height/2) - 5) && mouseY <= ((height/2) + 5)){
       Bee theLastChild = queenBee.getLastChild();
+      gotFinalBee = true;
       //add the new bee to the end of the trail
       collectBee.play();
       theLastChild.attachChildParticle(new Bee(theLastChild.x,theLastChild.y,0,0,0,0,beeRadius,1,250,250,ks,kd));
+      
    }
   }
 }
