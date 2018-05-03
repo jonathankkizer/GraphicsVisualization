@@ -113,9 +113,18 @@ int missleHeight = 75;
 float howManySecondsTheMissleLasts = 2;
 
 float onAverageAMissleAppearsAfterThisManySecondsHasPassed = 0.1;
-
+float highScore;
+FloatList highScores = new FloatList(); 
+Table highScoreTable;
 
 void setup() {
+  
+  highScoreTable = loadTable("highscores.csv", "header");
+  
+  for (TableRow row : highScoreTable.rows()) {
+    float highScore = row.getFloat("highscore");
+    highScores.append(highScore);
+  }
   
   //size is modular , 800x800 is reccomended but if you change it then everything else will (mostly) change accordingly
   size(800, 800);
@@ -210,8 +219,11 @@ void setup() {
   
 }
 
+float currentScore;
 
 void draw() {
+  
+  currentScore = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
   
   if (onLevel1) {
     drawLoopForLevel1();
@@ -318,6 +330,7 @@ void drawLoopForLevel1() {
   text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
   text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
+  text("Best Time: " + str(highScores.min()), 280*(width/500.0) + (width-500.0)/5.0 , 67.5*(height/500.0));
   //text("Frame Rate: " + str(frameRate), 10, 60);
   //flock2.runSimulation();
   //saveFrame();
@@ -468,6 +481,7 @@ void drawLoopForLevel2() {
   text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
   text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
+  text("Best Time: " + str(highScores.min()), 280*(width/500.0) + (width-500.0)/5.0 , 67.5*(height/500.0));
   //text("Frame Rate: " + str(frameRate), 10, 60);
   //flock2.runSimulation();
   //saveFrame();
@@ -624,6 +638,7 @@ void drawLoopForBoss() {
   text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
   text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
+  text("Best Time: " + str(highScores.min()), 280*(width/500.0) + (width-500.0)/5.0 , 67.5*(height/500.0));
   determineNextImageToShowAndShowIt(arrayOfBeeFrameImages);
   
   //show the bee-themed picture frame for the powerup to be in
@@ -695,6 +710,7 @@ void checkCollisionWithLines(){
       textSize(50);
       text("GAME OVER", width/2 - 130, height/2 - 20);
       textSize(defaultTextSize);
+      //writeHighScore();
       noLoop();
       }
     }
@@ -773,7 +789,7 @@ void checkCollisionsWithWall() {
       }
       
       gameOver.play();
-      
+      //writeHighScore();
       noLoop();
       
     } else {
@@ -819,6 +835,15 @@ void checkCollisionsWithBeeSpawns() {
   }
 }
 
+void writeHighScore() {
+  TableRow newRow = highScoreTable.addRow();
+  
+  newRow.setFloat("highscore", (currentScore));
+  saveTable(highScoreTable, "data/highscores.csv");
+  println("New Score Saved");
+  
+}
+
 // checks whether the queen bee has hit a bird; if yes, kills game; if not, checks children with helper function
 void checkBeeBirdCollision() {
   for(int counter = 0; counter < birdPos.size(); counter+=2) {
@@ -834,6 +859,7 @@ void checkBeeBirdCollision() {
         textSize(50);
         text("GAME OVER", width/2 - 130, height/2 - 20);
         textSize(defaultTextSize);
+        //writeHighScore();
         noLoop();
       }
     }
@@ -886,7 +912,7 @@ void checkNumberOfBees() {
          underEffectOfPowerUp.stop();
          musicTrack.loop(); //unknown bug: music doesnt restart on level 2 if the bee ends level 1 on a powerup
        }
-       
+       //writeHighScore();
        noLoop();
 
        
@@ -915,7 +941,7 @@ void checkNumberOfBees() {
          underEffectOfPowerUp.stop();
          musicTrack.loop(); //unknown bug: music doesnt restart on level 2 if the bee ends level 1 on a powerup
        }
-       
+       //writeHighScore();
        noLoop();
       }
 
@@ -928,6 +954,7 @@ void checkNumberOfBees() {
          musicTrack.stop();
          underEffectOfPowerUp.stop();
          win.play();
+         writeHighScore();
          noLoop();
         
       }
@@ -1032,6 +1059,7 @@ void checkBeeAndMissleCollision() {
         textSize(50);
         text("GAME OVER", width/2 - 130, height/2 - 20);
         textSize(defaultTextSize);
+        //writeHighScore();
         noLoop();
     }
     
@@ -1053,6 +1081,7 @@ void checkBeeAndMissleCollision() {
         textSize(50);
         text("GAME OVER", width/2 - 130, height/2 - 20);
         textSize(defaultTextSize);
+        //writeHighScore();
         noLoop();
     }
     
@@ -1078,6 +1107,7 @@ void checkBeeAndMissleCollision() {
         textSize(50);
         text("GAME OVER", width/2 - 130, height/2 - 20);
         textSize(defaultTextSize);
+        //writeHighScore();
         noLoop();
     }
     
@@ -1099,6 +1129,7 @@ void checkBeeAndMissleCollision() {
         textSize(50);
         text("GAME OVER", width/2 - 130, height/2 - 20);
         textSize(defaultTextSize);
+        //writeHighScore();
         noLoop();
     }
   }
