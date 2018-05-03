@@ -551,6 +551,7 @@ Bee bee1;
 
 float randomGap = 100 + (int)(Math.random() * (height-200));
 Line line1 = new Line(800,(height /2));
+boolean startingLineDone = false;
 
 void drawLoopForBoss() {  
   //to cycle between day and night we use a sine functions. numbers selected to best show day and night modes
@@ -569,9 +570,9 @@ void drawLoopForBoss() {
   }
   if (bossHasStarted == false){
     fill(0);
-    text("Click the yellow circle \nto begin the final level",width/2,height/2);
+    text("Click the yellow circle \nto begin the final level \n then avoid the lines",width/2,height/2);
     fill(255,255,0);
-    ellipse(50, height/2,30,30);
+    ellipse(100, height/2,30,30);
   } else{
    elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
   //checkCollisionWithLines();
@@ -591,7 +592,20 @@ void drawLoopForBoss() {
   //beeSpawnList.add(new Bee();
   bee1.displayBeeAndChildren();
 
-  
+  if (startingLineDone == false){
+    Line line1 = new Line(300,100 + (int)(Math.random() * (height-200)));
+    Line line2 = new Line(450,100 + (int)(Math.random() * (height-200)));
+    Line line3 = new Line(600,100 + (int)(Math.random() * (height-200)));
+    Line line4 = new Line(750,100 + (int)(Math.random() * (height-200)));
+    //Line line5 = new Line(950,100 + (int)(Math.random() * (height-200)));
+    lineList.add(line1);
+    lineList.add(line2);
+    lineList.add(line3);
+    lineList.add(line4);
+    //lineList.add(line5);
+    startingLineDone = true;
+    
+  }
   if(beeIsCurrentlyUnderEffectOfPowerUp) {
     queenBee.displayBeeAndChildrenAsInvincible();
   } else {
@@ -600,11 +614,8 @@ void drawLoopForBoss() {
    if(beeIsCurrentlyUnderEffectOfPowerUp == false) {
     checkCollisionsWithWall();
   }
-    if (powerupOnScreenAlready==false && powerupInStorageBox == false) {
-    spawnPowerUpBasedOnRNG();
-  }
-  checkCollisionsWithBeeSpawns();
-  framesPassedSinceBeeSpawn += 1;
+  
+  
    
   // Checks collisions with birds and bees
 
@@ -618,27 +629,15 @@ void drawLoopForBoss() {
   image(beeThemedPictureFrame,180*(width/500.0) + (width-500)/4.0 - ( (powerUpimageWidth+powerUpimageHeight)/2.0 - 30)*1.5 ,10*(height/500.0)+(height-500)/10.0);
   
   //See if the queen hit a beespawn, thus adding the bee to the chain
-  checkCollisionsWithBeeSpawns();
+  
   
   //check if its time for a powerup to spawn
   //as long as one is neither on the screen nor in the storage box
-  if (powerupOnScreenAlready==false && powerupInStorageBox == false) {
-    spawnPowerUpBasedOnRNG();
-  }
+  
   
   //move and show the powerup if its on the screen moving
-  if (powerupOnScreenAlready) {
-    //move it somehow...based on the ingame time
-    myPowerUp.moveIt();
-    myPowerUp.display();
-  }
   
-  if(powerupInStorageBox) {
-    //display the star in there
-    myPowerUp.xPosition = powerUpXPositionWhenInBox;
-    myPowerUp.yPosition = powerUpYPositionWhenInBox;
-    myPowerUp.displayWithoutShaking();
-  }
+ 
   if(mouseX - 5 > pmouseX) {
      beesFacingRight = true;
   }
@@ -649,14 +648,55 @@ void drawLoopForBoss() {
   framesPassedSinceLineSpawn += 1;
   checkCollisionWitPowerUpAndActAccordingly();
   checkToSeeIfItIstimeForThePowerEffectToDissapear();
+  if (beeIsCurrentlyUnderEffectOfPowerUp == false){
+  checkCollisionWithLines();
+  }
+  checkGotFinalBee();
   checkNumberOfBees();
   }
 } //closes the draw loop for boss
 ArrayList<Line> lineList = new ArrayList<Line>();
 int framesPassedSinceLineSpawn = 0;
-int framesBeforeALineAppears = 125;
+int framesBeforeALineAppears = 75;
 Line lineSpawn;
 
+float lineX;
+float gapUpper;
+float gapLower;
+
+void checkGotFinalBee(){
+  if (mouseX <= width - 75 && mouseX >= width - 85){
+   if (mouseY >= ((height/2) - 2) && mouseY <= ((height/2) + 2)){
+      Bee theLastChild = queenBee.getLastChild();
+      //add the new bee to the end of the trail
+      collectBee.play();
+      theLastChild.attachChildParticle(new Bee(theLastChild.x,theLastChild.y,0,0,0,0,beeRadius,1,250,250,ks,kd));
+   }
+  }
+}
+void checkCollisionWithLines(){
+  for (Line lineSpawn: lineList){
+    lineX = lineSpawn.getXpos();
+    gapUpper = lineSpawn.getGapUpper();
+    gapLower = lineSpawn.getGapLower();
+    if (mouseX <= (lineX + 2) && mouseX >= (lineX - 2)){
+      if (mouseY >= (gapLower) || mouseY <= (gapUpper)){
+      //copying the results from hitting a bird
+      background(0);
+      musicTrack.stop();
+      birdStrike.play();
+      gameOver.play();
+    
+      textSize(defaultTextSize);
+      text("The Queen was caught in a trap", width/2 - 130, height/2 - 80);
+      textSize(50);
+      text("GAME OVER", width/2 - 130, height/2 - 20);
+      textSize(defaultTextSize);
+      noLoop();
+      }
+    }
+  }
+}
 //creates a new line and appends it to the list with a random gap
 void createNewLine(){
   randomGap = 200 + (int)(Math.random() * (height-300));
@@ -1175,7 +1215,7 @@ void mouseClicked() {
 
 void mousePressed(){
    if(onBoss==true && bossHasStarted ==false){
-    if((mouseX >= 20) && (mouseX <= 80)) {
+    if((mouseX >= 70) && (mouseX <= 130)) {
       if(mouseY >= ((height/2)-30) && (mouseY <= ((height/2)+30)))
         bossHasStarted = true;
     }

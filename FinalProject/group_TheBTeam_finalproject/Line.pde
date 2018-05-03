@@ -8,7 +8,7 @@ class Line {
     xpos = _xpos;
     gap_pos = _gap_pos;
     gapLength = 85;
-    speedX = -1;
+    speedX = -2;
   }
   
   void display(){
@@ -23,5 +23,12 @@ class Line {
   }
   float getXpos(){
     return xpos; 
+  }
+  float getGapUpper(){
+    return gap_pos;
+  }
+  
+  float getGapLower(){
+    return (gap_pos + gapLength); 
   }
 }
