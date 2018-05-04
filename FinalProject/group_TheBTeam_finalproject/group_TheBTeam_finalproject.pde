@@ -1,3 +1,27 @@
+//mainpage global
+processing.data.Table table;
+//Mainpage main;
+PImage beeicon;
+PImage sound;
+boolean soundIsOn = true;
+int frameCountThatALevelWasClicked;
+int frameTheSoundWasTurnedOn;
+ArrayList<Float> level1Score = new ArrayList<Float>();
+ArrayList<Float> level2Score = new ArrayList<Float>();
+ArrayList<Float> bossScore = new ArrayList<Float>();
+
+int[] level1ScoreArray;
+int[] level2ScoreArray;
+int[] bossScoreArray;
+
+float level1HighScore;
+float level2HighScore;
+float bossHighScore;
+
+
+//ArrayList<BeeSpawns> beeSpawnList = new ArrayList<BeeSpawns>();
+
+Mainpage main;
 // Sound Import
 import processing.sound.*;
 SoundFile intro, birdStrike, win, musicTrack, gameOver, collectBee, underEffectOfPowerUp, collectPowerUp, electricShock, explosion;
@@ -96,7 +120,8 @@ int powerUpXPositionWhenInBox;
 int powerUpYPositionWhenInBox;
 
 //level control
-boolean onLevel1 = true;
+boolean onMainMenu = true;
+boolean onLevel1 = false;
 boolean onLevel2 = false;
 boolean onBoss = false;
 boolean level1WasJustCompleted = false;
@@ -111,7 +136,7 @@ PImage missleAlertImage;
 
 int missleWidth = 200;
 int missleHeight = 75;
-float howManySecondsTheMissleLasts = 2;
+float howManySecondsTheMissleLasts = 60;
 
 float onAverageAMissleAppearsAfterThisManySecondsHasPassed = 0.1;
 float highScore;
@@ -120,13 +145,67 @@ Table highScoreTable;
 
 
 void setup() {
-  
-  highScoreTable = loadTable("highscores.csv", "header");
-  
-  for (TableRow row : highScoreTable.rows()) {
-    float highScore = row.getFloat("highscore");
-    highScores.append(highScore);
+  //mainpage setup 
+  sound=loadImage("sound.png");
+  sound.resize(50,50);
+  beeicon=loadImage("bee.png");
+  beeicon.resize(300,300);
+  main = new Mainpage();
+  table = loadTable("highscores.csv","header");
+  //these are already set up as globals - no need to do anything with them here
+  //ArrayList<float> level1Score;
+  //ArrayList<float> level2Score;
+  //ArrayList<float> BossScore;
+  for (TableRow row: table.rows()){
+    float level1 = row.getFloat("level1");
+    level1Score.add(level1);
+    float level2=row.getFloat("level2");
+    level2Score.add(level2);
+    float boss=row.getFloat("boss");
+    bossScore.add(boss);
   }
+  
+  //make the arrayLists into arrays - creation
+  level1ScoreArray = new int[level1Score.size()];
+  level2ScoreArray = new int[level2Score.size()];
+  bossScoreArray = new int[bossScore.size()];
+  
+  //make the arrayLists into arrays - filling in the values
+  for(int i = 0; i<level1ScoreArray.length;i++) {
+    level1ScoreArray[i] = int(level1Score.get(i)*10000);
+  }
+  for(int i = 0; i<level2ScoreArray.length;i++) {
+    level2ScoreArray[i] = int(level2Score.get(i)*10000);
+  }
+  for(int i = 0; i<bossScoreArray.length;i++) {
+    bossScoreArray[i] = int(bossScore.get(i)*10000);
+  }
+  level1HighScore= ( min(level1ScoreArray)/10000.0     );
+  level2HighScore = (min(level2ScoreArray)/10000.0);
+  bossHighScore = ( min(bossScoreArray)/10000.0  );
+  println(level1HighScore,level2HighScore,bossHighScore);
+ 
+  
+  //alexis - get min of times here once u make the arrayLists arrays
+  
+  //float a=min(level1Score)
+  //println(a);
+    //println(min(level2Score));
+    //println(min(bossScore));
+  
+  
+ /* for (TableRow row: table.rows()){
+    float level1 = row.getFloat("level1");
+    float level2=row.getFloat("level2");
+    float boss=row.getFloat("boss");
+    println(level1,level2,boss);
+  }*/
+  //highScoreTable = loadTable("highscores.csv", "header");
+  
+  /*for (TableRow row : highScoreTable.rows()) {
+    float highScore = row.getFloat("highscore");
+    highScores.append(highScore);}*/
+  
   
   //size is modular , 800x800 is reccomended but if you change it then everything else will (mostly) change accordingly
   size(800, 800);
@@ -166,7 +245,7 @@ void setup() {
   //explosion for missle - source: https://freesound.org/people/tommccann/sounds/235968/
   explosion = new SoundFile(this, "explosion.wav");
   
-  
+
   intro.play();
   
   //background and border
@@ -225,26 +304,44 @@ float currentScore;
 
 void draw() {
   
+  
   currentScore = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
-  
-  if (onLevel1) {
-    drawLoopForLevel1();
+  //println(soundIsOn);
+  if(onMainMenu) {
+    main.display();
+    main.update(mouseX,mouseY);
+    if(soundIsOn) {
+      if (frameCount == 1 || frameCount == frameTheSoundWasTurnedOn + 1) {
+        musicTrack.loop();
+      }
+    } else {
+      musicTrack.stop();
+    }
+    
   } else {
-  
-    if (onLevel2) {
-      drawLoopForLevel2();
-    }
-    else if (onBoss){
-      drawLoopForBoss();
-    }
-    else {
-      println("on neither level for some reason - you shouldnt ever see this");
+    if (onLevel1) {
+      drawLoopForLevel1();
+    } else {
+    
+      if (onLevel2) {
+        drawLoopForLevel2();
+      }
+      else if (onBoss){
+        drawLoopForBoss();
+      }
+      else {
+        println("on neither level for some reason - you shouldnt ever see this");
+      }
     }
   }
 }
 
 
 
+void mainmenu(){
+ main.display();
+ 
+}
 
 void drawLoopForLevel1() {
   
@@ -262,10 +359,13 @@ void drawLoopForLevel1() {
   noTint();
   image(electricFenceBorder,0,0);
   
-  if (frameCount == 1) {
+  /*
+  if (frameCount == 1 + frameCountThatALevelWasClicked ) {
+    if(soundIsOn) {
     musicTrack.loop();
+    }
   }
- 
+  */
  
   
   if (frameCount >= numberOfFramesBeforeBirdsStartDoingDamage) {
@@ -332,7 +432,7 @@ void drawLoopForLevel1() {
   text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
   text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
-  text("Best Time: " + str(highScores.min()), 280*(width/500.0) + (width-500.0)/5.0 , 67.5*(height/500.0));
+  //text("Best Time: " + str(highScores.min()), 280*(width/500.0) + (width-500.0)/5.0 , 67.5*(height/500.0));
   //text("Frame Rate: " + str(frameRate), 10, 60);
   //flock2.runSimulation();
   //saveFrame();
@@ -411,10 +511,13 @@ void drawLoopForLevel2() {
   noTint();
   image(electricFenceBorder,0,0);
   
-  if (frameCount == 1) {
-    //musicTrack.loop();
+  /*
+  if (frameCount == 1 + frameCountThatALevelWasClicked) {
+    musicTrack.stop();
+    musicTrack.loop();
     
   }
+  */
   
   flock1.updateColor(levelTwoColor);
   if (frameCount >= numberOfFramesBeforeBirdsStartDoingDamage) {
@@ -483,7 +586,7 @@ void drawLoopForLevel2() {
   text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
   text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
-  text("Best Time: " + str(highScores.min()), 280*(width/500.0) + (width-500.0)/5.0 , 67.5*(height/500.0));
+  //text("Best Time: " + str(highScores.min()), 280*(width/500.0) + (width-500.0)/5.0 , 67.5*(height/500.0));
   //text("Frame Rate: " + str(frameRate), 10, 60);
   //flock2.runSimulation();
   //saveFrame();
@@ -589,9 +692,12 @@ void drawLoopForBoss() {
   image(backgroundPicture,0,0);
   noTint();
   image(electricFenceBorder,0,0);
-  if (frameCount == 1) {
-    //musicTrack.loop();
+  /*
+  if (frameCount == 1 + frameCountThatALevelWasClicked) {
+    musicTrack.stop();
+    musicTrack.loop();
   }
+  */
   if (bossHasStarted == false){
     fill(0);
     text("Click the yellow circle \nto begin the final level \n then avoid the lines",width/2,height/2);
@@ -648,7 +754,7 @@ void drawLoopForBoss() {
   text("Time: " + str(elapsedTime), 30*(width/500.0), 50*(height/500.0));
   text("Collect " +str(numberOfBeesToWin) + " Bees to win. Avoid birds.", 90*(width/500.0) + (width-500.0)/13.5, 475*(width/500.0));
   text("Number of Bees: " + str(queenBee.getNumberOfChildren()),280*(width/500.0) + (width-500.0)/5.0 , 50*(height/500.0));
-  text("Best Time: " + str(highScores.min()), 280*(width/500.0) + (width-500.0)/5.0 , 67.5*(height/500.0));
+  //text("Best Time: " + str(highScores.min()), 280*(width/500.0) + (width-500.0)/5.0 , 67.5*(height/500.0));
   determineNextImageToShowAndShowIt(arrayOfBeeFrameImages);
   
   //show the bee-themed picture frame for the powerup to be in
@@ -696,7 +802,9 @@ void checkGotFinalBee(){
       Bee theLastChild = queenBee.getLastChild();
       gotFinalBee = true;
       //add the new bee to the end of the trail
-      collectBee.play();
+      if(soundIsOn) {
+        collectBee.play();
+      }
       theLastChild.attachChildParticle(new Bee(theLastChild.x,theLastChild.y,0,0,0,0,beeRadius,1,250,250,ks,kd));
       
    }
@@ -712,8 +820,10 @@ void checkCollisionWithLines(){
       //copying the results from hitting a bird
       background(0);
       musicTrack.stop();
+      if(soundIsOn) {
       birdStrike.play();
       gameOver.play();
+      }
     
       textSize(defaultTextSize);
       text("The Queen was caught in a trap", width/2 - 130, height/2 - 80);
@@ -722,6 +832,11 @@ void checkCollisionWithLines(){
       textSize(defaultTextSize);
       //writeHighScore();
       noLoop();
+      if(soundIsOn) {
+      birdStrike.play();
+      gameOver.play();
+      }
+      musicTrack.stop();
       }
     }
   }
@@ -795,10 +910,13 @@ void checkCollisionsWithWall() {
       musicTrack.stop();
       //this just sounds good tbh
       for(int i = 0; i<10; i++) {
+        if(soundIsOn) {
         electricShock.play();
+        }
       }
-      
+      if(soundIsOn) {
       gameOver.play();
+      }
       //writeHighScore();
       noLoop();
       
@@ -818,8 +936,10 @@ void checkChildrensCollisionsWithWall(Bee childBeeToCheck) {
   //bee that hit a wall and all its children
   if (childBeeToCheck.x > width - beeRadius/2 || childBeeToCheck.x < beeRadius/2 || childBeeToCheck.y > height - beeRadius/2 || childBeeToCheck.y < beeRadius/2) {
     (childBeeToCheck).parentBee.deleteBeesChildren();
+    if(soundIsOn) {
     electricShock.play(); 
     electricShock.play();
+    }
     
   } else {
   //otherwise if the child bee didnt hit a wall, keep checking all the children (remember it's a linked list of bees)
@@ -838,13 +958,16 @@ void checkCollisionsWithBeeSpawns() {
       beeSpawnList.remove(i);
       Bee theLastChild = queenBee.getLastChild();
       //add the new bee to the end of the trail
+      if(soundIsOn) {
       collectBee.play();
+      }
       theLastChild.attachChildParticle(new Bee(theLastChild.x,theLastChild.y,0,0,0,0,beeRadius,1,250,250,ks,kd));
      
     }
   }
 }
 
+/*
 void writeHighScore() {
   TableRow newRow = highScoreTable.addRow();
   
@@ -852,7 +975,8 @@ void writeHighScore() {
   saveTable(highScoreTable, "data/highscores.csv");
   println("New Score Saved");
   
-}
+
+*/
 
 // checks whether the queen bee has hit a bird; if yes, kills game; if not, checks children with helper function
 void checkBeeBirdCollision() {
@@ -861,8 +985,10 @@ void checkBeeBirdCollision() {
       if ((birdPos.get(counter+1) <= (queenBee.y + beeRadius/2 + 10)) && (birdPos.get(counter+1) >= (queenBee.y - beeRadius/2 - 10))) {
         background(0);
         musicTrack.stop();
+        if(soundIsOn) {
         birdStrike.play();
         gameOver.play();
+        }
         //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
         textSize(defaultTextSize);
         text("The queen has died", width/2 - 130, height/2 - 80);
@@ -884,7 +1010,9 @@ void checkChildrenBeeBirdCollision(Bee childBeeToCheck) {
   for(int counter = 0; counter < birdPos.size(); counter+=2) {
     if ((birdPos.get(counter) <= (childBeeToCheck.x + beeRadius/2 + 10)) && (birdPos.get(counter) >= (childBeeToCheck.x - beeRadius/2 - 10))) {
       if ((birdPos.get(counter+1) <= (childBeeToCheck.y + beeRadius/2 + 10)) && (birdPos.get(counter+1) >= (childBeeToCheck.y - beeRadius/2 -5))) {
+        if(soundIsOn) {
         birdStrike.play();
+        }
         (childBeeToCheck).parentBee.deleteBeesChildren();
         //print("Child bees deleted from bird strike!\n");
       }
@@ -907,7 +1035,9 @@ void checkNumberOfBees() {
        text(str(numberOfBeesToWin)+ " bees collected: Click to go \nto Level 2!", width/2 - 215, height/2 - 10);
        musicTrack.stop();
        underEffectOfPowerUp.stop();
+       if(soundIsOn) {
        win.play();
+       }
        queenBee.deleteBeesChildren();
        textSize(defaultTextSize);
        level1WasJustCompleted = true;
@@ -922,7 +1052,9 @@ void checkNumberOfBees() {
        if (beeIsCurrentlyUnderEffectOfPowerUp) {
          beeIsCurrentlyUnderEffectOfPowerUp = false;
          underEffectOfPowerUp.stop();
-         musicTrack.loop(); //unknown bug: music doesnt restart on level 2 if the bee ends level 1 on a powerup
+         if(soundIsOn) {
+         musicTrack.loop();
+         }//unknown bug: music doesnt restart on level 2 if the bee ends level 1 on a powerup
        }
        //writeHighScore();
        noLoop();
@@ -936,7 +1068,9 @@ void checkNumberOfBees() {
        text(str(numberOfBeesToWin)+ " bees collected: Click to go \nto Final Level!", width/2 - 215, height/2 - 10);
        musicTrack.stop();
        underEffectOfPowerUp.stop();
+       if(soundIsOn) {
        win.play();
+       }
        queenBee.deleteBeesChildren();
        textSize(defaultTextSize);
        level2WasJustCompleted = true;
@@ -951,7 +1085,9 @@ void checkNumberOfBees() {
        if (beeIsCurrentlyUnderEffectOfPowerUp) {
          beeIsCurrentlyUnderEffectOfPowerUp = false;
          underEffectOfPowerUp.stop();
-         musicTrack.loop(); //unknown bug: music doesnt restart on level 2 if the bee ends level 1 on a powerup
+         if(soundIsOn) {
+         musicTrack.loop(); 
+         }//unknown bug: music doesnt restart on level 2 if the bee ends level 1 on a powerup
        }
        //writeHighScore();
        noLoop();
@@ -961,19 +1097,28 @@ void checkNumberOfBees() {
     
   }
   else if (onBoss && (queenBee.getNumberOfChildren() >= numberOfBeesToWin - 8)) {
+         musicTrack.stop();
          textSize(35);
          text("The Final bee has been collected: \nYou win!", width/2 - 215, height/2 - 10);
          musicTrack.stop();
          underEffectOfPowerUp.stop();
+         if(soundIsOn) {
          win.play();
+         }
          timeLevel3WasBeaten = elapsedTime;  //This is where you get the time that it took the user to beat the boss battle - Alexis
-         
+         musicTrack.stop();
          //add to this time to csv
          //load table, change the table values wit setDouble, then save the table
          
          println("time level 3 was beaten", timeLevel3WasBeaten);
-         writeHighScore();
+         TableRow newRow=table.addRow();
+    newRow.setFloat("level1",9999.999);
+    newRow.setFloat("level2",9999.999);
+    newRow.setFloat("boss",timeLevel3WasBeaten);
+    saveTable(table,"highscores.csv");
+         //writeHighScore();
          noLoop();
+         musicTrack.stop();
         
       }
   
@@ -1046,7 +1191,9 @@ void checkCollisionWitPowerUpAndActAccordingly() {
       //put powerup in storage box
       powerupInStorageBox = true;
       powerupOnScreenAlready = false;
+      if(soundIsOn) {
       collectPowerUp.play();
+      }
     } 
     //else do nothing
     
@@ -1069,8 +1216,10 @@ void checkBeeAndMissleCollision() {
         background(0);
         musicTrack.stop();
         explosion.amp(0.4);
+        if(soundIsOn) {
         explosion.play();
         gameOver.play();
+        }
         //text("Queen bee diped. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
         textSize(defaultTextSize);
         text("The queen has died", width/2 - 130, height/2 - 80);
@@ -1091,8 +1240,10 @@ void checkBeeAndMissleCollision() {
         background(0);
         musicTrack.stop();
         explosion.amp(0.4);
+        if(soundIsOn) {
         explosion.play();
         gameOver.play();
+        }
         //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
         textSize(defaultTextSize);
         text("The queen has died", width/2 - 130, height/2 - 80);
@@ -1117,8 +1268,10 @@ void checkBeeAndMissleCollision() {
         background(0);
         musicTrack.stop();
         explosion.amp(0.4);
+        if(soundIsOn) {
         explosion.play();
         gameOver.play();
+        }
         //text("Queen bee diped. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
         textSize(defaultTextSize);
         text("The queen has died", width/2 - 130, height/2 - 80);
@@ -1139,8 +1292,10 @@ void checkBeeAndMissleCollision() {
         background(0);
         musicTrack.stop();
         explosion.amp(0.4);
+        if(soundIsOn) {
         explosion.play();
         gameOver.play();
+        }
         //text("Queen bee died. GAME OVER.\nHit play in Processing to try again.\nLosing instantly? Don't start your\nmouse in the center.", width/2 - 130, height/2 - 30);
         textSize(defaultTextSize);
         text("The queen has died", width/2 - 130, height/2 - 80);
@@ -1172,7 +1327,9 @@ void checkChildrenBeeMissleCollision(Bee childBeeToCheck) {
     if (childBeeToCheckOverlappingWithMissle) {
         
         explosion.amp(0.2);
+        if(soundIsOn) {
         explosion.play();
+        }
         (childBeeToCheck).parentBee.deleteBeesChildren();
 
     }
@@ -1186,7 +1343,9 @@ void checkChildrenBeeMissleCollision(Bee childBeeToCheck) {
     if (childBeeToCheckOverlappingWithMissle) {
         
         explosion.amp(0.2);
+        if(soundIsOn) {
         explosion.play();
+        }
         (childBeeToCheck).parentBee.deleteBeesChildren();
 
     }
@@ -1204,7 +1363,9 @@ void checkChildrenBeeMissleCollision(Bee childBeeToCheck) {
     if (childBeeToCheckOverlappingWithMissle) {
         
         explosion.amp(0.2);
+        if(soundIsOn) {
         explosion.play();
+        }
         (childBeeToCheck).parentBee.deleteBeesChildren();
   
     }
@@ -1218,7 +1379,9 @@ void checkChildrenBeeMissleCollision(Bee childBeeToCheck) {
     if (childBeeToCheckOverlappingWithMissle) {
         
         explosion.amp(0.2);
+        if(soundIsOn) {
         explosion.play();
+        }
         (childBeeToCheck).parentBee.deleteBeesChildren();
   
     }
@@ -1242,17 +1405,71 @@ void rngToDetermineIfAMissleWillBeLaunchedThisFrame() {
 }
 
 void mouseClicked() {
+  
+  //check if we are on main menu so we can go to levels
+
+  if(onMainMenu) {
+    /*
+    if(main.isMouseOverSound){
+      soundIsOn = !soundIsOn;
+    }
+    */
+    
+    if(main.isMouseOverSound){
+     if(soundIsOn) {
+       soundIsOn = false;
+     } else {
+       soundIsOn = true;
+       frameTheSoundWasTurnedOn = frameCount;
+     }
+    }
+    
+    if(main.isMouseOverPhase1) {
+      delay(500);
+      onMainMenu = false;
+      timeSetUpCompleted = int(myTimer.getElapsedTime());
+      frameCountThatALevelWasClicked = frameCount;
+      onLevel1 = true;
+    }
+    
+    if(main.isMouseOverPhase2) {
+      delay(500);
+      onMainMenu = false;
+      timeSetUpCompleted = int(myTimer.getElapsedTime());
+      frameCountThatALevelWasClicked = frameCount;
+      onLevel2 = true;
+    }
+    
+    if(main.isMouseOverBoss) {
+      delay(500);
+      onMainMenu = false;
+      timeSetUpCompleted = int(myTimer.getElapsedTime());
+      frameCountThatALevelWasClicked = frameCount;
+      onBoss = true;
+    }
+    
+  }
   if(level1WasJustCompleted) {
     timeLevel1WasCompleted = elapsedTime; //this is the time it took user to beat level 1 - Alexis
     println("level 1 time",timeLevel1WasCompleted);
+    TableRow newRow=table.addRow();
+    newRow.setFloat("level1",timeLevel1WasCompleted);
+    newRow.setFloat("level2",9999.999);
+    newRow.setFloat("boss",9999.999);
+    saveTable(table,"highscores.csv");
+    
     
     
     myTimer.resume();
     //underEffectOfPowerUp.stop();
     level1WasJustCompleted = false;
+    if(soundIsOn) {
     musicTrack.loop();
+    }
     delay(10);
+    if(soundIsOn) {
     musicTrack.loop();
+    }
     loop();
     
   }
@@ -1260,12 +1477,21 @@ void mouseClicked() {
     
     timeLevel2WasCompleted = elapsedTime; //this is the time it took user to beat level 2 - Alexis
     println("level 2 time",timeLevel2WasCompleted);
+    TableRow newRow=table.addRow();
+    newRow.setFloat("level1",9999.999);
+    newRow.setFloat("level2",timeLevel2WasCompleted);
+    newRow.setFloat("boss",9999.999);
+    saveTable(table,"highscores.csv");
     myTimer.resume();
     //underEffectOfPowerUp.stop();
     level2WasJustCompleted = false;
+    if(soundIsOn) {
     musicTrack.loop();
+    }
     delay(10);
+    if(soundIsOn) {
     musicTrack.loop();
+    }
     loop();
   }
 
@@ -1285,55 +1511,61 @@ void mousePressed(){
   
 }
 void keyPressed() {
-  //cheat code - press up to instantly get another bee
-  if (keyCode == UP) {
-    Bee theLastChild = queenBee.getLastChild();
-    theLastChild.attachChildParticle(new Bee(theLastChild.x,theLastChild.y,0,0,0,0,beeRadius,1,250,250,ks,kd));
-  } 
-  
-  //if spacebar then acticate the powerup if you have one in the box
-  if (key == ' ') {
-      if (powerupInStorageBox && beeIsCurrentlyUnderEffectOfPowerUp==false) {
-        beeIsCurrentlyUnderEffectOfPowerUp = true;
-        powerupInStorageBox = false;
-        timePowerUpWasActivated = elapsedTime;
-        musicTrack.amp(0); //still playing in the background just at a volume of 0
-        underEffectOfPowerUp.loop(); //play the powerup music
-        //the variables in the linear model which allows the power-up music to be lessened in volume as the powerup runs out
-        m = (0-1) / ( howManySecondsAPowerUpLasts - 0 ) ;
-        x = elapsedTime - timePowerUpWasActivated;
-        b = 0 - m*howManySecondsAPowerUpLasts;
+  if(!onMainMenu) {
+    //cheat code - press up to instantly get another bee
+    if (keyCode == UP) {
+      Bee theLastChild = queenBee.getLastChild();
+      theLastChild.attachChildParticle(new Bee(theLastChild.x,theLastChild.y,0,0,0,0,beeRadius,1,250,250,ks,kd));
+    } 
+    
+    //if spacebar then acticate the powerup if you have one in the box
+    if (key == ' ') {
+        if (powerupInStorageBox && beeIsCurrentlyUnderEffectOfPowerUp==false) {
+          beeIsCurrentlyUnderEffectOfPowerUp = true;
+          powerupInStorageBox = false;
+          timePowerUpWasActivated = elapsedTime;
+          musicTrack.amp(0); //still playing in the background just at a volume of 0
+          if(soundIsOn) {
+          underEffectOfPowerUp.loop();
+          }//play the powerup music
+          //the variables in the linear model which allows the power-up music to be lessened in volume as the powerup runs out
+          m = (0-1) / ( howManySecondsAPowerUpLasts - 0 ) ;
+          x = elapsedTime - timePowerUpWasActivated;
+          b = 0 - m*howManySecondsAPowerUpLasts;
+        }
+    } 
+    
+    //cheat code: instantly get the effect of a powerup even if you dont have one in storage
+    if (keyCode == DOWN) {
+      if (beeIsCurrentlyUnderEffectOfPowerUp==false) {
+          beeIsCurrentlyUnderEffectOfPowerUp = true;
+          powerupInStorageBox = false;
+          timePowerUpWasActivated = elapsedTime;
+          musicTrack.amp(0); //still playing in the background just at a volume of 0
+          if(soundIsOn) {
+          underEffectOfPowerUp.loop(); 
+          }//play the powerup music
+          //the variables in the linear model which allows the power-up music to be lessened in volume as the powerup runs out
+          m = (0-1) / ( howManySecondsAPowerUpLasts - 0 ) ;
+          x = elapsedTime - timePowerUpWasActivated;
+          b = 0 - m*howManySecondsAPowerUpLasts;
+        }
+      
+    } 
+      
+    //pausing the game
+    if (key == 'p') {
+      //when user presses p, flip state of this boolean
+      gameIsPaused = !gameIsPaused;
+      
+      if (gameIsPaused) {
+        myTimer.pause();
+        textSize(50);
+        text("PAUSED", width/2 - 85, height/2 - 20);
+        textSize(defaultTextSize);
+      } else {
+        myTimer.resume();
       }
-  } 
-  
-  //cheat code: instantly get the effect of a powerup even if you dont have one in storage
-  if (keyCode == DOWN) {
-    if (beeIsCurrentlyUnderEffectOfPowerUp==false) {
-        beeIsCurrentlyUnderEffectOfPowerUp = true;
-        powerupInStorageBox = false;
-        timePowerUpWasActivated = elapsedTime;
-        musicTrack.amp(0); //still playing in the background just at a volume of 0
-        underEffectOfPowerUp.loop(); //play the powerup music
-        //the variables in the linear model which allows the power-up music to be lessened in volume as the powerup runs out
-        m = (0-1) / ( howManySecondsAPowerUpLasts - 0 ) ;
-        x = elapsedTime - timePowerUpWasActivated;
-        b = 0 - m*howManySecondsAPowerUpLasts;
-      }
-    
-  } 
-    
-  //pausing the game
-  if (key == 'p') {
-    //when user presses p, flip state of this boolean
-    gameIsPaused = !gameIsPaused;
-    
-    if (gameIsPaused) {
-      myTimer.pause();
-      textSize(50);
-      text("PAUSED", width/2 - 85, height/2 - 20);
-      textSize(defaultTextSize);
-    } else {
-      myTimer.resume();
     }
   }
     
