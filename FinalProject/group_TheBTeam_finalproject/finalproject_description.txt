@@ -1,0 +1,44 @@
+Controls:
+To run, click "run" in Processing and select a level to start on. 
+
+The game includes "cheat codes": Press UP key to add a bee, press DOWN key to get the power up effect. Spacebar activates the invincibility powerup if you have captured it. When in the game, press P to pause it.
+
+The game mechanic is controlled with the mouse, and involves avoiding the birds and collecting other bees. Once you have collected at 10 bees, you move on to the next level.
+
+Classes:
+- group_TheBTeam_finalproject:
+	- includes draw loops for each level as well as required setup() code for each
+	- controls sounds being played
+	- loads and displays high scores from our highscores.csv
+- Bee:
+	- class for bee objects, modeled with particle physics, that are to be collected by the Queen Bee character which is controlled by the cursor positions
+	- Two levels of animation: Bee moves, and "flaps" its wings
+- BeeSpawns:
+	- class that controls where BeeSpawns will occur and draws them
+- Bird:
+	- Controls individual bird objects with flocking behavior
+- Flock: 
+	- Controller class for individual bird objects so that each bird within a flock can interact with each other
+- Line:
+	- Draws lines for final boss fight
+- Missle:
+	- Controls missile game mechanic found in Level 2
+- ParticleWithMass:
+	- Superclass for springlike behavior found in bee objects
+- PowerUp:
+	- Controls powerup object found in Level 1 and Level 2 to allow for invincibility game mechanic
+- Timer:
+	- Class used to generate best times for each level
+- Mainpage:
+	- Generates and displays main menu
+	
+Unexpected Challenges:
+- Adding main menu functionality last was not ideal
+- 1000+ line main .pde file made dealing with adding features difficult; in the future, would be better about componentizing levels 
+- Performance issues when more than 5 birds and 10 bees are on screen (framerate would drop below 5 frames per second making game completely unplayable)
+
+Responsibilities:
+- Brandon: Menu Systems, Bee implementation, Level 2 Missiles, bee interaction with walls
+- Jonathan: Sounds, Bird and Flock creation, Bee interaction with birds, CSV score implementation
+- Alexis: Menu Systems, CSV score implementation, design and colors of game
+- Max: Level 3 (which included an entirely new/different gameplay mechanic expanding upon the original gameplay seen in levels 1 and 2)

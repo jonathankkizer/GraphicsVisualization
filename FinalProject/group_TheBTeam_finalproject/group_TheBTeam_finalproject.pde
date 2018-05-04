@@ -521,7 +521,7 @@ void drawLoopForLevel2() {
   
   flock1.updateColor(levelTwoColor);
   if (frameCount >= numberOfFramesBeforeBirdsStartDoingDamage) {
-    flock1.updateMaxSpeed(8);
+    flock1.updateMaxSpeed(6);
     flock1.updateBirdVelocity(2);
     flock1.runSimulation();
   }
@@ -1510,6 +1510,8 @@ void mousePressed(){
   } 
   
 }
+
+
 void keyPressed() {
   if(!onMainMenu) {
     //cheat code - press up to instantly get another bee
@@ -1526,6 +1528,7 @@ void keyPressed() {
           timePowerUpWasActivated = elapsedTime;
           musicTrack.amp(0); //still playing in the background just at a volume of 0
           if(soundIsOn) {
+          
           underEffectOfPowerUp.loop();
           }//play the powerup music
           //the variables in the linear model which allows the power-up music to be lessened in volume as the powerup runs out
