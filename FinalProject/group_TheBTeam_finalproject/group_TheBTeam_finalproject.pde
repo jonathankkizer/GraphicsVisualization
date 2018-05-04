@@ -102,6 +102,7 @@ boolean onBoss = false;
 boolean level1WasJustCompleted = false;
 boolean level2WasJustCompleted = false;
 float timeLevel1WasCompleted;
+float timeLevel2WasCompleted;
 
 //leevl 2: missle stuff
 Missle myMissle;
@@ -116,6 +117,7 @@ float onAverageAMissleAppearsAfterThisManySecondsHasPassed = 0.1;
 float highScore;
 FloatList highScores = new FloatList(); 
 Table highScoreTable;
+
 
 void setup() {
   
@@ -567,11 +569,19 @@ float randomGap = 100 + (int)(Math.random() * (height-200));
 Line line1 = new Line(800,(height /2));
 boolean startingLineDone = false;
 
+float timeYouTookToClickTheCircle;
+
+
 void drawLoopForBoss() {  
   //to cycle between day and night we use a sine functions. numbers selected to best show day and night modes
   //tint(50,50,139); //night mode
   //tint(255,255,255); //day mode
   //elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
+  elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted - 1000*timeLevel1WasCompleted - 1000*timeLevel2WasCompleted -1000*timeYouTookToClickTheCircle)/1000.0;
+  //println(1000*timeLevel1WasCompleted);
+  //println(1000*timeLevel2WasCompleted);
+  
+  
   int redTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
   int greenTintValue = int(102.5*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 152.5) ;
   int blueTintValue = int(58*sin(elapsedTime*(2*PI)/numberOfSecondsInAFullDay) + 197) ;
@@ -588,7 +598,7 @@ void drawLoopForBoss() {
     fill(255,255,0);
     ellipse(100, height/2,30,30);
   } else{
-   elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
+   //elapsedTime = (myTimer.getElapsedTime() - timeSetUpCompleted)/1000;
   //checkCollisionWithLines();
   //line1.display();
   //line1.move();
@@ -886,6 +896,8 @@ void checkChildrenBeeBirdCollision(Bee childBeeToCheck) {
   }
 }
 
+float timeLevel3WasBeaten;
+
 void checkNumberOfBees() {
   
   if (queenBee.getNumberOfChildren() >= numberOfBeesToWin) {
@@ -927,7 +939,7 @@ void checkNumberOfBees() {
        win.play();
        queenBee.deleteBeesChildren();
        textSize(defaultTextSize);
-       level1WasJustCompleted = true;
+       level2WasJustCompleted = true;
        onLevel1 = false;
        onBoss = true;
        onLevel2 = false;
@@ -954,6 +966,12 @@ void checkNumberOfBees() {
          musicTrack.stop();
          underEffectOfPowerUp.stop();
          win.play();
+         timeLevel3WasBeaten = elapsedTime;  //This is where you get the time that it took the user to beat the boss battle - Alexis
+         
+         //add to this time to csv
+         //load table, change the table values wit setDouble, then save the table
+         
+         println("time level 3 was beaten", timeLevel3WasBeaten);
          writeHighScore();
          noLoop();
         
@@ -1089,8 +1107,8 @@ void checkBeeAndMissleCollision() {
   
   if (myMissle.whichWallTheMissleAppearsfrom == 3) {
     
-    println("bee",queenBee.x - beeRadius/2);
-    println("missle",myMissle.x + myMissle.missleHeight);
+    //println("bee",queenBee.x - beeRadius/2);
+    //println("missle",myMissle.x + myMissle.missleHeight);
     
     boolean queenBeeOverlappingWithMissle = 
     (queenBee.x + beeRadius/2) >= myMissle.x  && (queenBee.x - beeRadius/2) <= (myMissle.x + myMissle.missleHeight  ) &&
@@ -1177,8 +1195,8 @@ void checkChildrenBeeMissleCollision(Bee childBeeToCheck) {
   
   if (myMissle.whichWallTheMissleAppearsfrom == 3) {
     
-    println("bee",childBeeToCheck.x - beeRadius/2);
-    println("missle",myMissle.x + myMissle.missleHeight);
+    //println("bee",childBeeToCheck.x - beeRadius/2);
+    //println("missle",myMissle.x + myMissle.missleHeight);
     
     boolean childBeeToCheckOverlappingWithMissle = 
     (childBeeToCheck.x + beeRadius/2) >= myMissle.x  && (childBeeToCheck.x - beeRadius/2) <= (myMissle.x + myMissle.missleHeight  ) &&
@@ -1225,7 +1243,10 @@ void rngToDetermineIfAMissleWillBeLaunchedThisFrame() {
 
 void mouseClicked() {
   if(level1WasJustCompleted) {
-    timeLevel1WasCompleted = elapsedTime;
+    timeLevel1WasCompleted = elapsedTime; //this is the time it took user to beat level 1 - Alexis
+    println("level 1 time",timeLevel1WasCompleted);
+    
+    
     myTimer.resume();
     //underEffectOfPowerUp.stop();
     level1WasJustCompleted = false;
@@ -1233,9 +1254,12 @@ void mouseClicked() {
     delay(10);
     musicTrack.loop();
     loop();
+    
   }
   if(level2WasJustCompleted) {
-    timeLevel1WasCompleted = elapsedTime;
+    
+    timeLevel2WasCompleted = elapsedTime; //this is the time it took user to beat level 2 - Alexis
+    println("level 2 time",timeLevel2WasCompleted);
     myTimer.resume();
     //underEffectOfPowerUp.stop();
     level2WasJustCompleted = false;
@@ -1252,6 +1276,10 @@ void mousePressed(){
     if((mouseX >= 70) && (mouseX <= 130)) {
       if(mouseY >= ((height/2)-30) && (mouseY <= ((height/2)+30)))
         bossHasStarted = true;
+        timeYouTookToClickTheCircle = elapsedTime;
+        
+        
+        
     }
   } 
   
